@@ -115,6 +115,9 @@ iterations — letter #40 is coded against the same lists as letter #1:
 - `themes.json` — the 12-theme taxonomy.
 - `asks.json` — the recurring "asks" registry (slide 13 of the deck).
 - `entities.json` — canonical people / countries / projects (alias-merged).
+- `definitions.json` — plain-language, Swedish definitions of every metric and
+  term (tonindex, LIX, ask, …); the single source of truth surfaced in the
+  product (see §7.1).
 
 `compile.py` produces `data/letters.json` (the array the site reads) plus small
 derived aggregates (per-act, per-year, per-theme) for convenience.
@@ -170,6 +173,30 @@ here** and will be finalized from a dedicated design exploration (see
   filter-heavy dashboard: tone over time, theme over time, the recurring-asks
   tracker, and readability. Restraint and annotation over density.
 
+### 7.1 Definitions & transparency
+
+Every coined or technical term must be **explained in plain language wherever it
+appears** — no undefined jargon reaches the reader. Definitions live once in
+`data/vocab/definitions.json` (single source of truth) and surface two ways:
+
+1. **Inline** — an unobtrusive "ⓘ" / info affordance next to each metric label
+   (e.g. *Tonindex ⓘ*) revealing its definition on hover/tap.
+2. **A short "Så här mäter vi" (how we measure) section** — a method/glossary
+   block collecting all definitions, reachable from both views.
+
+Terms to define: tonindex, LIX-läsbarhet, assertiva/hedgande markörer, engelska
+låneord, akt, tema, ask (återkommande uppmaning), signaturfras, signaturcitat.
+
+Canonical example (the voice/level every definition must match — plain, Swedish,
+board-friendly, honest that it is a proxy):
+
+> **Tonindex** — ett mått på hur *drivande* språket är. Vi räknar kraftord som
+> signalerar att VD driver en linje (*måste, kräver, avgörande, brådskande*)
+> minus gardingsord som signalerar öppen reservation (*kanske, möjligen,
+> tycks*), per 1 000 ord. Högt positivt värde = texten driver tydligt en linje;
+> nära noll eller negativt = ett mer öppet resonemang. En indikator på tonläge —
+> inte en bedömning av innehållets kvalitet eller av personen.
+
 ## 8. Scope
 
 **v1 (in scope):**
@@ -178,6 +205,8 @@ here** and will be finalized from a dedicated design exploration (see
 - The scripted + AI pipeline with a working, documented "add a letter" runbook.
 - The Next.js site with: the **three-act arc** (story) + **tone timeline** +
   **theme view** + **recurring-asks tracker** (explore), in editorial style.
+- Plain-language definitions for every metric, surfaced inline + in a "Så här
+  mäter vi" section, from `data/vocab/definitions.json` (§7.1).
 
 **Roadmap (explicitly not v1):**
 - Reference/entity network graph.
