@@ -159,10 +159,10 @@ export** (no live backend needed). Deploys to Vercel (a private link for the
 board) or GitHub Pages later — same code. Reads `data/letters.json`.
 
 **Aesthetic:** editorial throughout (serif display, generous whitespace,
-pull-quotes, the arc as a quiet hero). The detailed visual design system —
-typography, palette, component styling, motion — is intentionally **left open
-here** and will be finalized from a dedicated design exploration (see
-`docs/design-brief.md`). The architecture is independent of these choices.
+pull-quotes, the arc as a quiet hero). The visual design system is **finalized**
+as "The Annual Essay" — see `docs/design-system.md` (typography, palette, the
+Story + Explore screens, motion). The architecture remains independent of these
+choices.
 
 **Two views:**
 
@@ -228,7 +228,8 @@ Carried over from the existing analysis and to be surfaced in the product:
 
 ## 10. Open questions (to refine, non-blocking)
 
-1. Detailed visual design system — from the design exploration round.
+1. ~~Detailed visual design system~~ — **resolved**: "The Annual Essay"
+   (`docs/design-system.md`).
 2. Final theme taxonomy — confirm the 12 categories; consider splitting out
    *life science* / *industripolitik* as flagged in the rundown.
 3. Deploy & access model for the board (private Vercel link vs. password vs.
