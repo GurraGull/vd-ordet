@@ -77,9 +77,23 @@ binds them to `data/letters.json` + `data/aggregates.json` produced by Plan 1.
 Add a short summary atop each Akt III essay beat (a readability improvement the
 Explore view surfaced).
 
-## Reference implementations (to add to repo)
+## Two directions, both in scope (on the existing dataset)
 
-Download from the Claude Design project into `docs/design/`:
-`Art Direction.dc.html`, `Story.dc.html`, `Explore.dc.html`. Plan 2 ports these
-static HTML/CSS designs into Next.js components. Alternates on file but **not
-chosen**: `Style Variants.dc.html` (Riso Broadside, Nocturne).
+The delivered designs (in `docs/design/`) span two looks, both built on the
+data we already have — **no dataset extension**:
+
+- **Editorial "Annual Essay"** (warm, light) — `Story.dc.html`, `Explore.dc.html`,
+  `Art Direction.dc.html`. The narrative front. → **Plan 2** builds the Story.
+- **Dark "Signal Console"** (analytical) — `Overview.dc.html`,
+  `Signal Console.dc.html`. The "look inside the data" tool. → **Plan 3** (later),
+  on existing data; the console tiles that needed deeper measures
+  (sentence-by-sentence tone, questions, imperatives, vi/jag) are **dropped**.
+
+Alternates on file but **not chosen**: `Style Variants.dc.html` (Riso Broadside,
+Nocturne — Nocturne reserved as a possible future dark theme).
+
+## Reference implementations (in repo)
+
+`docs/design/` holds the design files + `support.js` + `screenshots/`. Plans 2–3
+port these into Next.js components, replacing every placeholder value with
+derived real data.
