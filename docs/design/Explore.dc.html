@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:#F2ECDF; }
+  ::selection { background:#C8A24A; color:#14202B; }
+  @media (max-width: 1000px){
+    [data-fig]{ grid-template-columns:minmax(0,1fr) !important; }
+    [data-margin]{ border-left:none !important; border-top:1px solid #E7E0D0 !important; padding:18px 0 0 0 !important; margin-top:6px !important; }
+  }
+</style>
+</helmet>
+<div style="background:#F7F3EA; color:#16222E; font-family:'Newsreader',Georgia,serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- Masthead -->
+  <div style="position:sticky; top:0; z-index:40; background:rgba(247,243,234,0.86); backdrop-filter:blur(10px); border-bottom:1px solid #E2DAC8;">
+    <div style="max-width:1180px; margin:0 auto; padding:14px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <a href="Art Direction.dc.html" style="font-family:'Libre Franklin',sans-serif; font-weight:700; letter-spacing:0.14em; font-size:13px; color:#0E3A5E; text-decoration:none;">IVA</a>
+        <span style="font-family:'Libre Franklin',sans-serif; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; font-size:10.5px; color:#7A776C;">VD-ord · Analys</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; font-family:'Libre Franklin',sans-serif; font-size:12.5px; letter-spacing:0.04em;">
+        <a href="Story.dc.html" style="color:#8A8576; text-decoration:none;" style-hover="color:#0E3A5E;">Berättelse</a>
+        <span style="color:#16222E; border-bottom:2px solid #C8A24A; padding-bottom:3px;">Utforska</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Essay header -->
+  <div style="max-width:760px; margin:0 auto; padding:80px 28px 20px;">
+    <div style="font-family:'Libre Franklin',sans-serif; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; color:#9A6A1E; margin-bottom:24px;">Utforska · En annoterad läsning</div>
+    <h1 style="font-weight:400; font-size:clamp(38px,5.4vw,62px); line-height:1.06; letter-spacing:-0.02em; margin:0 0 24px; max-width:18ch;">Fyra sätt att läsa <span style="font-style:italic; color:#0E3A5E;">samma röst</span></h1>
+    <p style="font-size:21px; line-height:1.62; color:#45505B; margin:0;">Inte ett instrumentbräde, utan en essä med diagram i marginalen. Fyra vyer på datasetet — ton, teman, återkommande krav och läsbarhet — var och en med en kommentar om vad siffrorna faktiskt betyder.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:30px;">
+      <a href="#ton" style="text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:12px; color:#0E3A5E; border:1px solid #D6CDB8; border-radius:100px; padding:7px 15px;">01 · Ton över tid</a>
+      <a href="#tema" style="text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:12px; color:#0E3A5E; border:1px solid #D6CDB8; border-radius:100px; padding:7px 15px;">02 · Tema över tid</a>
+      <a href="#krav" style="text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:12px; color:#0E3A5E; border:1px solid #D6CDB8; border-radius:100px; padding:7px 15px;">03 · Återkommande krav</a>
+      <a href="#lasbarhet" style="text-decoration:none; font-family:'Libre Franklin',sans-serif; font-size:12px; color:#0E3A5E; border:1px solid #D6CDB8; border-radius:100px; padding:7px 15px;">04 · Läsbarhet</a>
+    </div>
+  </div>
+
+  <div style="max-width:1020px; margin:0 auto; padding:0 28px;"><div style="height:1px; background:#E2DAC8; margin:54px 0;"></div></div>
+
+  <!-- 01 TON -->
+  <div id="ton" style="max-width:1020px; margin:0 auto; padding:0 28px 70px;">
+    <div data-fig style="display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:44px; align-items:start;">
+      <div>
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#C8A24A; margin-bottom:12px;">01 — Ton över tid</div>
+        <h2 style="font-weight:400; font-size:32px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 14px;">En kurva, ett utbrott, en doktrin</h2>
+        <p style="font-size:18px; line-height:1.7; color:#45505B; margin:0 0 28px; max-width:60ch;">Tonindexet mäter hur agendasättande och normativ rösten är. Det stiger lugnt genom Akt I, exploderar vid <em>Stresstest för Europa</em>, håller sig högt genom Akt II och lägger sig på en mer reflekterande nivå i Akt III.</p>
+        <svg viewBox="0 0 1000 300" style="width:100%; height:auto; display:block; overflow:visible;">
+          <defs><linearGradient id="tfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#C8A24A" stop-opacity="0.16"></stop><stop offset="100%" stop-color="#C8A24A" stop-opacity="0"></stop></linearGradient></defs>
+          <line x1="40" y1="{{ tone.baseY }}" x2="980" y2="{{ tone.baseY }}" stroke="#E2DAC8"></line>
+          <sc-for list="{{ tone.dividers }}" as="d" hint-placeholder-count="2"><line x1="{{ d.x }}" y1="20" x2="{{ d.x }}" y2="{{ tone.baseY }}" stroke="#E2DAC8" stroke-dasharray="1 6"></line></sc-for>
+          <path d="{{ tone.area }}" fill="url(#tfill)"></path>
+          <path d="{{ tone.path }}" fill="none" stroke="#C8A24A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          <sc-for list="{{ tone.points }}" as="p" hint-placeholder-count="22"><circle cx="{{ p.cx }}" cy="{{ p.cy }}" r="{{ p.r }}" fill="{{ p.fill }}" stroke="#F7F3EA" stroke-width="1.3"></circle></sc-for>
+          <line x1="{{ tone.spikeX }}" y1="{{ tone.spikeY }}" x2="{{ tone.spikeX }}" y2="{{ tone.baseY }}" stroke="#C8A24A" stroke-dasharray="2 4"></line>
+          <text x="{{ tone.spikeX }}" y="{{ tone.spikeLabelY }}" text-anchor="middle" style="font-family:'IBM Plex Mono',monospace; font-size:18px; font-weight:500; fill:#9A6A1E;">+13,8</text>
+          <sc-for list="{{ tone.acts }}" as="a" hint-placeholder-count="3"><text x="{{ a.cx }}" y="290" text-anchor="middle" style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.14em; fill:#9A6A1E;">{{ a.name }}</text></sc-for>
+        </svg>
+      </div>
+      <div data-margin style="border-left:1px solid #E7E0D0; padding-left:22px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#A9A493; margin-bottom:10px;">I marginalen</div>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0 0 16px;">Utbrottet är en enskild text, inte en trend. Det säger mer om ett val av språk än om en personlighet.</p>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0;">Notera att Akt III ligger <em>över</em> Akt I — rösten lade sig, men aldrig tillbaka till utgångsläget.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1020px; margin:0 auto; padding:0 28px;"><div style="height:1px; background:#E2DAC8; margin:0 0 54px;"></div></div>
+
+  <!-- 02 TEMA -->
+  <div id="tema" style="max-width:1020px; margin:0 auto; padding:0 28px 70px;">
+    <div data-fig style="display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:44px; align-items:start;">
+      <div>
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#C8A24A; margin-bottom:12px;">02 — Tema över tid</div>
+        <h2 style="font-weight:400; font-size:32px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 14px;">Vad hon skriver om, och när</h2>
+        <p style="font-size:18px; line-height:1.7; color:#45505B; margin:0 0 30px; max-width:60ch;">Fem teman, var och en som en egen åskam över tiden. Höjden visar hur mycket plats temat tar i varje brev. Säkerhet toppar vid stresstestet; klimat vid greenhushing; Europa återvänder i slutet.</p>
+        <svg viewBox="0 0 1000 380" style="width:100%; height:auto; display:block; overflow:visible;">
+          <sc-for list="{{ themes }}" as="th" hint-placeholder-count="5">
+            <line x1="190" y1="{{ th.baseY }}" x2="980" y2="{{ th.baseY }}" stroke="#EAE3D2"></line>
+            <path d="{{ th.area }}" fill="{{ th.fill }}"></path>
+            <path d="{{ th.line }}" fill="none" stroke="{{ th.stroke }}" stroke-width="1.6"></path>
+            <text x="180" y="{{ th.labelY }}" text-anchor="end" style="font-family:'Libre Franklin',sans-serif; font-size:13px; fill:#3C4751;">{{ th.name }}</text>
+            <text x="180" y="{{ th.subY }}" text-anchor="end" style="font-family:'IBM Plex Mono',monospace; font-size:9.5px; fill:#A9A493;">{{ th.peak }}</text>
+          </sc-for>
+          <sc-for list="{{ themeActs }}" as="a" hint-placeholder-count="3"><text x="{{ a.cx }}" y="372" text-anchor="middle" style="font-family:'Libre Franklin',sans-serif; font-size:10.5px; letter-spacing:0.14em; fill:#9A6A1E;">{{ a.name }}</text></sc-for>
+        </svg>
+      </div>
+      <div data-margin style="border-left:1px solid #E7E0D0; padding-left:22px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#A9A493; margin-bottom:10px;">I marginalen</div>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0 0 16px;">Kompetens är basröst: alltid närvarande, aldrig dominerande. Det är akademins hemvist.</p>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0;">Säkerhet och Europa rör sig nästan i takt — två sidor av samma oro under 2025.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1020px; margin:0 auto; padding:0 28px;"><div style="height:1px; background:#E2DAC8; margin:0 0 54px;"></div></div>
+
+  <!-- 03 KRAV -->
+  <div id="krav" style="max-width:1020px; margin:0 auto; padding:0 28px 70px;">
+    <div data-fig style="display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:44px; align-items:start;">
+      <div>
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#C8A24A; margin-bottom:12px;">03 — Återkommande krav</div>
+        <h2 style="font-weight:400; font-size:32px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 14px;">Det hon ber om, gång på gång</h2>
+        <p style="font-size:18px; line-height:1.7; color:#45505B; margin:0 0 26px; max-width:60ch;">Fem stående krav till politik och näringsliv. Varje punkt är ett brev där kravet återkommer — en kadens som avslöjar vad doktrinen faktiskt vill ha gjort.</p>
+        <!-- act header -->
+        <div style="display:flex; gap:10px; margin-left:172px; margin-bottom:14px;">
+          <div style="flex:6; text-align:center; font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; color:#9A6A1E; border-bottom:1px solid #E7DFCB; padding-bottom:6px;">AKT I</div>
+          <div style="flex:9; text-align:center; font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; color:#9A6A1E; border-bottom:1px solid #E7DFCB; padding-bottom:6px;">AKT II</div>
+          <div style="flex:7; text-align:center; font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; color:#9A6A1E; border-bottom:1px solid #E7DFCB; padding-bottom:6px;">AKT III</div>
+        </div>
+        <sc-for list="{{ asks }}" as="ask" hint-placeholder-count="5">
+          <div style="display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #EFE9DA;">
+            <div style="width:162px; flex:none; font-size:14.5px; line-height:1.25; color:#1F2C37;">{{ ask.name }}</div>
+            <div style="flex:1; display:flex; align-items:center; gap:0;">
+              <sc-for list="{{ ask.cells }}" as="c" hint-placeholder-count="22">
+                <div style="flex:1; display:flex; justify-content:center;"><span style="width:{{ c.size }}; height:{{ c.size }}; border-radius:50%; background:{{ c.bg }};"></span></div>
+              </sc-for>
+            </div>
+            <div style="width:30px; flex:none; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0E3A5E;">{{ ask.count }}</div>
+          </div>
+        </sc-for>
+        <div style="display:flex; align-items:center; gap:18px; margin-top:18px; font-family:'Libre Franklin',sans-serif; font-size:11.5px; color:#8A8576;">
+          <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:9px; height:9px; border-radius:50%; background:#0E3A5E;"></span> Kravet framförs</span>
+          <span style="display:inline-flex; align-items:center; gap:7px;"><span style="width:4px; height:4px; border-radius:50%; background:#DDD3BE;"></span> Tyst</span>
+          <span style="margin-left:auto; font-family:'IBM Plex Mono',monospace;">antal brev →</span>
+        </div>
+      </div>
+      <div data-margin style="border-left:1px solid #E7E0D0; padding-left:22px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#A9A493; margin-bottom:10px;">I marginalen</div>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0 0 16px;">Dual use existerar inte i Akt I — kravet föds med begreppet och blir sedan stående.</p>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0;">Forskningsfinansiering är det enda kravet som löper genom alla tre akter.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1020px; margin:0 auto; padding:0 28px;"><div style="height:1px; background:#E2DAC8; margin:0 0 54px;"></div></div>
+
+  <!-- 04 LÄSBARHET -->
+  <div id="lasbarhet" style="max-width:1020px; margin:0 auto; padding:0 28px 70px;">
+    <div data-fig style="display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:44px; align-items:start;">
+      <div>
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#C8A24A; margin-bottom:12px;">04 — Läsbarhet</div>
+        <h2 style="font-weight:400; font-size:32px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 14px;">Rikare texter, högre tröskel</h2>
+        <p style="font-size:18px; line-height:1.7; color:#45505B; margin:0 0 28px; max-width:60ch;">LIX-värdet stiger stadigt: essäerna i Akt III är längre och mer komplexa än de tidiga kommentarerna. Mer substans — men också mer att kräva av en tidspressad läsare.</p>
+        <svg viewBox="0 0 1000 260" style="width:100%; height:auto; display:block; overflow:visible;">
+          <sc-for list="{{ lix.bars }}" as="b" hint-placeholder-count="3"><rect x="{{ b.x }}" y="{{ b.y }}" width="{{ b.w }}" height="{{ b.h }}" fill="{{ b.fill }}"></rect></sc-for>
+          <line x1="40" y1="{{ lix.baseY }}" x2="980" y2="{{ lix.baseY }}" stroke="#E2DAC8"></line>
+          <path d="{{ lix.path }}" fill="none" stroke="#0E3A5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <sc-for list="{{ lix.points }}" as="p" hint-placeholder-count="22"><circle cx="{{ p.cx }}" cy="{{ p.cy }}" r="2.2" fill="#0E3A5E"></circle></sc-for>
+          <sc-for list="{{ lix.barLabels }}" as="l" hint-placeholder-count="3">
+            <text x="{{ l.cx }}" y="{{ l.valY }}" text-anchor="middle" style="font-family:'IBM Plex Mono',monospace; font-size:16px; fill:#9A6A1E;">{{ l.val }}</text>
+            <text x="{{ l.cx }}" y="250" text-anchor="middle" style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.12em; fill:#9A6A1E;">{{ l.name }}</text>
+            <text x="{{ l.cx }}" y="232" text-anchor="middle" style="font-family:'IBM Plex Mono',monospace; font-size:10px; fill:#A9A493;">{{ l.words }}</text>
+          </sc-for>
+        </svg>
+      </div>
+      <div data-margin style="border-left:1px solid #E7E0D0; padding-left:22px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#A9A493; margin-bottom:10px;">I marginalen</div>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0 0 16px;">LIX 50 är ”svår — facktext”. Doktrinen vinner i djup men riskerar att tappa den breda läsaren.</p>
+        <p style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; line-height:1.55; color:#3C4751; margin:0;">En rekommendation: erbjud en kort sammanfattning överst i varje essä.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coda -->
+  <div style="max-width:760px; margin:0 auto; padding:30px 28px 130px; text-align:center;">
+    <div style="height:1px; background:#E2DAC8; margin-bottom:46px;"></div>
+    <p style="font-family:'Newsreader',serif; font-style:italic; font-size:24px; line-height:1.5; color:#16222E; max-width:34ch; margin:0 auto 30px;">Siffrorna ritar konturen. Berättelsen ger den mening.</p>
+    <a href="Story.dc.html" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; background:#FBF6E9; color:#16222E; border:1px solid #D8C28A; font-family:'Libre Franklin',sans-serif; font-size:13px; letter-spacing:0.04em; padding:14px 24px; border-radius:3px;"><span>←</span> Tillbaka till berättelsen</a>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  smooth(pts) {
+    if (pts.length < 2) return '';
+    let d = `M ${pts[0][0]},${pts[0][1]}`;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[i-1] || pts[i], p1 = pts[i], p2 = pts[i+1], p3 = pts[i+2] || p2;
+      const c1x = p1[0] + (p2[0]-p0[0])/6, c1y = p1[1] + (p2[1]-p0[1])/6;
+      const c2x = p2[0] - (p3[0]-p1[0])/6, c2y = p2[1] - (p3[1]-p1[1])/6;
+      d += ` C ${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+    }
+    return d;
+  }
+
+  renderVals() {
+    const tones = [1.2,1.8,2.6,3.6,5.2,6.0, 6.4,13.8,10.4,9.4,10.1,9.1,10.3,9.6,8.8, 7.0,6.4,6.8,6.0,5.6,6.2,5.8];
+    const n = tones.length, tMax = 15;
+
+    // ---- 01 TONE ----
+    const tx = i => 40 + (i/(n-1))*940;
+    const ty = t => 250 - (t/tMax)*220;
+    const tpts = tones.map((t,i) => [tx(i), ty(t)]);
+    const tpath = this.smooth(tpts);
+    const tarea = tpath + ` L ${tx(n-1).toFixed(1)},250 L ${tx(0).toFixed(1)},250 Z`;
+    const tb1 = (tx(5)+tx(6))/2, tb2 = (tx(14)+tx(15))/2;
+    const tone = {
+      path: tpath, area: tarea, baseY: ty(0).toFixed(1),
+      dividers: [{x:tb1.toFixed(1)},{x:tb2.toFixed(1)}],
+      points: tones.map((t,i) => ({ cx:tx(i).toFixed(1), cy:ty(t).toFixed(1), r:t>=13?5:2.4, fill:t>=13?'#C8A24A':'#0E3A5E' })),
+      spikeX: tx(7).toFixed(1), spikeY: ty(13.8).toFixed(1), spikeLabelY: (ty(13.8)-14).toFixed(1),
+      acts: [
+        {cx:((40+tb1)/2).toFixed(1), name:'AKT I'},
+        {cx:((tb1+tb2)/2).toFixed(1), name:'AKT II'},
+        {cx:((tb2+tx(n-1))/2).toFixed(1), name:'AKT III'}
+      ]
+    };
+
+    // ---- 02 THEMES (ridgelines) ----
+    const themeDefs = [
+      {name:'Kompetens', peak:'jämn', stroke:'#0E3A5E', fill:'rgba(14,58,94,0.10)',
+       v:[.7,.65,.6,.55,.6,.55, .5,.45,.4,.4,.35,.4,.45,.5,.5, .8,.75,.7,.65,.7,.6,.55]},
+      {name:'Säkerhet & beredskap', peak:'apr 25', stroke:'#9A6A1E', fill:'rgba(200,162,74,0.14)',
+       v:[.15,.2,.25,.3,.35,.4, .55,1.0,.8,.75,.7,.6,.65,.6,.55, .5,.45,.5,.55,.5,.45,.6]},
+      {name:'Klimat', peak:'aug 25', stroke:'#2E6E9E', fill:'rgba(46,110,158,0.12)',
+       v:[.3,.35,.3,.4,.35,.3, .35,.3,.4,.45,.5,.95,.7,.55,.5, .45,.4,.35,.3,.35,.4,.35]},
+      {name:'Europa', peak:'apr 25 · apr 26', stroke:'#0E3A5E', fill:'rgba(14,58,94,0.10)',
+       v:[.2,.25,.3,.35,.4,.45, .6,.95,.7,.6,.55,.5,.55,.5,.45, .4,.45,.4,.45,.5,.55,.85]},
+      {name:'Innovation & teknik', peak:'maj 25', stroke:'#9A6A1E', fill:'rgba(200,162,74,0.14)',
+       v:[.5,.5,.55,.5,.55,.5, .55,.6,.65,.9,.75,.65,.7,.65,.6, .6,.65,.6,.65,.6,.65,.6]}
+    ];
+    const rx = i => 200 + (i/(n-1))*770;
+    const laneTop = 16, laneH = 52, laneGap = 16;
+    const themes = themeDefs.map((th, k) => {
+      const top = laneTop + k*(laneH+laneGap);
+      const baseY = top + laneH;
+      const pts = th.v.map((val,i) => [rx(i), baseY - val*laneH]);
+      const line = this.smooth(pts);
+      const area = line + ` L ${rx(n-1).toFixed(1)},${baseY.toFixed(1)} L ${rx(0).toFixed(1)},${baseY.toFixed(1)} Z`;
+      return { name:th.name, peak:'topp · '+th.peak, stroke:th.stroke, fill:th.fill,
+        line, area, baseY:baseY.toFixed(1), labelY:(baseY-14).toFixed(1), subY:(baseY-1).toFixed(1) };
+    });
+    const rb1 = (rx(5)+rx(6))/2, rb2 = (rx(14)+rx(15))/2;
+    const themeActs = [
+      {cx:((200+rb1)/2).toFixed(1), name:'AKT I'},
+      {cx:((rb1+rb2)/2).toFixed(1), name:'AKT II'},
+      {cx:((rb2+rx(n-1))/2).toFixed(1), name:'AKT III'}
+    ];
+
+    // ---- 03 ASKS (dot matrix) ----
+    const askDefs = [
+      {name:'Långsiktig forskningsfinansiering', on:[0,2,4,5,8,12,16,18,21]},
+      {name:'Reform av kompetensförsörjningen', on:[1,4,5,7,10,14,15,17,19]},
+      {name:'Investera i dual-use-teknik', on:[7,9,10,12,16,20,21]},
+      {name:'Europeisk beredskap & stresstest', on:[7,8,9,11,13,18,21]},
+      {name:'Tydliga, stabila spelregler', on:[0,3,6,8,11,14,16,19,20]}
+    ];
+    const asks = askDefs.map(a => {
+      const set = new Set(a.on);
+      return {
+        name: a.name, count: a.on.length,
+        cells: Array.from({length:n}, (_,i) => set.has(i)
+          ? { size:'9px', bg:'#0E3A5E' }
+          : { size:'4px', bg:'#DDD3BE' })
+      };
+    });
+
+    // ---- 04 READABILITY ----
+    const lixVals = [42,41,43,42,44,43, 45,47,46,46,45,47,46,48,47, 49,50,49,51,50,52,51];
+    const lx = i => 40 + (i/(n-1))*940;
+    const lyMin = 38, lyMax = 54;
+    const ly = v => 210 - ((v-lyMin)/(lyMax-lyMin))*180;
+    const lpts = lixVals.map((v,i) => [lx(i), ly(v)]);
+    const lixBaseY = 210;
+    const actBars = [
+      {from:0,to:5, avg:42, words:'~380 ord', name:'AKT I'},
+      {from:6,to:14, avg:46, words:'~620 ord', name:'AKT II'},
+      {from:15,to:21, avg:50, words:'~980 ord', name:'AKT III'}
+    ];
+    const bars = actBars.map((a,k) => {
+      const x0 = lx(a.from) - 14, x1 = lx(a.to) + 14;
+      const yTop = ly(a.avg);
+      return { x:x0.toFixed(1), w:(x1-x0).toFixed(1), y:yTop.toFixed(1), h:(lixBaseY-yTop).toFixed(1),
+        fill: k===2 ? 'rgba(200,162,74,0.16)' : 'rgba(14,58,94,0.05)' };
+    });
+    const barLabels = actBars.map(a => ({
+      cx:((lx(a.from)+lx(a.to))/2).toFixed(1), val:'LIX '+a.avg, valY:(ly(a.avg)-12).toFixed(1),
+      name:a.name, words:a.words
+    }));
+    const lix = {
+      path: this.smooth(lpts), baseY: lixBaseY,
+      points: lpts.map(p => ({cx:p[0].toFixed(1), cy:p[1].toFixed(1)})),
+      bars, barLabels
+    };
+
+    return { tone, themes, themeActs, asks, lix };
+  }
+}
+</script>
+</body>
+</html>

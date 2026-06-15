@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:#0B0F14; }
+  ::selection { background:#E0A23C; color:#0B0F14; }
+</style>
+</helmet>
+<div style="background:#0B0F14; color:#C9D4DC; font-family:'IBM Plex Mono',monospace; min-height:100vh; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- HEADER (matches console) -->
+  <div style="position:sticky; top:0; z-index:50; background:#0D131A; border-bottom:1px solid #1E2730;">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 26px; gap:20px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <span style="color:{{ accent }}; font-size:15px;">◆</span>
+        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.06em; color:#EAF0F5;">IVA · VD-ORD</span>
+        <span style="font-size:10px; letter-spacing:0.22em; color:#5E6B76; border:1px solid #28323C; padding:3px 8px; border-radius:2px;">ÖVERSIKT</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:18px;">
+        <span style="font-size:10px; letter-spacing:0.1em; color:#5E6B76;">38 BREV · 18 MÅN</span>
+        <a href="Signal Console.dc.html" style="display:inline-flex; align-items:center; gap:7px; font-size:10px; letter-spacing:0.12em; color:#0B0F14; background:{{ accent }}; padding:6px 12px; border-radius:2px; text-decoration:none; font-weight:600;">ÖPPNA KONSOLEN →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div style="max-width:1120px; margin:0 auto; padding:74px 40px 30px;">
+    <div style="font-size:11px; letter-spacing:0.22em; color:{{ accent }}; margin-bottom:26px;">EN ANALYS AV SYLVIA SCHWAAG SERGERS VD-ORD · JAN 2025 – APR 2026</div>
+    <h1 style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(40px,6.4vw,82px); line-height:1.02; letter-spacing:-0.025em; color:#F2F6FA; margin:0 0 26px; max-width:16ch;">Rösten som <span style="color:{{ accent }};">växte fram</span></h1>
+    <p style="font-family:'Newsreader',serif; font-size:clamp(19px,2.2vw,24px); line-height:1.55; color:#9FACB6; max-width:56ch; margin:0;">Arton månader av VD-ord, lästa som en enda berättelse i tre akter. Vi mätte tonen, språket och de begrepp hon myntade — och lät datan visa hur en röst hittar, sätter och till sist kodifierar sin agenda.</p>
+  </div>
+
+  <!-- HERO ARC -->
+  <div style="max-width:1120px; margin:0 auto; padding:20px 40px 30px;">
+    <div style="border:1px solid #1E2730; border-radius:4px; background:linear-gradient(180deg,#0E141B,#0B0F14); padding:26px 28px 18px;">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:8px;">
+        <span style="font-size:11px; letter-spacing:0.14em; color:#8C98A3;">TONINDEX ÖVER TID <span style="color:#4F5C67;">— 38 brev</span></span>
+        <span style="font-size:10px; color:#5E6B76;">HÖGRE = MER AGENDASÄTTANDE</span>
+      </div>
+      <svg viewBox="0 0 1000 340" style="width:100%; height:auto; display:block; overflow:visible;">
+        <defs><linearGradient id="ofill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="{{ accent }}" stop-opacity="0.22"></stop><stop offset="100%" stop-color="{{ accent }}" stop-opacity="0"></stop></linearGradient></defs>
+        <line x1="40" y1="{{ arc.baseY }}" x2="980" y2="{{ arc.baseY }}" stroke="#1E2730"></line>
+        <line x1="40" y1="{{ arc.g1 }}" x2="980" y2="{{ arc.g1 }}" stroke="#141C24" stroke-dasharray="2 6"></line>
+        <line x1="40" y1="{{ arc.g2 }}" x2="980" y2="{{ arc.g2 }}" stroke="#141C24" stroke-dasharray="2 6"></line>
+        <sc-for list="{{ arc.dividers }}" as="d" hint-placeholder-count="2"><line x1="{{ d.x }}" y1="20" x2="{{ d.x }}" y2="{{ arc.baseY }}" stroke="#1A222B" stroke-dasharray="1 6"></line></sc-for>
+        <path d="{{ arc.area }}" fill="url(#ofill)"></path>
+        <path id="oline" d="{{ arc.path }}" fill="none" stroke="{{ accent }}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <sc-for list="{{ arc.points }}" as="p" hint-placeholder-count="38"><circle cx="{{ p.cx }}" cy="{{ p.cy }}" r="{{ p.r }}" fill="{{ p.fill }}" stroke="#0B0F14" stroke-width="1.4"></circle></sc-for>
+        <line x1="{{ arc.spikeX }}" y1="{{ arc.spikeY }}" x2="{{ arc.spikeX }}" y2="{{ arc.baseY }}" stroke="{{ accent }}" stroke-dasharray="2 4" opacity="0.6"></line>
+        <text x="{{ arc.spikeX }}" y="{{ arc.spikeLabelY }}" text-anchor="middle" style="font-family:'Archivo',sans-serif; font-weight:700; font-size:20px; fill:{{ accent }};"><tspan id="ospike">+13,8</tspan></text>
+        <text x="{{ arc.spikeX }}" y="{{ arc.spikeSubY }}" text-anchor="middle" style="font-family:'Newsreader',serif; font-style:italic; font-size:14px; fill:#C9D4DC;">Stresstest för Europa</text>
+        <sc-for list="{{ arc.acts }}" as="a" hint-placeholder-count="3">
+          <text x="{{ a.cx }}" y="322" text-anchor="middle" style="font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.16em; fill:{{ accent }};">{{ a.name }}</text>
+          <text x="{{ a.cx }}" y="337" text-anchor="middle" style="font-family:'Newsreader',serif; font-style:italic; font-size:12px; fill:#6E7B86;">{{ a.title }}</text>
+        </sc-for>
+      </svg>
+    </div>
+  </div>
+
+  <!-- HOW TO READ -->
+  <div style="max-width:1120px; margin:0 auto; padding:34px 40px 10px;">
+    <div style="font-size:11px; letter-spacing:0.16em; color:#8C98A3; margin-bottom:18px;">SÅ LÄSER DU DATAN <span style="color:#4F5C67;">— fyra mått, en metod</span></div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:#161F27; border:1px solid #161F27; border-radius:4px; overflow:hidden;">
+      <sc-for list="{{ defs }}" as="d" hint-placeholder-count="4">
+        <div style="background:#0C1219; padding:20px 20px 22px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:15px; color:#EAF0F5; margin-bottom:8px; display:flex; align-items:center; gap:8px;"><span style="color:{{ d.color }}; font-size:13px;">{{ d.glyph }}</span>{{ d.term }}</div>
+          <p style="font-size:12.5px; line-height:1.6; color:#8C98A3; margin:0;">{{ d.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- THREE ACTS -->
+  <div style="max-width:1120px; margin:0 auto; padding:44px 40px 10px;">
+    <div style="font-size:11px; letter-spacing:0.16em; color:#8C98A3; margin-bottom:20px;">BERÄTTELSEN I TRE AKTER</div>
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <sc-for list="{{ acts }}" as="a" hint-placeholder-count="3">
+        <div style="display:grid; grid-template-columns:84px 1fr 280px; gap:24px; align-items:center; border:1px solid #1E2730; border-radius:4px; background:#0E141B; padding:22px 24px;">
+          <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:54px; line-height:0.8; color:{{ accent }};">{{ a.num }}</div>
+          <div>
+            <div style="display:flex; align-items:baseline; gap:12px; margin-bottom:7px;">
+              <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:21px; color:#F2F6FA;">{{ a.title }}</span>
+              <span style="font-size:11px; color:#5E6B76;">{{ a.range }}</span>
+            </div>
+            <p style="font-size:13.5px; line-height:1.6; color:#9FACB6; margin:0; max-width:60ch;">{{ a.body }}</p>
+          </div>
+          <div style="display:flex; gap:0; border-left:1px solid #1E2730;">
+            <sc-for list="{{ a.stats }}" as="s" hint-placeholder-count="3">
+              <div style="flex:1; padding:0 14px;">
+                <div style="font-family:'Archivo',sans-serif; font-weight:600; font-size:19px; color:{{ s.color }}; font-variant-numeric:tabular-nums;">{{ s.val }}</div>
+                <div style="font-size:9px; letter-spacing:0.1em; color:#5E6B76; margin-top:5px;">{{ s.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- COINED TERMS STRIP -->
+  <div style="max-width:1120px; margin:0 auto; padding:40px 40px 10px;">
+    <div style="font-size:11px; letter-spacing:0.16em; color:#8C98A3; margin-bottom:16px;">BEGREPP HON MYNTADE</div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px;">
+      <sc-for list="{{ coined }}" as="c" hint-placeholder-count="5">
+        <div style="display:flex; align-items:baseline; gap:10px; border:1px solid #2A3540; background:#10171F; border-radius:3px; padding:10px 15px;">
+          <span style="font-family:'Newsreader',serif; font-style:italic; font-size:18px; color:#EAF0F5;">{{ c.term }}</span>
+          <span style="font-size:10px; color:#5E6B76;">{{ c.date }}</span>
+          <span style="font-size:11px; color:{{ accent }};">×{{ c.count }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- ENTER CONSOLE -->
+  <div style="max-width:1120px; margin:0 auto; padding:46px 40px 90px;">
+    <div style="border:1px solid #2A3540; border-radius:5px; background:linear-gradient(135deg,#12191F,#0C1117); padding:34px 34px 32px; display:grid; grid-template-columns:1fr 300px; gap:30px; align-items:center;">
+      <div>
+        <div style="font-size:11px; letter-spacing:0.16em; color:{{ accent }}; margin-bottom:12px;">SIGNALKONSOLEN <span style="color:#4F5C67;">— det analytiska verktyget</span></div>
+        <h2 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:26px; color:#F2F6FA; margin:0 0 14px; letter-spacing:-0.01em;">Gå från berättelse till bevis</h2>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; max-width:560px;">
+          <sc-for list="{{ features }}" as="f" hint-placeholder-count="4">
+            <div style="display:flex; gap:10px; align-items:flex-start; font-size:13px; line-height:1.5; color:#9FACB6;"><span style="color:{{ accent }};">→</span>{{ f }}</div>
+          </sc-for>
+        </div>
+      </div>
+      <a href="Signal Console.dc.html" style="display:flex; flex-direction:column; justify-content:center; gap:8px; text-decoration:none; background:{{ accent }}; color:#0B0F14; border-radius:4px; padding:24px 26px;">
+        <span style="font-size:10px; letter-spacing:0.16em; opacity:0.7;">38 BREV · 12 SIGNALER</span>
+        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:22px; display:flex; align-items:center; justify-content:space-between;">Öppna konsolen <span style="font-size:24px;">→</span></span>
+      </a>
+    </div>
+    <div style="font-size:10px; color:#3C4751; margin-top:18px;">Datasetet uppdateras med varje nytt VD-ord. Tonindex, LIX och termfrekvens beräknas automatiskt per brev.</div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E0A23C&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  smooth(pts){
+    if(pts.length<2) return '';
+    let d=`M ${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for(let i=0;i<pts.length-1;i++){
+      const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+      const c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6;
+      const c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;
+      d+=` C ${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+    }
+    return d;
+  }
+
+  renderVals(){
+    const accent=this.props.accent ?? '#E0A23C';
+    const blue='#6FA8DC';
+    const tone=[1.2,1.9,2.9,3.8,4.7,6.0, 6.4,7.1,13.8,10.6,9.4,10.1,9.0,9.1,10.3,9.6,8.8,8.2,7.9,7.6,7.2, 7.0,6.7,6.4,6.6,6.2,6.8,6.0,6.3,5.9,6.2,5.7,6.0,5.8,6.1,5.6,5.9,5.8];
+    const n=tone.length, tMax=15;
+    const x=i=>40+(i/(n-1))*940, y=t=>290-(t/tMax)*250;
+    const pts=tone.map((t,i)=>[x(i),y(t)]);
+    const path=this.smooth(pts);
+    const spikeI=8;
+    const b1=(x(5)+x(6))/2, b2=(x(20)+x(21))/2;
+    const arc={
+      path, area:path+` L ${x(n-1).toFixed(1)},290 L 40,290 Z`,
+      baseY:y(0).toFixed(1), g1:y(5).toFixed(1), g2:y(10).toFixed(1),
+      dividers:[{x:b1.toFixed(1)},{x:b2.toFixed(1)}],
+      points:tone.map((t,i)=>({cx:x(i).toFixed(1), cy:y(t).toFixed(1), r:t>=13?5:(i%2===0?2.6:2), fill:t>=13?accent:(t>=8?'#8FC0E6':blue)})),
+      spikeX:x(spikeI).toFixed(1), spikeY:y(13.8).toFixed(1), spikeLabelY:(y(13.8)-20).toFixed(1), spikeSubY:(y(13.8)-5).toFixed(1),
+      acts:[
+        {cx:((40+b1)/2).toFixed(1), name:'AKT I', title:'Att hitta rösten'},
+        {cx:((b1+b2)/2).toFixed(1), name:'AKT II', title:'Att sätta agendan'},
+        {cx:((b2+x(n-1))/2).toFixed(1), name:'AKT III', title:'Doktrinen'}
+      ]
+    };
+
+    const defs=[
+      {term:'Tonindex', glyph:'◆', color:accent, body:'Hur agendasättande och normativ rösten är, relativt akademiens basläge (0). Vi spårar det per brev och mening för mening.'},
+      {term:'LIX', glyph:'▤', color:blue, body:'Läsbarhetsindex. Högre = längre meningar och svårare ord. Stiger när breven blir essäer (≥ 50 = facktext).'},
+      {term:'Myntat begrepp', glyph:'❝', color:accent, body:'Ord och uttryck hon själv förde in i samtalet — stresstest, dual use, greenhushing — med första förekomst och frekvens.'},
+      {term:'”Vi” vs ”jag”', glyph:'⊕', color:blue, body:'Andelen kollektiva formuleringar. Stiger genom akterna — från personlig kommentar till institutionell doktrin.'}
+    ];
+
+    const acts=[
+      {num:'I', title:'Att hitta rösten', range:'JAN–MAR 2025', body:'Reaktiv kommentar och korta brev. Hon väger andras agendor mer än hon sätter sin egen — ett nytt ledarskap som prövar tonen i skrift.',
+       stats:[{val:'6', label:'BREV', color:'#EAF0F5'},{val:'+3,3', label:'SNITT-TON', color:accent},{val:'42', label:'SNITT-LIX', color:blue}]},
+      {num:'II', title:'Att sätta agendan', range:'APR–OKT 2025', body:'Vändpunkten. ”Stresstest för Europa” skjuter tonen i höjden, och hon myntar egna begrepp — dual use, greenhushing. Tonen kulminerar.',
+       stats:[{val:'15', label:'BREV', color:'#EAF0F5'},{val:'+9,8', label:'SNITT-TON', color:accent},{val:'46', label:'SNITT-LIX', color:blue}]},
+      {num:'III', title:'Doktrinen', range:'NOV 2025–APR 2026', body:'Essäserien ”IVAs vd — om X”. Formen skiftar från kommentar till doktrin: längre, mer uppbyggda texter. Tonen dämpas men tyngden ökar.',
+       stats:[{val:'17', label:'BREV', color:'#EAF0F5'},{val:'+6,1', label:'SNITT-TON', color:accent},{val:'50', label:'SNITT-LIX', color:blue}]}
+    ];
+
+    const coined=[
+      {term:'stresstest', date:'APR 2025', count:7},
+      {term:'dual use', date:'MAJ 2025', count:6},
+      {term:'greenhushing', date:'AUG 2025', count:5},
+      {term:'doktrin', date:'NOV 2025', count:8},
+      {term:'beredskapslucka', date:'DEC 2025', count:4}
+    ];
+
+    const features=[
+      'Bläddra alla 38 brev och borra ner i ett',
+      'Se tonen röra sig mening för mening',
+      'Jämför varje signal mot hela serien',
+      'Sortera, filtrera och exportera datasetet'
+    ];
+
+    return { accent, arc, defs, acts, coined, features };
+  }
+
+  componentDidMount(){
+    const reduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const line=document.getElementById('oline');
+    if(line && !reduced){
+      try{
+        const len=line.getTotalLength();
+        line.style.strokeDasharray=len; line.style.strokeDashoffset=len;
+        line.getBoundingClientRect();
+        requestAnimationFrame(()=>{ line.style.transition='stroke-dashoffset 2s cubic-bezier(.45,0,.15,1)'; line.style.strokeDashoffset='0'; });
+      }catch(e){}
+    }
+    const sp=document.getElementById('ospike');
+    if(sp && !reduced){
+      const t0=performance.now(), dur=1600;
+      const step=now=>{ const p=Math.min(1,(now-t0)/dur); const e=1-Math.pow(1-p,3); sp.textContent='+'+(13.8*e).toFixed(1).replace('.',','); if(p<1) requestAnimationFrame(step); };
+      setTimeout(()=>requestAnimationFrame(step),300);
+    }
+  }
+}
+</script>
+</body>
+</html>

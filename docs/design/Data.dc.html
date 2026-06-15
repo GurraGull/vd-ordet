@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:#F2ECDF; }
+  ::selection { background:#C8A24A; color:#14202B; }
+  table { border-collapse:collapse; width:100%; }
+  @media (max-width: 900px){ [data-twocol]{ grid-template-columns:1fr !important; } [data-hidesm]{ display:none !important; } }
+</style>
+</helmet>
+<div style="background:#F7F3EA; color:#16222E; font-family:'Newsreader',Georgia,serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- Masthead -->
+  <div style="position:sticky; top:0; z-index:40; background:rgba(247,243,234,0.86); backdrop-filter:blur(10px); border-bottom:1px solid #E2DAC8;">
+    <div style="max-width:1180px; margin:0 auto; padding:14px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <a href="Art Direction.dc.html" style="font-family:'Libre Franklin',sans-serif; font-weight:700; letter-spacing:0.14em; font-size:13px; color:#0E3A5E; text-decoration:none;">IVA</a>
+        <span style="font-family:'Libre Franklin',sans-serif; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; font-size:10.5px; color:#7A776C;">VD-ord · Appendix</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; font-family:'Libre Franklin',sans-serif; font-size:12.5px; letter-spacing:0.04em;">
+        <a href="Story.dc.html" style="color:#8A8576; text-decoration:none;" style-hover="color:#0E3A5E;">Berättelse</a>
+        <a href="Explore.dc.html" style="color:#8A8576; text-decoration:none;" style-hover="color:#0E3A5E;">Utforska</a>
+        <span style="color:#16222E; border-bottom:2px solid #C8A24A; padding-bottom:3px;">Data</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div style="max-width:1180px; margin:0 auto; padding:74px 40px 0;">
+    <div style="font-family:'Libre Franklin',sans-serif; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; color:#9A6A1E; margin-bottom:24px;">Appendix · Hela datasetet</div>
+    <h1 style="font-weight:400; font-size:clamp(38px,5.2vw,62px); line-height:1.05; letter-spacing:-0.02em; margin:0 0 22px; max-width:20ch;">Datat bakom <span style="font-style:italic; color:#0E3A5E;">rösten</span></h1>
+    <p style="font-size:20px; line-height:1.6; color:#45505B; max-width:62ch; margin:0;">När datan ska visas i sin helhet blir den ett register, inte ett instrumentbräde. Tabeller satta som en årsredovisning: tabellsiffror, hårfina linjer och små staplar i raden — läsbara på en skärm, exporterbara till ett blad.</p>
+  </div>
+
+  <!-- Stat band -->
+  <div style="max-width:1180px; margin:0 auto; padding:44px 40px 10px;">
+    <div style="display:flex; flex-wrap:wrap; border-top:2px solid #16222E; border-bottom:1px solid #E2DAC8;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="5">
+        <div style="flex:1; min-width:150px; padding:22px 24px 20px; border-right:1px solid #E7E0D0;">
+          <div style="font-family:'Newsreader',serif; font-size:42px; line-height:1; letter-spacing:-0.01em; color:#16222E; font-variant-numeric:tabular-nums;">{{ s.val }}</div>
+          <div style="font-family:'Libre Franklin',sans-serif; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#9A6A1E; margin-top:10px;">{{ s.label }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- MAIN LEDGER TABLE -->
+  <div style="max-width:1180px; margin:0 auto; padding:48px 40px 20px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:20px;">
+      <h2 style="font-weight:500; font-size:26px; letter-spacing:-0.01em; margin:0;">Registret över VD-ord</h2>
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A968B;">urval · 19 av 38 brev</span>
+    </div>
+
+    <table>
+      <thead>
+        <tr style="border-bottom:2px solid #16222E;">
+          <th scope="col" style="text-align:left; padding:0 12px 12px 0; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:38px;">№</th>
+          <th scope="col" style="text-align:left; padding:0 12px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:104px;">Datum</th>
+          <th scope="col" style="text-align:left; padding:0 14px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788;">Brevets titel</th>
+          <th scope="col" style="text-align:left; padding:0 12px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:188px;">Tonindex</th>
+          <th scope="col" style="text-align:left; padding:0 12px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:148px;">Myntat begrepp</th>
+          <th scope="col" data-hidesm style="text-align:left; padding:0 12px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:150px;">Teman</th>
+          <th scope="col" style="text-align:right; padding:0 0 12px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:58px;">LIX</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="19">
+          <sc-if value="{{ r.groupStart }}" hint-placeholder-val="{{ true }}">
+            <tr>
+              <td colspan="7" style="padding:26px 0 9px;">
+                <div style="display:flex; align-items:baseline; gap:12px;">
+                  <span style="font-family:'Newsreader',serif; font-style:italic; font-size:22px; color:#C8A24A; line-height:1;">{{ r.actNum }}</span>
+                  <span style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#9A6A1E;">Akt · {{ r.actTitle }}</span>
+                  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#B7AE98;">{{ r.actRange }}</span>
+                </div>
+              </td>
+            </tr>
+          </sc-if>
+          <tr style="border-bottom:1px solid #E7E0D0; background:{{ r.bg }};">
+            <td style="padding:13px 12px 13px 0; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#A9A493; font-variant-numeric:tabular-nums; vertical-align:baseline;">{{ r.num }}</td>
+            <td style="padding:13px 12px; font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:#5B6671; font-variant-numeric:tabular-nums; white-space:nowrap; vertical-align:baseline;">{{ r.date }}</td>
+            <td style="padding:13px 14px; vertical-align:baseline;">
+              <span style="font-family:'Newsreader',serif; font-size:17px; color:#16222E;">{{ r.title }}</span>
+              <sc-if value="{{ r.isSpike }}" hint-placeholder-val="{{ true }}"><span style="color:#C8A24A; font-size:13px; margin-left:7px;">★</span></sc-if>
+            </td>
+            <td style="padding:13px 12px; vertical-align:baseline;">
+              <div style="display:flex; align-items:center; gap:11px;">
+                <div style="position:relative; width:96px; height:6px; background:#ECE5D5; border-radius:3px; flex:none;">
+                  <div style="position:absolute; left:0; top:0; height:6px; border-radius:3px; width:{{ r.toneW }}; background:{{ r.toneColor }};"></div>
+                </div>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:{{ r.toneColor }}; font-variant-numeric:tabular-nums; font-weight:{{ r.toneWeight }};">{{ r.toneStr }}</span>
+              </div>
+            </td>
+            <td style="padding:13px 12px; vertical-align:baseline;">
+              <span style="font-family:'Newsreader',serif; font-style:italic; font-size:15px; color:{{ r.termColor }};">{{ r.termText }}</span>
+              <sc-if value="{{ r.isSeries }}" hint-placeholder-val="{{ true }}"><span style="font-family:'Libre Franklin',sans-serif; font-size:8.5px; letter-spacing:0.1em; text-transform:uppercase; color:#9CA9B4; margin-left:6px;">serie</span></sc-if>
+            </td>
+            <td data-hidesm style="padding:13px 12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A8576; vertical-align:baseline;">{{ r.themes }}</td>
+            <td style="padding:13px 0 13px 12px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:13px; color:#5B6671; font-variant-numeric:tabular-nums; vertical-align:baseline;">{{ r.lix }}</td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A9A493; margin-top:16px; line-height:1.6;">★ Tonindexets toppnotering. &nbsp; Tonindex mätt relativt akademiens basläge (0). &nbsp; LIX ≥ 50 = ”svår, facktext”.</div>
+  </div>
+
+  <!-- TWO TABLES -->
+  <div style="max-width:1180px; margin:0 auto; padding:44px 40px 20px;">
+    <div data-twocol style="display:grid; grid-template-columns:1.35fr 1fr; gap:50px; align-items:start;">
+
+      <!-- Lexikon -->
+      <div>
+        <h2 style="font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0 0 6px;">Lexikon — myntade begrepp</h2>
+        <p style="font-size:15px; line-height:1.6; color:#6B6759; margin:0 0 20px;">Begreppen hon själv förde in i samtalet, med första förekomst och hur ofta de återkommer.</p>
+        <table>
+          <thead>
+            <tr style="border-bottom:2px solid #16222E;">
+              <th scope="col" style="text-align:left; padding:0 12px 10px 0; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788;">Begrepp</th>
+              <th scope="col" style="text-align:left; padding:0 12px 10px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:96px;">Intro</th>
+              <th scope="col" style="text-align:right; padding:0 0 10px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:64px;">Brev</th>
+            </tr>
+          </thead>
+          <tbody>
+            <sc-for list="{{ lexikon }}" as="t" hint-placeholder-count="5">
+              <tr style="border-bottom:1px solid #E7E0D0;">
+                <td style="padding:14px 12px 14px 0; vertical-align:top;">
+                  <div style="font-family:'Newsreader',serif; font-style:italic; font-size:18px; color:#16222E;">{{ t.term }}</div>
+                  <div style="font-size:13.5px; line-height:1.5; color:#6B6759; margin-top:3px; max-width:42ch;">{{ t.def }}</div>
+                </td>
+                <td style="padding:14px 12px; font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:#5B6671; white-space:nowrap; vertical-align:top;">{{ t.intro }}<div style="font-size:10px; color:#A9A493; margin-top:3px;">Akt {{ t.act }}</div></td>
+                <td style="padding:14px 0 14px 12px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:14px; color:#0E3A5E; font-variant-numeric:tabular-nums; vertical-align:top;">{{ t.count }}</td>
+              </tr>
+            </sc-for>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Topp 5 -->
+      <div>
+        <h2 style="font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0 0 6px;">Topp 5 efter ton</h2>
+        <p style="font-size:15px; line-height:1.6; color:#6B6759; margin:0 0 20px;">De mest agendasättande breven.</p>
+        <div style="display:flex; flex-direction:column;">
+          <sc-for list="{{ topp }}" as="p" hint-placeholder-count="5">
+            <div style="display:flex; align-items:center; gap:16px; padding:15px 0; border-bottom:1px solid #E7E0D0;">
+              <span style="font-family:'Newsreader',serif; font-size:26px; color:#C8A24A; width:26px; flex:none; font-variant-numeric:tabular-nums;">{{ p.rank }}</span>
+              <div style="flex:1; min-width:0;">
+                <div style="font-family:'Newsreader',serif; font-size:16px; color:#16222E; line-height:1.2; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ p.title }}</div>
+                <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A9A493; margin-top:3px;">{{ p.date }}</div>
+              </div>
+              <span style="font-family:'IBM Plex Mono',monospace; font-size:15px; color:#0E3A5E; font-variant-numeric:tabular-nums; flex:none;">{{ p.toneStr }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PER-ACT SUMMARY -->
+  <div style="max-width:1180px; margin:0 auto; padding:44px 40px 20px;">
+    <h2 style="font-weight:500; font-size:24px; letter-spacing:-0.01em; margin:0 0 20px;">Sammanfattning per akt</h2>
+    <table>
+      <thead>
+        <tr style="border-bottom:2px solid #16222E;">
+          <th scope="col" style="text-align:left; padding:0 12px 10px 0; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:230px;">Akt</th>
+          <th scope="col" style="text-align:left; padding:0 12px 10px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788;">Period</th>
+          <th scope="col" style="text-align:right; padding:0 12px 10px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:60px;">Brev</th>
+          <th scope="col" style="text-align:left; padding:0 12px 10px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:230px;">Tonspann (snitt)</th>
+          <th scope="col" style="text-align:right; padding:0 0 10px 12px; font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#9C9788; width:90px;">Snitt-LIX</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ perAct }}" as="a" hint-placeholder-count="3">
+          <tr style="border-bottom:1px solid #E7E0D0;">
+            <td style="padding:16px 12px 16px 0; vertical-align:middle;">
+              <div style="display:flex; align-items:baseline; gap:11px;">
+                <span style="font-family:'Newsreader',serif; font-style:italic; font-size:22px; color:#C8A24A;">{{ a.num }}</span>
+                <span style="font-family:'Newsreader',serif; font-size:18px; color:#16222E;">{{ a.title }}</span>
+              </div>
+            </td>
+            <td style="padding:16px 12px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5B6671; vertical-align:middle;">{{ a.period }}</td>
+            <td style="padding:16px 12px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:13px; color:#5B6671; font-variant-numeric:tabular-nums; vertical-align:middle;">{{ a.count }}</td>
+            <td style="padding:16px 12px; vertical-align:middle;">
+              <div style="display:flex; align-items:center; gap:11px;">
+                <div style="position:relative; width:120px; height:6px; background:#ECE5D5; border-radius:3px; flex:none;">
+                  <div style="position:absolute; top:0; height:6px; border-radius:3px; left:{{ a.spanL }}; width:{{ a.spanW }}; background:#D9C28F;"></div>
+                  <div style="position:absolute; top:-2px; width:2px; height:10px; left:{{ a.avgX }}; background:#0E3A5E;"></div>
+                </div>
+                <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#5B6671; font-variant-numeric:tabular-nums;">{{ a.spanStr }}</span>
+              </div>
+            </td>
+            <td style="padding:16px 0 16px 12px; text-align:right; font-family:'IBM Plex Mono',monospace; font-size:14px; color:#0E3A5E; font-variant-numeric:tabular-nums; vertical-align:middle;">{{ a.lix }}</td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A9A493; margin-top:14px;">Stapel = tonspann · blå markör = snitt. Siffror för hela datasetet (38 brev).</div>
+  </div>
+
+  <!-- footer -->
+  <div style="max-width:1180px; margin:0 auto; padding:40px 40px 110px;">
+    <div style="height:1px; background:#E2DAC8; margin-bottom:24px;"></div>
+    <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#9A968B;">Exporterbar till CSV / Excel · varje rad ett VD-ord</span>
+      <a href="Explore.dc.html" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; background:#FBF6E9; color:#16222E; border:1px solid #D8C28A; font-family:'Libre Franklin',sans-serif; font-size:13px; letter-spacing:0.04em; padding:13px 22px; border-radius:3px;"><span>←</span> Tillbaka till essän</a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const L = [
+      {num:'01', date:'17 jan 2025', title:'Ett nytt år, en ny röst', t:1.2, term:null, kind:null, themes:'Kompetens', lix:42, act:'I'},
+      {num:'02', date:'31 jan 2025', title:'Vad förväntas av en akademi?', t:1.8, term:null, kind:null, themes:'Kompetens · Innovation', lix:41, act:'I'},
+      {num:'03', date:'14 feb 2025', title:'Forskningen och försvaret', t:2.9, term:null, kind:null, themes:'Säkerhet', lix:43, act:'I'},
+      {num:'04', date:'28 feb 2025', title:'Kompetensbristen som inte syns', t:4.0, term:null, kind:null, themes:'Kompetens', lix:42, act:'I'},
+      {num:'05', date:'14 mar 2025', title:'Mellan reaktion och regelverk', t:5.2, term:null, kind:null, themes:'Innovation', lix:44, act:'I'},
+      {num:'08', date:'11 apr 2025', title:'Inför ett spänt Europa', t:6.4, term:null, kind:null, themes:'Europa', lix:45, act:'II'},
+      {num:'09', date:'25 apr 2025', title:'Stresstest för Europa', t:13.8, term:'stresstest', kind:'mynt', themes:'Säkerhet · Europa', lix:47, act:'II'},
+      {num:'10', date:'09 maj 2025', title:'Efter stormen', t:10.4, term:null, kind:null, themes:'Europa', lix:46, act:'II'},
+      {num:'11', date:'23 maj 2025', title:'Tekniken som tjänar två herrar', t:9.4, term:'dual use', kind:'mynt', themes:'Innovation · Säkerhet', lix:46, act:'II'},
+      {num:'12', date:'13 jun 2025', title:'Investera i det dubbla', t:10.1, term:null, kind:null, themes:'Innovation', lix:45, act:'II'},
+      {num:'15', date:'15 aug 2025', title:'Det tysta klimatet', t:9.1, term:'greenhushing', kind:'mynt', themes:'Klimat', lix:47, act:'II'},
+      {num:'16', date:'12 sep 2025', title:'Greenhushing och dess pris', t:10.3, term:null, kind:null, themes:'Klimat', lix:46, act:'II'},
+      {num:'17', date:'26 sep 2025', title:'Kompetens i en osäker tid', t:9.6, term:null, kind:null, themes:'Kompetens', lix:48, act:'II'},
+      {num:'18', date:'10 okt 2025', title:'Att hålla kursen', t:8.8, term:null, kind:null, themes:'Säkerhet', lix:47, act:'II'},
+      {num:'21', date:'07 nov 2025', title:'IVAs vd — om kompetens', t:7.0, term:'om kompetens', kind:'serie', themes:'Kompetens', lix:49, act:'III'},
+      {num:'24', date:'12 dec 2025', title:'IVAs vd — om beredskap', t:6.8, term:'om beredskap', kind:'serie', themes:'Säkerhet', lix:50, act:'III'},
+      {num:'27', date:'16 jan 2026', title:'IVAs vd — om innovation', t:6.0, term:'om innovation', kind:'serie', themes:'Innovation', lix:49, act:'III'},
+      {num:'31', date:'13 mar 2026', title:'IVAs vd — om tillit', t:6.2, term:'om tillit', kind:'serie', themes:'Kompetens', lix:52, act:'III'},
+      {num:'33', date:'10 apr 2026', title:'IVAs vd — om Europa', t:5.8, term:'om Europa', kind:'serie', themes:'Europa', lix:51, act:'III'}
+    ];
+
+    const actMeta = {
+      I:   {numr:'I',   title:'Att hitta rösten', range:'Jan–Mar 2025'},
+      II:  {numr:'II',  title:'Att sätta agendan', range:'Apr–Okt 2025'},
+      III: {numr:'III', title:'Doktrinen',         range:'Nov 2025–Apr 2026'}
+    };
+
+    const fmtTone = t => (t>=0?'+':'') + t.toFixed(1).replace('.', ',');
+    const tMax = 14;
+    let lastAct = null;
+    const rows = L.map(o => {
+      const groupStart = o.act !== lastAct; lastAct = o.act;
+      const m = actMeta[o.act];
+      const spike = o.t >= 13;
+      const series = o.kind === 'serie';
+      return {
+        ...o,
+        groupStart,
+        actNum: m.numr, actTitle: m.title, actRange: m.range,
+        isSpike: spike,
+        toneStr: fmtTone(o.t),
+        toneW: Math.min(100, (o.t/tMax)*100).toFixed(0) + '%',
+        toneColor: spike ? '#C8A24A' : '#0E3A5E',
+        toneWeight: spike ? 500 : 400,
+        bg: spike ? '#FBF6E9' : 'transparent',
+        hasTerm: !!o.term,
+        isSeries: series,
+        termText: o.term || '—',
+        termColor: o.term ? (series ? '#2E6E9E' : '#9A6A1E') : '#C7C0AE'
+      };
+    });
+
+    const stats = [
+      {val:'38', label:'VD-ord'},
+      {val:'18', label:'Månader'},
+      {val:'+13,8', label:'Topp-ton'},
+      {val:'9', label:'Myntade begrepp'},
+      {val:'42→51', label:'LIX-spann'}
+    ];
+
+    const lexikon = [
+      {term:'stresstest', def:'Att pröva ett systems motståndskraft mot framtida chocker — lånat från bankvärlden.', intro:'25 apr 2025', act:'II', count:7},
+      {term:'dual use', def:'Teknik med både civil och militär användning; två sidor av samma investering.', intro:'23 maj 2025', act:'II', count:6},
+      {term:'greenhushing', def:'När företag tonar ned sitt klimatarbete av rädsla för granskning.', intro:'15 aug 2025', act:'II', count:5},
+      {term:'doktrin', def:'Ett sammanhängande, begripligt ramverk som håller över tid.', intro:'07 nov 2025', act:'III', count:8},
+      {term:'beredskapslucka', def:'Gapet mellan Sveriges uttalade ambitioner och dess faktiska förmåga.', intro:'12 dec 2025', act:'III', count:4}
+    ];
+
+    const topp = L.slice().sort((a,b) => b.t - a.t).slice(0,5).map((o,i) => ({
+      rank: i+1, title: o.title, date: o.date, toneStr: fmtTone(o.t)
+    }));
+
+    // per-act bar: tone span mapped to 0..14 over 120px track
+    const span = (lo, hi, avg) => {
+      const px = v => (v/tMax)*120;
+      return { spanL: px(lo).toFixed(0)+'px', spanW: (px(hi)-px(lo)).toFixed(0)+'px', avgX: px(avg).toFixed(0)+'px',
+        spanStr: fmtTone(lo)+'–'+fmtTone(hi) };
+    };
+    const perAct = [
+      {num:'I',   title:'Att hitta rösten', period:'Jan–Mar 2025', count:6,  lix:42, ...span(1.2,6.0,3.2)},
+      {num:'II',  title:'Att sätta agendan', period:'Apr–Okt 2025', count:22, lix:46, ...span(6.4,13.8,9.8)},
+      {num:'III', title:'Doktrinen',         period:'Nov 2025–Apr 2026', count:10, lix:50, ...span(5.6,7.0,6.3)}
+    ];
+
+    return { rows, stats, lexikon, topp, perAct };
+  }
+}
+</script>
+</body>
+</html>

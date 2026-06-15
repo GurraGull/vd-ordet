@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:#F2ECDF; }
+  ::selection { background:#C8A24A; color:#14202B; }
+  @media (max-width: 1120px){ #spine { display:none !important; } }
+</style>
+</helmet>
+<div style="background:#F7F3EA; color:#16222E; font-family:'Newsreader',Georgia,serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
+
+  <!-- Masthead -->
+  <div style="position:sticky; top:0; z-index:40; background:rgba(247,243,234,0.86); backdrop-filter:blur(10px); border-bottom:1px solid #E2DAC8;">
+    <div style="max-width:1180px; margin:0 auto; padding:14px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <a href="Art Direction.dc.html" style="font-family:'Libre Franklin',sans-serif; font-weight:700; letter-spacing:0.14em; font-size:13px; color:#0E3A5E; text-decoration:none;">IVA</a>
+        <span style="font-family:'Libre Franklin',sans-serif; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; font-size:10.5px; color:#7A776C;">VD-ord · En läsning</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; font-family:'Libre Franklin',sans-serif; font-size:12.5px; letter-spacing:0.04em;">
+        <span style="color:#16222E; border-bottom:2px solid #C8A24A; padding-bottom:3px;">Berättelse</span>
+        <a href="Explore.dc.html" style="color:#8A8576; text-decoration:none;" style-hover="color:#0E3A5E;">Utforska</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed scroll spine -->
+  <div id="spine" style="position:fixed; left:20px; top:0; height:100vh; width:118px; z-index:20; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; pointer-events:none; padding-top:60px;">
+    <div style="margin-bottom:18px; padding-left:6px;">
+      <div id="spine-act" style="font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:#9A6A1E;">Akt I</div>
+      <div style="display:flex; align-items:baseline; gap:5px; margin-top:3px;">
+        <span style="font-family:'Libre Franklin',sans-serif; font-size:8.5px; letter-spacing:0.1em; text-transform:uppercase; color:#A9A493;">Ton</span>
+        <span id="spine-tone" style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#0E3A5E;">+1,2</span>
+      </div>
+    </div>
+    <svg viewBox="0 0 80 560" style="width:96px; height:62vh; overflow:visible;">
+      <path id="spinepath" d="{{ spinePath }}" fill="none" stroke="#DDD3BE" stroke-width="2" stroke-linecap="round"></path>
+      <sc-for list="{{ spineActs }}" as="s" hint-placeholder-count="3">
+        <text x="6" y="{{ s.y }}" style="font-family:'IBM Plex Mono',monospace; font-size:9px; fill:#B7AE98;">{{ s.name }}</text>
+      </sc-for>
+      <circle id="spinedot" cx="40" cy="24" r="5" fill="#C8A24A" stroke="#F7F3EA" stroke-width="2.5"></circle>
+    </svg>
+  </div>
+
+  <!-- HERO -->
+  <div style="max-width:1080px; margin:0 auto; padding:84px 40px 30px; text-align:center;">
+    <div style="font-family:'Libre Franklin',sans-serif; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; color:#9A6A1E; margin-bottom:26px;">38 VD-ord &nbsp;·&nbsp; Januari 2025 – April 2026</div>
+    <h1 style="font-weight:400; font-size:clamp(42px,7vw,86px); line-height:1.04; letter-spacing:-0.025em; margin:0 auto 26px; max-width:14ch;">Rösten som <span style="font-style:italic; color:#0E3A5E;">växte fram</span></h1>
+    <p style="font-size:clamp(19px,2.2vw,24px); line-height:1.6; color:#45505B; max-width:58ch; margin:0 auto;">Arton månader av Sylvia Schwaag Sergers VD-ord, läst som en enda berättelse i tre akter. Ett tonindex stiger, kulminerar vid ett enda brev — och lägger sig sedan i en doktrin.</p>
+  </div>
+
+  <!-- HERO ARC -->
+  <div style="max-width:1080px; margin:0 auto; padding:18px 40px 40px;">
+    <div style="position:relative;">
+      <svg viewBox="0 0 1000 380" style="width:100%; height:auto; display:block; overflow:visible;">
+        <defs>
+          <linearGradient id="arcfill" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#C8A24A" stop-opacity="0.18"></stop>
+            <stop offset="100%" stop-color="#C8A24A" stop-opacity="0"></stop>
+          </linearGradient>
+        </defs>
+        <!-- gridlines -->
+        <line x1="40" y1="{{ baseY }}" x2="960" y2="{{ baseY }}" stroke="#E2DAC8" stroke-width="1"></line>
+        <line x1="40" y1="{{ gridY1 }}" x2="960" y2="{{ gridY1 }}" stroke="#ECE5D5" stroke-width="1" stroke-dasharray="2 5"></line>
+        <line x1="40" y1="{{ gridY2 }}" x2="960" y2="{{ gridY2 }}" stroke="#ECE5D5" stroke-width="1" stroke-dasharray="2 5"></line>
+        <!-- act dividers -->
+        <sc-for list="{{ dividers }}" as="d" hint-placeholder-count="2">
+          <line x1="{{ d.x }}" y1="40" x2="{{ d.x }}" y2="{{ baseY }}" stroke="#E2DAC8" stroke-width="1" stroke-dasharray="1 6"></line>
+        </sc-for>
+        <!-- area + line -->
+        <path d="{{ heroArea }}" fill="url(#arcfill)"></path>
+        <path id="heroline" d="{{ heroPath }}" fill="none" stroke="#C8A24A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <!-- points -->
+        <sc-for list="{{ heroPoints }}" as="p" hint-placeholder-count="22">
+          <circle id="hp-{{ $index }}" cx="{{ p.cx }}" cy="{{ p.cy }}" r="{{ p.r }}" fill="{{ p.fill }}" stroke="#F7F3EA" stroke-width="1.4"></circle>
+        </sc-for>
+        <!-- spike annotation -->
+        <line x1="{{ spikeX }}" y1="{{ spikeY }}" x2="{{ spikeX }}" y2="{{ baseY }}" stroke="#C8A24A" stroke-width="1" stroke-dasharray="2 4"></line>
+        <text x="{{ spikeX }}" y="{{ spikeLabelY }}" text-anchor="middle" style="font-family:'IBM Plex Mono',monospace; font-size:21px; font-weight:500; fill:#9A6A1E;"><tspan id="spikeval">+13,8</tspan></text>
+        <text x="{{ spikeX }}" y="{{ spikeSubY }}" text-anchor="middle" style="font-family:'Newsreader',serif; font-style:italic; font-size:15px; fill:#16222E;">Stresstest för Europa</text>
+        <!-- act labels -->
+        <sc-for list="{{ actLabels }}" as="a" hint-placeholder-count="3">
+          <text x="{{ a.cx }}" y="362" text-anchor="middle" style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.16em; fill:#9A6A1E;">{{ a.name }}</text>
+          <text x="{{ a.cx }}" y="377" text-anchor="middle" style="font-family:'Newsreader',serif; font-style:italic; font-size:12px; fill:#8A8576;">{{ a.title }}</text>
+        </sc-for>
+        <!-- y label -->
+        <text x="40" y="48" style="font-family:'Libre Franklin',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase; fill:#B7AE98;">Tonindex</text>
+      </svg>
+    </div>
+    <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-top:18px; font-family:'Libre Franklin',sans-serif; font-size:12px; color:#8A8576;">
+      <span style="width:22px; height:2.5px; background:#C8A24A; display:inline-block;"></span>
+      Tonindex relativt akademiens basläge · högre = mer agendasättande och normativ ton
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <div style="text-align:center; padding:14px 0 40px;">
+    <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#B0A88F;">Läs berättelsen ↓</div>
+  </div>
+
+  <!-- NARRATIVE BEATS -->
+  <div style="max-width:720px; margin:0 auto; padding:0 28px 140px;">
+    <sc-for list="{{ beats }}" as="b" hint-placeholder-count="8">
+
+      <sc-if value="{{ b.hasActStart }}" hint-placeholder-val="{{ true }}">
+        <div style="border-top:2px solid #16222E; margin-top:78px; padding-top:30px; margin-bottom:54px;">
+          <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:14px;">
+            <span style="font-family:'Newsreader',serif; font-style:italic; font-size:54px; line-height:0.8; color:#C8A24A;">{{ b.asNum }}</span>
+            <div>
+              <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#9A6A1E; margin-bottom:6px;">Akt · {{ b.asRange }}</div>
+              <h2 style="font-weight:400; font-size:38px; line-height:1.05; letter-spacing:-0.015em; margin:0;">{{ b.asTitle }}</h2>
+            </div>
+          </div>
+          <p style="font-size:18px; line-height:1.65; color:#55606B; margin:0; max-width:54ch;">{{ b.asBlurb }}</p>
+        </div>
+      </sc-if>
+
+      <div data-beat="{{ b.idx }}" data-arc="{{ b.arc }}" data-act="{{ b.act }}" data-tone="{{ b.toneStr }}" style="padding:34px 0; border-bottom:1px solid #E7E0D0;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-family:'Libre Franklin',sans-serif; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:#9A6A1E;">{{ b.act }}</span>
+            <span style="width:4px; height:4px; border-radius:50%; background:#CDBF9B;"></span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A8576;">{{ b.date }}</span>
+          </div>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0E3A5E; display:inline-flex; gap:6px; align-items:center;"><span style="font-size:9px; letter-spacing:0.08em; color:#A9A493; text-transform:uppercase;">Ton</span>{{ b.toneStr }}</span>
+        </div>
+        <h3 style="font-weight:500; font-size:30px; line-height:1.12; letter-spacing:-0.015em; margin:0 0 16px;">{{ b.title }}</h3>
+        <p style="font-size:18px; line-height:1.72; color:#45505B; margin:0 0 24px;">{{ b.thesis }}</p>
+        <div style="border-left:2px solid #C8A24A; padding:2px 0 2px 22px; margin:0 0 22px;">
+          <div style="font-family:'Newsreader',serif; font-style:italic; font-size:24px; line-height:1.42; color:#16222E;">{{ b.quote }}</div>
+        </div>
+        <sc-if value="{{ b.hasTerm }}" hint-placeholder-val="{{ true }}">
+          <span style="display:inline-flex; align-items:center; gap:9px; border:1px solid #D8C28A; background:#FBF6E9; border-radius:100px; padding:6px 15px; white-space:nowrap;">
+            <span style="font-family:'Libre Franklin',sans-serif; font-size:9.5px; text-transform:uppercase; letter-spacing:0.12em; color:#9A6A1E;">{{ b.termKind }}</span>
+            <span style="font-family:'Newsreader',serif; font-style:italic; font-size:16px; color:#16222E;">{{ b.term }}</span>
+          </span>
+        </sc-if>
+      </div>
+
+    </sc-for>
+
+    <!-- Coda -->
+    <div style="text-align:center; padding-top:70px;">
+      <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#9A6A1E; margin-bottom:18px;">Slutet är en början</div>
+      <p style="font-family:'Newsreader',serif; font-style:italic; font-size:26px; line-height:1.5; color:#16222E; max-width:30ch; margin:0 auto 30px;">Tonen har lagt sig. Men doktrinen fortsätter — ett brev i taget.</p>
+      <a href="Explore.dc.html" style="display:inline-flex; align-items:center; gap:10px; text-decoration:none; background:#0E3A5E; color:#F3F7FA; font-family:'Libre Franklin',sans-serif; font-size:13px; letter-spacing:0.04em; padding:14px 24px; border-radius:3px;">Utforska datan bakom rösten <span>→</span></a>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  get L() {
+    return [
+      {t:1.2,a:'I'},{t:1.8,a:'I'},{t:2.6,a:'I'},{t:3.6,a:'I'},{t:5.2,a:'I'},{t:6.0,a:'I'},
+      {t:6.4,a:'II'},{t:13.8,a:'II'},{t:10.4,a:'II'},{t:9.4,a:'II'},{t:10.1,a:'II'},{t:9.1,a:'II'},{t:10.3,a:'II'},{t:9.6,a:'II'},{t:8.8,a:'II'},
+      {t:7.0,a:'III'},{t:6.4,a:'III'},{t:6.8,a:'III'},{t:6.0,a:'III'},{t:5.6,a:'III'},{t:6.2,a:'III'},{t:5.8,a:'III'}
+    ];
+  }
+  get B() {
+    return [
+      {arc:0, act:'Akt I', date:'17 jan 2025', t:1.2, title:'Ett nytt år — och en röst att hitta',
+       thesis:'De första VD-orden är korta och försiktiga. Schwaag Serger kommenterar andras agendor mer än hon sätter sin egen — ett nytt ledarskap som prövar tonen i skrift.',
+       quote:'”Jag skriver för att förstå, inte för att förkunna.”',
+       term:null, termKind:null,
+       actStart:{num:'I', title:'Att hitta rösten', range:'Januari–Mars 2025', blurb:'Reaktiv kommentar, korta brev, en röst som söker sig fram.'}},
+      {arc:4, act:'Akt I', date:'14 mar 2025', t:5.2, title:'Mellan reaktion och regelverk',
+       thesis:'Breven blir längre. Hon väger in egna omdömen om kompetensförsörjning och forskningspolitik, men håller sig nära den dagordning som andra redan satt.',
+       quote:'”Det räcker inte att förvalta en ställning. Den måste förtjänas på nytt.”',
+       term:null, termKind:null},
+      {arc:7, act:'Akt II', date:'25 apr 2025', t:13.8, title:'Stresstest för Europa',
+       thesis:'Vändpunkten. Hon lånar bankvärldens språk och vänder det mot kontinentens beredskap: om finansiella system kan stresstestas, varför inte Europas innovationskraft, kompetens och försvarsförmåga? Brevet får stort genomslag och tonindexet skjuter i höjden.',
+       quote:'”Vi måste sluta förvalta nuet och börja stresstesta framtiden.”',
+       term:'stresstest', termKind:'Myntat begrepp',
+       actStart:{num:'II', title:'Att sätta agendan', range:'April–Oktober 2025', blurb:'Hon myntar egna begrepp och sätter villkoren för samtalet. Tonen kulminerar.'}},
+      {arc:9, act:'Akt II', date:'23 maj 2025', t:9.4, title:'Tekniken som tjänar två herrar',
+       thesis:'Med dragkraften från stresstestet introducerar hon dual use som ett svenskt samtalsbegrepp — civil och militär teknik som två sidor av samma investering.',
+       quote:'”Det vi bygger för fred måste också kunna värna den.”',
+       term:'dual use', termKind:'Myntat begrepp'},
+      {arc:11, act:'Akt II', date:'15 aug 2025', t:9.1, title:'Det tysta klimatet',
+       thesis:'Efter sommaren namnger hon greenhushing — företagen som tonar ned sitt klimatarbete av rädsla för granskning. Ett begrepp som fångar ett skifte i näringslivets språk.',
+       quote:'”När tystnaden blir strategi förlorar både klimatet och tilliten.”',
+       term:'greenhushing', termKind:'Myntat begrepp'},
+      {arc:15, act:'Akt III', date:'7 nov 2025', t:7.0, title:'IVAs vd — om kompetens',
+       thesis:'Den första i essäserien. Formen skiftar från kommentar till doktrin: längre, mer uppbyggda texter under ett gemensamt namn. Tonen dämpas men tyngden ökar.',
+       quote:'”En doktrin är inte att ha rätt. Det är att vara begriplig över tid.”',
+       term:'om kompetens', termKind:'Essäserie',
+       actStart:{num:'III', title:'Doktrinen', range:'November 2025–April 2026', blurb:'Essäserien ”IVAs vd — om X”. Doktrinbygge och en mer nyanserad ton.'}},
+      {arc:20, act:'Akt III', date:'13 mar 2026', t:6.2, title:'IVAs vd — om tillit',
+       thesis:'Doktrinen mognar. Hon prövar sina egna begrepp mot verkligheten och erkänner deras gränser — en mer nyanserad röst som vågar tveka.',
+       quote:'”Tillit byggs i det långsamma. Den kan rivas i en enda mening.”',
+       term:'om tillit', termKind:'Essäserie'},
+      {arc:21, act:'Akt III', date:'10 apr 2026', t:5.8, title:'IVAs vd — om Europa',
+       thesis:'Ett medvetet eko av stresstestet, ett år senare. Samma ämne, lugnare puls: agendan är satt, nu ska den förvaltas med precision snarare än kraft.',
+       quote:'”Det brådskande ropade. Det viktiga viskar.”',
+       term:'om Europa', termKind:'Essäserie'}
+    ];
+  }
+
+  smooth(pts) {
+    if (pts.length < 2) return '';
+    let d = `M ${pts[0][0]},${pts[0][1]}`;
+    for (let i = 0; i < pts.length - 1; i++) {
+      const p0 = pts[i-1] || pts[i], p1 = pts[i], p2 = pts[i+1], p3 = pts[i+2] || p2;
+      const c1x = p1[0] + (p2[0]-p0[0])/6, c1y = p1[1] + (p2[1]-p0[1])/6;
+      const c2x = p2[0] - (p3[0]-p1[0])/6, c2y = p2[1] - (p3[1]-p1[1])/6;
+      d += ` C ${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+    }
+    return d;
+  }
+
+  renderVals() {
+    const L = this.L, n = L.length, tMax = 15;
+    const x = i => 40 + (i/(n-1))*920;
+    const y = t => 320 - (t/tMax)*265;
+    const pts = L.map((o,i) => [x(i), y(o.t)]);
+    const heroPath = this.smooth(pts);
+    const heroArea = heroPath + ` L ${x(n-1).toFixed(1)},320 L ${x(0).toFixed(1)},320 Z`;
+
+    const b1end = (x(5)+x(6))/2, b2end = (x(14)+x(15))/2;
+    const dividers = [{x:b1end.toFixed(1)},{x:b2end.toFixed(1)}];
+    const actLabels = [
+      {cx:((40+b1end)/2).toFixed(1), name:'AKT I', title:'Att hitta rösten'},
+      {cx:((b1end+b2end)/2).toFixed(1), name:'AKT II', title:'Att sätta agendan'},
+      {cx:((b2end+x(n-1))/2).toFixed(1), name:'AKT III', title:'Doktrinen'}
+    ];
+
+    const beatArcs = new Set(this.B.map(b => b.arc));
+    const heroPoints = L.map((o,i) => {
+      const spike = o.t >= 13;
+      const big = beatArcs.has(i);
+      return {
+        cx: x(i).toFixed(1), cy: y(o.t).toFixed(1),
+        r: spike ? 5 : (big ? 3.6 : 2),
+        fill: spike ? '#C8A24A' : (big ? '#0E3A5E' : '#C3CBD0')
+      };
+    });
+
+    const spikeX = x(7), spikeY = y(13.8);
+    const sH = 560, sy = i => 24 + (i/(n-1))*512, sx = t => 30 + (t/tMax)*42;
+    const spinePath = this.smooth(L.map((o,i) => [sx(o.t), sy(i)]));
+    const spineActs = [
+      {y:(sy(2)+4).toFixed(1), name:'I'},
+      {y:(sy(10)+4).toFixed(1), name:'II'},
+      {y:(sy(19)+4).toFixed(1), name:'III'}
+    ];
+
+    const beats = this.B.map((b,i) => ({
+      ...b, idx:i,
+      toneStr: (b.t>=0?'+':'') + b.t.toFixed(1).replace('.',','),
+      hasTerm: !!b.term, term: b.term, termKind: b.termKind,
+      hasActStart: !!b.actStart,
+      asNum: b.actStart?.num, asTitle: b.actStart?.title, asRange: b.actStart?.range, asBlurb: b.actStart?.blurb
+    }));
+
+    return {
+      heroPath, heroArea, heroPoints, dividers, actLabels,
+      baseY: y(0).toFixed(1), gridY1: y(5).toFixed(1), gridY2: y(10).toFixed(1),
+      spikeX: spikeX.toFixed(1), spikeY: spikeY.toFixed(1),
+      spikeLabelY: (spikeY-18).toFixed(1), spikeSubY: (spikeY-2).toFixed(1),
+      spinePath, spineActs, beats
+    };
+  }
+
+  componentDidMount() {
+    const reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Hero line draw-in
+    const hl = document.getElementById('heroline');
+    if (hl && !reduced) {
+      try {
+        const len = hl.getTotalLength();
+        hl.style.strokeDasharray = len;
+        hl.style.strokeDashoffset = len;
+        hl.getBoundingClientRect();
+        requestAnimationFrame(() => {
+          hl.style.transition = 'stroke-dashoffset 1.9s cubic-bezier(.45,0,.15,1)';
+          hl.style.strokeDashoffset = '0';
+        });
+      } catch(e) {}
+    }
+
+    // Spine dot follows scroll
+    const sp = document.getElementById('spinepath');
+    const dot = document.getElementById('spinedot');
+    let len = 0;
+    try { len = sp ? sp.getTotalLength() : 0; } catch(e) {}
+    const onScroll = () => {
+      if (!sp || !dot || !len) return;
+      const de = document.documentElement;
+      const max = de.scrollHeight - de.clientHeight;
+      const f = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      try { const pt = sp.getPointAtLength(f*len); dot.setAttribute('cx', pt.x); dot.setAttribute('cy', pt.y); } catch(e) {}
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    // Readout
+    const actEl = document.getElementById('spine-act');
+    const toneEl = document.getElementById('spine-tone');
+    const setActive = (el) => {
+      if (actEl) actEl.textContent = el.getAttribute('data-act');
+      if (toneEl) toneEl.textContent = el.getAttribute('data-tone');
+    };
+
+    // Count-up on spike beat
+    let counted = false;
+    const runCount = () => {
+      if (counted) return; counted = true;
+      const el = document.getElementById('spikeval');
+      if (!el || reduced) return;
+      const target = 13.8, dur = 1200, t0 = performance.now();
+      const step = (now) => {
+        const p = Math.min(1, (now - t0)/dur);
+        const e = 1 - Math.pow(1-p, 3);
+        el.textContent = '+' + (target*e).toFixed(1).replace('.', ',');
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    // Beat reveal + active
+    const beatsEls = Array.from(document.querySelectorAll('[data-beat]'));
+    if (!reduced) {
+      beatsEls.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity .7s ease, transform .8s cubic-bezier(.4,0,.2,1)';
+      });
+    }
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          setActive(e.target);
+          if (e.target.getAttribute('data-arc') === '7') runCount();
+        }
+      });
+    }, {threshold:0.2, rootMargin:'0px 0px -30% 0px'});
+    beatsEls.forEach(el => io.observe(el));
+
+    // Safety fallback
+    setTimeout(() => { beatsEls.forEach(el => { el.style.opacity = '1'; el.style.transform = 'none'; }); }, 3000);
+  }
+}
+</script>
+</body>
+</html>

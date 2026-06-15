@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Libre+Franklin:wght@400;500;600;700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #EFE9DC; }
+  ::selection { background: #C8A24A; color: #14202B; }
+</style>
+</helmet>
+<div style="background:#F7F3EA; color:#16222E; font-family:'Newsreader',Georgia,serif; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- Masthead -->
+  <div style="position:sticky; top:0; z-index:30; background:rgba(247,243,234,0.86); backdrop-filter:blur(10px); border-bottom:1px solid #E2DAC8;">
+    <div style="max-width:1180px; margin:0 auto; padding:14px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:baseline; gap:12px;">
+        <span style="font-family:'Libre Franklin',sans-serif; font-weight:700; letter-spacing:0.14em; font-size:13px; color:#0E3A5E;">IVA</span>
+        <span style="font-family:'Libre Franklin',sans-serif; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; font-size:10.5px; color:#7A776C;">Art Direction &amp; Designsystem</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:26px; font-family:'Libre Franklin',sans-serif; font-size:12.5px; letter-spacing:0.04em;">
+        <a href="Story.dc.html" style="color:#16222E; text-decoration:none; border-bottom:1px solid transparent;" style-hover="color:#0E3A5E; border-bottom:1px solid #C8A24A;">Berättelse →</a>
+        <a href="Explore.dc.html" style="color:#16222E; text-decoration:none;" style-hover="color:#0E3A5E; border-bottom:1px solid #C8A24A;">Utforska →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cover -->
+  <div style="max-width:1180px; margin:0 auto; padding:78px 40px 40px;">
+    <div style="font-family:'Libre Franklin',sans-serif; text-transform:uppercase; letter-spacing:0.22em; font-size:11px; color:#9A6A1E; margin-bottom:26px;">Designunderlag &nbsp;·&nbsp; Juni 2026</div>
+    <h1 style="font-weight:400; font-size:clamp(40px,6vw,72px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 32px; max-width:18ch;">Rösten som <span style="font-style:italic; color:#0E3A5E;">växte fram</span></h1>
+    <p style="font-size:clamp(19px,2.1vw,23px); line-height:1.6; color:#45505B; max-width:60ch; margin:0;">Konstnärlig riktning, typografi och layoutkoncept för en redaktionell webbapp som läser arton månader av VD-ord från IVA:s vd Sylvia Schwaag Serger — och berättar hur hennes röst utvecklades genom tre akter.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:34px; margin-top:42px; font-family:'Libre Franklin',sans-serif; font-size:12.5px; color:#6B6759;">
+      <div><div style="text-transform:uppercase; letter-spacing:0.14em; font-size:10px; color:#9C9788; margin-bottom:5px;">Känsla</div>Redaktionell · lugn auktoritet</div>
+      <div><div style="text-transform:uppercase; letter-spacing:0.14em; font-size:10px; color:#9C9788; margin-bottom:5px;">Bygge</div>Next.js · Tailwind · WCAG AA</div>
+      <div><div style="text-transform:uppercase; letter-spacing:0.14em; font-size:10px; color:#9C9788; margin-bottom:5px;">Läsare</div>IVA:s styrelse &amp; ledning</div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px;"><div style="height:1px; background:#E2DAC8; margin:48px 0;"></div></div>
+
+  <!-- SECTION 01 — Directions -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px 20px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:8px;">
+      <span style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.16em; color:#C8A24A;">01</span>
+      <h2 style="font-weight:400; font-size:34px; letter-spacing:-0.01em; margin:0;">Tre riktningar</h2>
+    </div>
+    <p style="font-size:18px; line-height:1.65; color:#55606B; max-width:56ch; margin:0 0 38px;">Samma redaktionella DNA — varm pappersbakgrund, IVA-blå som ankare, antikguld reserverad för tonkurvan. De skiljer sig i temperament. <strong style="color:#16222E; font-weight:600;">Jag rekommenderar Riktning A.</strong></p>
+
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+
+      <!-- Direction A -->
+      <div style="background:#FFFFFF; border:1px solid #E7E0D0; border-radius:3px; overflow:hidden; box-shadow:0 1px 0 rgba(20,34,46,0.02), 0 18px 40px -28px rgba(20,34,46,0.28);">
+        <div style="height:150px; background:#F7F3EA; position:relative; border-bottom:1px solid #EDE6D6; padding:18px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'Libre Franklin',sans-serif; text-transform:uppercase; letter-spacing:0.16em; font-size:9.5px; color:#9A6A1E;">Akt II</div>
+          <div style="font-family:'Newsreader',serif; font-style:italic; font-size:21px; line-height:1.2; color:#16222E;">Att sätta agendan</div>
+          <svg viewBox="0 0 260 46" style="width:100%; height:34px;" preserveAspectRatio="none"><path d="M0,38 C40,36 60,30 90,28 C110,27 120,8 134,9 C150,10 175,18 200,16 C228,14 246,20 260,19" fill="none" stroke="#C8A24A" stroke-width="2"/><circle cx="134" cy="9" r="3" fill="#0E3A5E"/></svg>
+          <div style="display:flex; gap:6px;">
+            <span style="width:22px; height:22px; border-radius:50%; background:#0E3A5E;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#C8A24A;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#F7F3EA; border:1px solid #DDD5C3;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#16222E;"></span>
+          </div>
+        </div>
+        <div style="padding:20px 20px 24px;">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+            <span style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:#0E3A5E; background:#EAF0F5; padding:3px 8px; border-radius:2px;">Rekommenderad</span>
+          </div>
+          <h3 style="font-weight:500; font-size:22px; margin:0 0 8px;">Den årliga essän</h3>
+          <p style="font-size:15px; line-height:1.6; color:#5B6671; margin:0 0 14px;">Varmast och mest mänsklig. Newsreader med optisk kursiv för citat, rikligt med luft, guld endast på tonkurvan. Läses som en påkostad årsessä.</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A8576; letter-spacing:0.02em;">Newsreader · Libre Franklin</div>
+        </div>
+      </div>
+
+      <!-- Direction B -->
+      <div style="background:#FFFFFF; border:1px solid #E7E0D0; border-radius:3px; overflow:hidden; box-shadow:0 18px 40px -30px rgba(20,34,46,0.22);">
+        <div style="height:150px; background:#EEF2F4; position:relative; border-bottom:1px solid #E1E7EA; padding:18px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'Archivo',sans-serif; text-transform:uppercase; letter-spacing:0.16em; font-size:9.5px; color:#0E3A5E;">Akt II</div>
+          <div style="font-family:'Spectral',serif; font-size:21px; line-height:1.2; color:#102A3C;">Att sätta agendan</div>
+          <svg viewBox="0 0 260 46" style="width:100%; height:34px;" preserveAspectRatio="none"><path d="M0,38 C40,36 60,30 90,28 C110,27 120,8 134,9 C150,10 175,18 200,16 C228,14 246,20 260,19" fill="none" stroke="#0E3A5E" stroke-width="2"/><circle cx="134" cy="9" r="3" fill="#C8A24A"/></svg>
+          <div style="display:flex; gap:6px;">
+            <span style="width:22px; height:22px; border-radius:50%; background:#102A3C;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#2E6E9E;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#EEF2F4; border:1px solid #D3DCE1;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#B9923C;"></span>
+          </div>
+        </div>
+        <div style="padding:20px 20px 24px;">
+          <h3 style="font-weight:500; font-size:22px; margin:18px 0 8px 0;">Det institutionella protokollet</h3>
+          <p style="font-size:15px; line-height:1.6; color:#5B6671; margin:0 0 14px;">Svalare och mer strukturerat. Spectral på en ljust blå papperston, fastare rutnät, Archivo-etiketter. Närmare en årsredovisning — mer akademi, mindre magasin.</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A8576; letter-spacing:0.02em;">Spectral · Archivo</div>
+        </div>
+      </div>
+
+      <!-- Direction C -->
+      <div style="background:#FFFFFF; border:1px solid #E7E0D0; border-radius:3px; overflow:hidden; box-shadow:0 18px 40px -30px rgba(20,34,46,0.22);">
+        <div style="height:150px; background:#F4F2EC; position:relative; border-bottom:1px solid #E8E4D8; padding:18px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div style="font-family:'IBM Plex Mono',monospace; text-transform:uppercase; letter-spacing:0.12em; font-size:9.5px; color:#86817170;">Akt II · +13,8</div>
+          <div style="font-family:'Source Serif 4',serif; font-size:21px; line-height:1.2; color:#1B1B19;">Att sätta agendan</div>
+          <svg viewBox="0 0 260 46" style="width:100%; height:34px;" preserveAspectRatio="none"><path d="M0,38 C40,36 60,30 90,28 C110,27 120,8 134,9 C150,10 175,18 200,16 C228,14 246,20 260,19" fill="none" stroke="#1B1B19" stroke-width="1.5"/><circle cx="134" cy="9" r="3" fill="#B9923C"/></svg>
+          <div style="display:flex; gap:6px;">
+            <span style="width:22px; height:22px; border-radius:50%; background:#1B1B19;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#5A5950;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#F4F2EC; border:1px solid #DBD7C9;"></span>
+            <span style="width:22px; height:22px; border-radius:50%; background:#B9923C;"></span>
+          </div>
+        </div>
+        <div style="padding:20px 20px 24px;">
+          <h3 style="font-weight:500; font-size:22px; margin:18px 0 8px 0;">Tyst data</h3>
+          <p style="font-size:15px; line-height:1.6; color:#5B6671; margin:0 0 14px;">Mest neutral. Bläck på papper, guld endast som datasignal, Source Serif med monosiffror för tabeller. Tufte-aktig marginalia. Disciplinerad — men något kyligare.</p>
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8A8576; letter-spacing:0.02em;">Source Serif 4 · IBM Plex Mono</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px;"><div style="height:1px; background:#E2DAC8; margin:56px 0;"></div></div>
+
+  <!-- SECTION 02 — Typography -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px 20px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:8px;">
+      <span style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.16em; color:#C8A24A;">02</span>
+      <h2 style="font-weight:400; font-size:34px; letter-spacing:-0.01em; margin:0;">Typografi</h2>
+    </div>
+    <p style="font-size:18px; line-height:1.65; color:#55606B; max-width:56ch; margin:0 0 38px;">Tre redaktionella par, alla webbtillgängliga. Display-serif bär gravitas; en grotesk sans hanterar etiketter och datasiffror. <strong style="color:#16222E; font-weight:600;">Vald: Newsreader + Libre Franklin.</strong></p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; border:1px solid #E7E0D0; border-radius:3px; overflow:hidden; background:#fff;">
+      <!-- Pairing 1 -->
+      <div style="padding:26px 24px; border-right:1px solid #EDE6D6; background:#FFFEFB;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#0E3A5E; margin-bottom:18px;">Vald · Essä</div>
+        <div style="font-family:'Newsreader',serif; font-size:46px; line-height:0.98; letter-spacing:-0.02em; color:#16222E;">Aa</div>
+        <div style="font-family:'Newsreader',serif; font-style:italic; font-size:20px; color:#0E3A5E; margin-top:6px;">Att hitta rösten</div>
+        <div style="height:1px; background:#EDE6D6; margin:18px 0;"></div>
+        <div style="font-family:'Newsreader',serif; font-size:14.5px; line-height:1.55; color:#55606B;">Newsreader — optisk serif med varm kursiv för citat.</div>
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:12px; letter-spacing:0.05em; color:#7A7567; margin-top:10px;">Libre Franklin — etiketter &amp; UI</div>
+      </div>
+      <!-- Pairing 2 -->
+      <div style="padding:26px 24px; border-right:1px solid #EDE6D6;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9C9788; margin-bottom:18px;">Alternativ · Protokoll</div>
+        <div style="font-family:'Spectral',serif; font-size:46px; line-height:0.98; color:#16222E;">Aa</div>
+        <div style="font-family:'Spectral',serif; font-style:italic; font-size:20px; color:#0E3A5E; margin-top:6px;">Att sätta agendan</div>
+        <div style="height:1px; background:#EDE6D6; margin:18px 0;"></div>
+        <div style="font-family:'Spectral',serif; font-size:14.5px; line-height:1.55; color:#55606B;">Spectral — lugnare, klassisk, akademisk.</div>
+        <div style="font-family:'Archivo',sans-serif; font-size:12px; letter-spacing:0.04em; color:#7A7567; margin-top:10px;">Archivo — etiketter &amp; UI</div>
+      </div>
+      <!-- Pairing 3 -->
+      <div style="padding:26px 24px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9C9788; margin-bottom:18px;">Alternativ · Data</div>
+        <div style="font-family:'Source Serif 4',serif; font-size:46px; line-height:0.98; color:#16222E;">Aa</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:18px; color:#9A6A1E; margin-top:9px;">+13,8</div>
+        <div style="height:1px; background:#EDE6D6; margin:18px 0;"></div>
+        <div style="font-family:'Source Serif 4',serif; font-size:14.5px; line-height:1.55; color:#55606B;">Source Serif — robust, datavänlig.</div>
+        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#7A7567; margin-top:10px;">IBM Plex Mono — siffror</div>
+      </div>
+    </div>
+
+    <!-- Type scale -->
+    <div style="margin-top:34px; background:#FFFFFF; border:1px solid #E7E0D0; border-radius:3px; padding:34px 36px;">
+      <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9C9788; margin-bottom:24px;">Typskala — vald uppsättning</div>
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div style="display:flex; align-items:baseline; gap:24px; border-bottom:1px dotted #E7E0D0; padding-bottom:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A39E8F; width:120px; flex:none;">Display / 76</div>
+          <div style="font-family:'Newsreader',serif; font-size:54px; line-height:1; letter-spacing:-0.02em; color:#16222E;">Doktrinen</div>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:24px; border-bottom:1px dotted #E7E0D0; padding-bottom:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A39E8F; width:120px; flex:none;">Rubrik / 34</div>
+          <div style="font-family:'Newsreader',serif; font-size:32px; color:#16222E;">Att sätta agendan</div>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:24px; border-bottom:1px dotted #E7E0D0; padding-bottom:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A39E8F; width:120px; flex:none;">Ingress / 22</div>
+          <div style="font-family:'Newsreader',serif; font-size:22px; line-height:1.5; color:#3C4751; max-width:52ch;">Tonindexet stiger genom akt ett, toppar vid ett enda brev och lägger sig sedan i en mer nyanserad doktrin.</div>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:24px; border-bottom:1px dotted #E7E0D0; padding-bottom:18px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A39E8F; width:120px; flex:none;">Brödtext / 18</div>
+          <div style="font-family:'Newsreader',serif; font-size:18px; line-height:1.7; color:#45505B; max-width:62ch;">Varje VD-ord lyfts fram som en passage: datum, tes, ett signaturcitat och det begrepp hon myntar. Mätvärden vilar i marginalen — aldrig som ett brusigt instrumentbräde.</div>
+        </div>
+        <div style="display:flex; align-items:baseline; gap:24px;">
+          <div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#A39E8F; width:120px; flex:none;">Etikett / 11</div>
+          <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; text-transform:uppercase; letter-spacing:0.18em; color:#9A6A1E;">Myntat begrepp · Tonindex · Akt III</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px;"><div style="height:1px; background:#E2DAC8; margin:56px 0;"></div></div>
+
+  <!-- SECTION 03 — Color -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px 20px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:8px;">
+      <span style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.16em; color:#C8A24A;">03</span>
+      <h2 style="font-weight:400; font-size:34px; letter-spacing:-0.01em; margin:0;">Färg</h2>
+    </div>
+    <p style="font-size:18px; line-height:1.65; color:#55606B; max-width:60ch; margin:0 0 38px;">Vi lutar oss mot IVA:s institutionella blå och guld — men dämpade och redaktionella. Blå är auktoritet och länkar; antikguld är reserverad nästan helt för tonkurvan, så att datan blir en tyst hjälte. WCAG AA-kontrast hålls på all text.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px;">
+      <!-- Light -->
+      <div style="background:#fff; border:1px solid #E7E0D0; border-radius:3px; padding:26px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#0E3A5E; margin-bottom:20px;">Ljust tema — primärt</div>
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px;">
+          <div><div style="height:62px; border-radius:3px; background:#F7F3EA; border:1px solid #E5DDCB;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B6759; margin-top:7px;">Papper · #F7F3EA</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#FFFEFB; border:1px solid #E5DDCB;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B6759; margin-top:7px;">Yta · #FFFEFB</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#16222E;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B6759; margin-top:7px;">Bläck · #16222E</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#0E3A5E;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B6759; margin-top:7px;">IVA-blå · #0E3A5E</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#2E6E9E;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B6759; margin-top:7px;">Länk · #2E6E9E</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#C8A24A;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#6B6759; margin-top:7px;">Guld · #C8A24A</div></div>
+        </div>
+      </div>
+      <!-- Dark -->
+      <div style="background:#0E1620; border:1px solid #20303E; border-radius:3px; padding:26px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#C8A24A; margin-bottom:20px;">Mörkt tema — valfritt</div>
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:12px;">
+          <div><div style="height:62px; border-radius:3px; background:#0E1620; border:1px solid #28384A;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8FA0AE; margin-top:7px;">Bakgrund · #0E1620</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#15212E; border:1px solid #28384A;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8FA0AE; margin-top:7px;">Yta · #15212E</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#ECE7DB;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8FA0AE; margin-top:7px;">Text · #ECE7DB</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#7FB2DA;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8FA0AE; margin-top:7px;">Blå · #7FB2DA</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#DDB85E;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8FA0AE; margin-top:7px;">Guld · #DDB85E</div></div>
+          <div><div style="height:62px; border-radius:3px; background:#2A3947;"></div><div style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:#8FA0AE; margin-top:7px;">Linje · #2A3947</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px;"><div style="height:1px; background:#E2DAC8; margin:56px 0;"></div></div>
+
+  <!-- SECTION 04 — Components -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px 20px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:8px;">
+      <span style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.16em; color:#C8A24A;">04</span>
+      <h2 style="font-weight:400; font-size:34px; letter-spacing:-0.01em; margin:0;">Komponenter</h2>
+    </div>
+    <p style="font-size:18px; line-height:1.65; color:#55606B; max-width:56ch; margin:0 0 38px;">Byggstenarna som bär berättelsen. Alla med generös luft och hårfina linjer.</p>
+
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:22px; align-items:start;">
+
+      <!-- Beat card -->
+      <div style="background:#FFFEFB; border:1px solid #E7E0D0; border-radius:3px; padding:34px 36px;">
+        <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9C9788; margin-bottom:22px;">Passage-kort &nbsp;·&nbsp; ett VD-ord</div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+          <span style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; color:#9A6A1E;">Akt II</span>
+          <span style="width:4px; height:4px; border-radius:50%; background:#CDBF9B;"></span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#8A8576;">2025-09-12</span>
+        </div>
+        <h3 style="font-weight:500; font-size:27px; line-height:1.12; letter-spacing:-0.01em; margin:0 0 14px;">Stresstest för Europa</h3>
+        <p style="font-size:17px; line-height:1.7; color:#4B5660; margin:0 0 22px;">Hon vänder krisretoriken till ett verktyg: om bankerna kan stresstestas, varför inte kontinentens beredskap, kompetens och innovationsförmåga?</p>
+        <div style="border-left:2px solid #C8A24A; padding-left:18px; margin:0 0 22px;">
+          <div style="font-family:'Newsreader',serif; font-style:italic; font-size:21px; line-height:1.4; color:#16222E;">”Vi måste sluta förvalta nuet och börja stresstesta framtiden.”</div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
+          <span style="display:inline-flex; align-items:center; gap:8px; border:1px solid #D8C28A; background:#FBF6E9; border-radius:100px; padding:5px 13px;">
+            <span style="font-family:'Libre Franklin',sans-serif; font-size:9.5px; text-transform:uppercase; letter-spacing:0.12em; color:#9A6A1E;">Myntat begrepp</span>
+            <span style="font-family:'Newsreader',serif; font-style:italic; font-size:15px; color:#16222E;">stresstest</span>
+          </span>
+          <span style="display:inline-flex; align-items:center; gap:7px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#0E3A5E;">Tonindex <strong style="font-weight:500;">+13,8</strong></span>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:22px;">
+        <!-- Pull quote -->
+        <div style="background:#0E3A5E; border-radius:3px; padding:32px 34px; color:#EAF1F7;">
+          <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9CC2DE; margin-bottom:18px;">Pull-citat</div>
+          <div style="font-family:'Newsreader',serif; font-style:italic; font-weight:400; font-size:26px; line-height:1.35; letter-spacing:-0.01em;">”Doktrin är inte att ha rätt. Det är att vara begriplig över tid.”</div>
+          <div style="font-family:'Libre Franklin',sans-serif; font-size:11px; letter-spacing:0.06em; color:#9CC2DE; margin-top:18px;">VD-ord · 14 mars 2026</div>
+        </div>
+        <!-- Nav / header -->
+        <div style="background:#FFFEFB; border:1px solid #E7E0D0; border-radius:3px; padding:20px 22px;">
+          <div style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9C9788; margin-bottom:16px;">Navigation</div>
+          <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #EDE6D6; padding-bottom:12px;">
+            <span style="font-family:'Libre Franklin',sans-serif; font-weight:700; letter-spacing:0.14em; font-size:13px; color:#0E3A5E;">IVA</span>
+            <div style="display:flex; gap:18px; font-family:'Libre Franklin',sans-serif; font-size:12.5px;">
+              <span style="color:#16222E; border-bottom:2px solid #C8A24A; padding-bottom:3px;">Berättelse</span>
+              <span style="color:#8A8576;">Utforska</span>
+            </div>
+          </div>
+          <div style="margin-top:14px; display:flex; gap:6px; align-items:center;">
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#9A6A1E;">AKT I</span>
+            <span style="flex:1; height:3px; border-radius:2px; background:linear-gradient(90deg,#C8A24A 0%,#C8A24A 64%,#E5DDCB 64%);"></span>
+            <span style="font-family:'IBM Plex Mono',monospace; font-size:10px; color:#B7AE98;">AKT III</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px;"><div style="height:1px; background:#E2DAC8; margin:56px 0;"></div></div>
+
+  <!-- SECTION 05 — Motion + Layout + links -->
+  <div style="max-width:1180px; margin:0 auto; padding:0 40px 90px;">
+    <div style="display:flex; align-items:baseline; gap:18px; margin-bottom:8px;">
+      <span style="font-family:'Libre Franklin',sans-serif; font-weight:600; font-size:12px; letter-spacing:0.16em; color:#C8A24A;">05</span>
+      <h2 style="font-weight:400; font-size:34px; letter-spacing:-0.01em; margin:0;">Rörelse &amp; layout</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:30px;">
+      <div style="background:#FFFEFB; border:1px solid #E7E0D0; border-radius:3px; padding:30px 32px;">
+        <h3 style="font-weight:500; font-size:20px; margin:0 0 16px;">Subtil rörelse</h3>
+        <ul style="margin:0; padding-left:18px; font-size:16px; line-height:1.85; color:#4B5660;">
+          <li>Tonkurvan <em>ritas in</em> när hjälten kommer i vy (stroke-dashoffset).</li>
+          <li>En klibbig mini-kurva i marginalen med en punkt som följer scrollen.</li>
+          <li>Passager tonar upp och glider 12 px vid inträde (IntersectionObserver).</li>
+          <li>+13,8 räknas upp en gång när stresstest-passagen nås.</li>
+          <li>Inget scroll-kapande. Respekterar <code style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#0E3A5E;">prefers-reduced-motion</code>.</li>
+        </ul>
+      </div>
+      <div style="background:#FFFEFB; border:1px solid #E7E0D0; border-radius:3px; padding:30px 32px;">
+        <h3 style="font-weight:500; font-size:20px; margin:0 0 16px;">Två skärmar — se dem live</h3>
+        <p style="font-size:16px; line-height:1.7; color:#4B5660; margin:0 0 20px;">Layoutkoncepten är byggda som riktiga, responsiva skärmar i den valda riktningen.</p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <a href="Story.dc.html" style="display:flex; align-items:center; justify-content:space-between; text-decoration:none; background:#0E3A5E; color:#F3F7FA; padding:16px 20px; border-radius:3px;">
+            <span><span style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9CC2DE; display:block; margin-bottom:4px;">Skärm 1</span><span style="font-family:'Newsreader',serif; font-size:21px;">Berättelse — treaktskurvan</span></span>
+            <span style="font-size:22px;">→</span>
+          </a>
+          <a href="Explore.dc.html" style="display:flex; align-items:center; justify-content:space-between; text-decoration:none; background:#FBF6E9; color:#16222E; border:1px solid #D8C28A; padding:16px 20px; border-radius:3px;">
+            <span><span style="font-family:'Libre Franklin',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.16em; color:#9A6A1E; display:block; margin-bottom:4px;">Skärm 2</span><span style="font-family:'Newsreader',serif; font-size:21px;">Utforska — den annoterade essän</span></span>
+            <span style="font-size:22px;">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

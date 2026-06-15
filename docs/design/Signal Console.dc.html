@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600;700&family=Newsreader:ital,opsz@1,6..72&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:#0B0F14; }
+  ::selection { background:#E0A23C; color:#0B0F14; }
+  table { border-collapse:collapse; width:100%; }
+  .rail::-webkit-scrollbar{ width:8px; } .rail::-webkit-scrollbar-thumb{ background:#28323C; border-radius:4px; }
+  @media (max-width: 1080px){ [data-shell]{ grid-template-columns:1fr !important; } [data-rail]{ position:static !important; max-height:none !important; } }
+</style>
+</helmet>
+<div style="background:#0B0F14; color:#C9D4DC; font-family:'IBM Plex Mono',monospace; min-height:100vh; -webkit-font-smoothing:antialiased;">
+
+  <!-- HEADER -->
+  <div style="position:sticky; top:0; z-index:50; background:#0D131A; border-bottom:1px solid #1E2730;">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:11px 22px; gap:20px;">
+      <div style="display:flex; align-items:center; gap:14px; min-width:0;">
+        <span style="color:{{ accent }}; font-size:15px;">◆</span>
+        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:13px; letter-spacing:0.06em; color:#EAF0F5;">IVA · VD-ORD</span>
+        <span style="font-size:10px; letter-spacing:0.22em; color:#5E6B76; border:1px solid #28323C; padding:3px 8px; border-radius:2px;">SIGNALKONSOL</span>
+      </div>
+      <div style="display:flex; align-items:center; gap:8px; flex:1; max-width:420px;">
+        <div style="display:flex; align-items:center; gap:8px; flex:1; background:#10171F; border:1px solid #28323C; border-radius:3px; padding:6px 10px;">
+          <span style="color:#4F5C67; font-size:12px;">⌕</span>
+          <span style="color:#5E6B76; font-size:12px;">sök brev, begrepp, tema…</span>
+          <span style="margin-left:auto; color:#3C4751; font-size:10px; border:1px solid #28323C; padding:1px 5px; border-radius:2px;">/</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span style="font-size:10px; letter-spacing:0.1em; color:#5E6B76;">38 BREV · 18 MÅN · {{ today }}</span>
+        <span style="display:inline-flex; align-items:center; gap:6px; font-size:10px; letter-spacing:0.1em; color:#6BC08C;"><span style="width:6px; height:6px; border-radius:50%; background:#6BC08C; box-shadow:0 0 6px #6BC08C;"></span>LIVE</span>
+        <a href="Overview.dc.html" style="font-size:10px; letter-spacing:0.12em; color:#6FA8DC; text-decoration:none;">↩ ÖVERSIKT</a>
+      </div>
+    </div>
+    <!-- filter strip -->
+    <div style="display:flex; align-items:center; gap:0; padding:0 22px; border-top:1px solid #141C24; background:#0B1117;">
+      <sc-for list="{{ actFilters }}" as="f" hint-placeholder-count="4">
+        <div onClick="{{ f.onClick }}" style="cursor:pointer; padding:8px 16px; font-size:11px; letter-spacing:0.08em; color:{{ f.color }}; border-bottom:2px solid {{ f.border }}; background:{{ f.bg }};">{{ f.label }} <span style="color:#3C4751;">{{ f.count }}</span></div>
+      </sc-for>
+      <div style="margin-left:auto; display:flex; align-items:center; gap:14px; font-size:10px; color:#4F5C67; letter-spacing:0.1em;">
+        <span>SORTERAT: {{ sortLabel }}</span>
+        <span style="color:#28323C;">|</span>
+        <span>{{ visibleCount }} RADER</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SHELL -->
+  <div data-shell style="display:grid; grid-template-columns:264px 1fr; gap:0;">
+
+    <!-- LEFT RAIL: letter index -->
+    <div data-rail class="rail" style="position:sticky; top:84px; max-height:calc(100vh - 84px); overflow-y:auto; border-right:1px solid #1E2730; background:#0A0E13;">
+      <div style="padding:12px 16px 8px; font-size:10px; letter-spacing:0.18em; color:#4F5C67; position:sticky; top:0; background:#0A0E13; border-bottom:1px solid #141C24;">BREVINDEX ↓</div>
+      <sc-for list="{{ railRows }}" as="r" hint-placeholder-count="38">
+        <div onClick="{{ r.onClick }}" style="cursor:pointer; padding:9px 16px; border-bottom:1px solid #11181F; background:{{ r.bg }}; border-left:2px solid {{ r.accentBar }};">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+            <span style="font-size:10px; color:#4F5C67;">{{ r.num }} · {{ r.shortDate }}</span>
+            <span style="font-size:11px; color:{{ r.toneColor }}; font-weight:500;">{{ r.toneStr }}</span>
+          </div>
+          <div style="font-family:'Archivo',sans-serif; font-size:12.5px; color:{{ r.titleColor }}; margin-top:3px; line-height:1.25; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ r.title }}</div>
+          <div style="height:3px; background:#161F27; border-radius:2px; margin-top:6px; overflow:hidden;"><div style="height:3px; width:{{ r.toneW }}; background:{{ r.toneColor }};"></div></div>
+        </div>
+      </sc-for>
+    </div>
+
+    <!-- MAIN -->
+    <div style="padding:0 0 60px; min-width:0;">
+
+      <!-- EXPLAINER -->
+      <sc-if value="{{ showHelp }}" hint-placeholder-val="{{ true }}">
+        <div style="padding:14px 26px; border-bottom:1px solid #1E2730; background:#0C141C;">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:11px;">
+            <span style="font-size:11px; letter-spacing:0.14em; color:{{ accent }};">ⓘ SÅ TOLKAR DU KONSOLEN</span>
+            <span onClick="{{ toggleHelp }}" style="cursor:pointer; font-size:10px; letter-spacing:0.1em; color:#5E6B76;">DÖLJ ✕</span>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:22px;">
+            <sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+              <div style="font-size:12px; line-height:1.5; color:#8C98A3;"><strong style="color:#C9D4DC; font-weight:500;">{{ l.k }}</strong> — {{ l.v }}</div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ helpHidden }}" hint-placeholder-val="{{ false }}">
+        <div onClick="{{ toggleHelp }}" style="cursor:pointer; padding:8px 26px; border-bottom:1px solid #1E2730; background:#0C141C; font-size:10px; letter-spacing:0.12em; color:#5E6B76;">ⓘ VISA FÖRKLARING</div>
+      </sc-if>
+
+      <!-- DETAIL HEADER -->
+      <div style="padding:20px 26px 22px; border-bottom:1px solid #1E2730; background:linear-gradient(180deg,#0E141B,#0B0F14);">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+          <span style="font-size:10px; letter-spacing:0.16em; color:{{ accent }};">AKT {{ cur.act }}</span>
+          <span style="color:#28323C;">·</span>
+          <span style="font-size:11px; color:#7E8B96;">BREV {{ cur.num }} / 38</span>
+          <span style="color:#28323C;">·</span>
+          <span style="font-size:11px; color:#7E8B96;">{{ cur.date }}</span>
+          <sc-if value="{{ cur.isSpike }}" hint-placeholder-val="{{ true }}"><span style="margin-left:4px; font-size:9.5px; letter-spacing:0.12em; color:#0B0F14; background:{{ accent }}; padding:2px 7px; border-radius:2px;">TOPP-TON</span></sc-if>
+        </div>
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+          <h1 style="font-family:'Archivo',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.01em; color:#EEF3F7; margin:0; max-width:30ch; line-height:1.1;">{{ cur.title }}</h1>
+          <sc-if value="{{ cur.hasTerm }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex; align-items:center; gap:10px; border:1px solid #3A4450; background:#10171F; border-radius:3px; padding:7px 13px;">
+              <span style="font-size:9px; letter-spacing:0.14em; color:{{ cur.termLabelColor }};">{{ cur.termKind }}</span>
+              <span style="font-family:'Newsreader',serif; font-style:italic; font-size:18px; color:#EEF3F7;">{{ cur.term }}</span>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <!-- KPI TILES -->
+      <div style="display:grid; grid-template-columns:repeat(6,1fr); border-bottom:1px solid #1E2730;">
+        <sc-for list="{{ kpis }}" as="k" hint-placeholder-count="6">
+          <div style="padding:16px 18px; border-right:1px solid #161F27;">
+            <div style="font-size:9.5px; letter-spacing:0.14em; color:#5E6B76;">{{ k.label }}</div>
+            <div style="display:flex; align-items:baseline; gap:8px; margin-top:9px;">
+              <span style="font-family:'Archivo',sans-serif; font-weight:600; font-size:26px; color:{{ k.color }}; font-variant-numeric:tabular-nums; line-height:1;">{{ k.val }}</span>
+              <span style="font-size:11px; color:{{ k.deltaColor }};">{{ k.delta }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- HERO: sentence-level tone trace -->
+      <div style="padding:22px 26px 18px; border-bottom:1px solid #1E2730;">
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;">
+          <div style="font-size:11px; letter-spacing:0.14em; color:#8C98A3;">MENINGSVIS TONPROFIL <span style="color:#4F5C67;">— hur tonen rör sig genom brevet</span></div>
+          <div style="font-size:10px; color:#5E6B76;">{{ cur.sentCount }} meningar · topp mening #{{ cur.peakIdx }}</div>
+        </div>
+        <svg viewBox="0 0 980 150" style="width:100%; height:auto; display:block; overflow:visible;">
+          <defs>
+            <linearGradient id="sfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="{{ accent }}" stop-opacity="0.30"></stop><stop offset="100%" stop-color="{{ accent }}" stop-opacity="0"></stop></linearGradient>
+          </defs>
+          <line x1="0" y1="{{ sent.midY }}" x2="980" y2="{{ sent.midY }}" stroke="#1A222B" stroke-dasharray="2 5"></line>
+          <line x1="0" y1="{{ sent.baseY }}" x2="980" y2="{{ sent.baseY }}" stroke="#1E2730"></line>
+          <path d="{{ sent.area }}" fill="url(#sfill)"></path>
+          <path d="{{ sent.path }}" fill="none" stroke="{{ accent }}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          <line x1="{{ sent.peakX }}" y1="6" x2="{{ sent.peakX }}" y2="{{ sent.baseY }}" stroke="{{ accent }}" stroke-width="1" stroke-dasharray="2 3" opacity="0.5"></line>
+          <circle cx="{{ sent.peakX }}" cy="{{ sent.peakY }}" r="4" fill="{{ accent }}" stroke="#0B0F14" stroke-width="2"></circle>
+        </svg>
+        <div style="display:flex; justify-content:space-between; font-size:9.5px; color:#4F5C67; margin-top:2px;"><span>INLEDNING</span><span>AVSLUTNING</span></div>
+      </div>
+
+      <!-- SMALL MULTIPLES -->
+      <div style="padding:20px 26px 22px; border-bottom:1px solid #1E2730;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:#8C98A3; margin-bottom:16px;">SIGNALER ÖVER ALLA 38 BREV <span style="color:#4F5C67;">— punkt = valt brev</span></div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#161F27; border:1px solid #161F27;">
+          <sc-for list="{{ smalls }}" as="m" hint-placeholder-count="6">
+            <div style="background:#0C1219; padding:14px 16px;">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:10px;">
+                <span style="font-size:10px; letter-spacing:0.1em; color:#7E8B96;">{{ m.label }}</span>
+                <span style="font-family:'Archivo',sans-serif; font-weight:600; font-size:15px; color:{{ m.color }}; font-variant-numeric:tabular-nums;">{{ m.curVal }}</span>
+              </div>
+              <svg viewBox="0 0 240 56" style="width:100%; height:auto; display:block; overflow:visible;">
+                <line x1="0" y1="50" x2="240" y2="50" stroke="#1A222B"></line>
+                <path d="{{ m.path }}" fill="none" stroke="{{ m.lineColor }}" stroke-width="1.5"></path>
+                <line x1="{{ m.dotX }}" y1="2" x2="{{ m.dotX }}" y2="50" stroke="{{ m.color }}" stroke-width="1" opacity="0.35"></line>
+                <circle cx="{{ m.dotX }}" cy="{{ m.dotY }}" r="3.2" fill="{{ m.color }}" stroke="#0C1219" stroke-width="1.5"></circle>
+              </svg>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- TERM EXTRACTION -->
+      <div style="padding:20px 26px 24px; border-bottom:1px solid #1E2730;">
+        <div style="font-size:11px; letter-spacing:0.14em; color:#8C98A3; margin-bottom:16px;">TERMEXTRAKTION <span style="color:#4F5C67;">— mest frekventa i detta brev</span></div>
+        <div style="display:flex; flex-direction:column; gap:9px;">
+          <sc-for list="{{ terms }}" as="t" hint-placeholder-count="6">
+            <div style="display:flex; align-items:center; gap:14px;">
+              <span style="width:150px; flex:none; font-size:13px; color:{{ t.color }}; display:flex; align-items:center; gap:7px;">{{ t.term }}<sc-if value="{{ t.coined }}" hint-placeholder-val="{{ true }}"><span style="font-size:8px; letter-spacing:0.1em; color:#0B0F14; background:{{ accent }}; padding:1px 5px; border-radius:2px;">MYNT</span></sc-if></span>
+              <div style="flex:1; height:14px; background:#10171F; border-radius:2px; overflow:hidden;"><div style="height:14px; width:{{ t.w }}; background:{{ t.bar }};"></div></div>
+              <span style="width:36px; flex:none; text-align:right; font-size:12px; color:#7E8B96; font-variant-numeric:tabular-nums;">{{ t.count }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- DATA GRID -->
+      <div style="padding:22px 26px 10px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:14px;">
+          <div style="font-size:11px; letter-spacing:0.14em; color:#8C98A3;">FULLT DATASET <span style="color:#4F5C67;">— klicka rubrik för sortering, rad för att öppna</span></div>
+          <span style="font-size:10px; color:#6FA8DC; cursor:pointer;">⤓ EXPORTERA CSV</span>
+        </div>
+        <div style="border:1px solid #1E2730; border-radius:3px; overflow:hidden;">
+          <table>
+            <thead>
+              <tr style="background:#10171F;">
+                <sc-for list="{{ headers }}" as="h" hint-placeholder-count="11">
+                  <th scope="col" onClick="{{ h.onClick }}" style="cursor:pointer; text-align:{{ h.align }}; padding:10px 12px; font-size:9.5px; letter-spacing:0.1em; color:{{ h.color }}; font-weight:500; white-space:nowrap; border-bottom:1px solid #1E2730; background:{{ h.bg }};">{{ h.label }}<span style="color:{{ accent }};">{{ h.arrow }}</span></th>
+                </sc-for>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{ gridRows }}" as="g" hint-placeholder-count="38">
+                <tr onClick="{{ g.onClick }}" style="cursor:pointer; background:{{ g.bg }}; border-bottom:1px solid #141C24;">
+                  <td style="padding:9px 12px; font-size:11px; color:#4F5C67; font-variant-numeric:tabular-nums;">{{ g.num }}</td>
+                  <td style="padding:9px 12px; font-size:11px; color:#7E8B96; white-space:nowrap;">{{ g.date }}</td>
+                  <td style="padding:9px 12px; font-family:'Archivo',sans-serif; font-size:12.5px; color:{{ g.titleColor }}; max-width:280px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{{ g.title }}</td>
+                  <td style="padding:9px 12px; font-size:10px; color:{{ accent }}; text-align:center;">{{ g.act }}</td>
+                  <td style="padding:9px 12px; text-align:right;">
+                    <span style="display:inline-flex; align-items:center; gap:8px; justify-content:flex-end;">
+                      <span style="width:46px; height:5px; background:#161F27; border-radius:3px; overflow:hidden; display:inline-block;"><span style="display:block; height:5px; width:{{ g.toneW }}; background:{{ g.toneColor }};"></span></span>
+                      <span style="font-size:12px; color:{{ g.toneColor }}; font-variant-numeric:tabular-nums; width:42px; text-align:right;">{{ g.toneStr }}</span>
+                    </span>
+                  </td>
+                  <td style="padding:9px 12px; text-align:right; font-size:12px; color:#A6B2BC; font-variant-numeric:tabular-nums;">{{ g.lix }}</td>
+                  <td style="padding:9px 12px; text-align:right; font-size:12px; color:#A6B2BC; font-variant-numeric:tabular-nums;">{{ g.words }}</td>
+                  <td style="padding:9px 12px; text-align:right; font-size:12px; color:#A6B2BC; font-variant-numeric:tabular-nums;">{{ g.sentences }}</td>
+                  <td style="padding:9px 12px; text-align:right; font-size:12px; color:#A6B2BC; font-variant-numeric:tabular-nums;">{{ g.questions }}</td>
+                  <td style="padding:9px 12px; text-align:right; font-size:12px; color:#A6B2BC; font-variant-numeric:tabular-nums;">{{ g.imperatives }}</td>
+                  <td style="padding:9px 12px; text-align:right; font-size:12px; color:#A6B2BC; font-variant-numeric:tabular-nums;">{{ g.viShare }}</td>
+                  <td style="padding:9px 12px; font-family:'Newsreader',serif; font-style:italic; font-size:13px; color:{{ g.termColor }}; white-space:nowrap;">{{ g.termText }}</td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+        <div style="font-size:10px; color:#3C4751; margin-top:12px; line-height:1.7;">Tonindex relativt akademiens basläge (0). · ”vi”-andel = andel ”vi”-formuleringar av ”jag”+”vi”. · LIX ≥ 50 = svår facktext. · Alla värden per brev.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E0A23C&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { sel: 8, sortKey: 'num', sortDir: 1, actFilter: 'ALLA', showHelp: true };
+
+  seeded(seed){ return function(){ let t=seed+=0x6D2B79F5; t=Math.imul(t^t>>>15,t|1); t^=t+Math.imul(t^t>>>7,t|61); return ((t^t>>>14)>>>0)/4294967296; }; }
+
+  smooth(pts){
+    if(pts.length<2) return pts.length?`M ${pts[0][0]},${pts[0][1]}`:'';
+    let d=`M ${pts[0][0].toFixed(1)},${pts[0][1].toFixed(1)}`;
+    for(let i=0;i<pts.length-1;i++){
+      const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+      const c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6;
+      const c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;
+      d+=` C ${c1x.toFixed(1)},${c1y.toFixed(1)} ${c2x.toFixed(1)},${c2y.toFixed(1)} ${p2[0].toFixed(1)},${p2[1].toFixed(1)}`;
+    }
+    return d;
+  }
+
+  get data(){
+    if(this._d) return this._d;
+    const tone=[1.2,1.9,2.9,3.8,4.7,6.0, 6.4,7.1,13.8,10.6,9.4,10.1,9.0,9.1,10.3,9.6,8.8,8.2,7.9,7.6,7.2, 7.0,6.7,6.4,6.6,6.2,6.8,6.0,6.3,5.9,6.2,5.7,6.0,5.8,6.1,5.6,5.9,5.8];
+    const N=tone.length;
+    const titlesNotable={0:'Ett nytt år, en ny röst',2:'Forskningen och försvaret',4:'Mellan reaktion och regelverk',6:'Inför ett spänt Europa',8:'Stresstest för Europa',10:'Tekniken som tjänar två herrar',13:'Det tysta klimatet',21:'IVAs vd — om kompetens',26:'IVAs vd — om beredskap',30:'IVAs vd — om innovation',34:'IVAs vd — om tillit',37:'IVAs vd — om Europa'};
+    const termMap={8:'stresstest',10:'dual use',13:'greenhushing',21:'om kompetens',26:'om beredskap',30:'om innovation',34:'om tillit',37:'om Europa'};
+    const themeOf={8:'Säkerhet',10:'Innovation',13:'Klimat',21:'Kompetens',26:'Säkerhet',30:'Innovation',34:'Kompetens',37:'Europa'};
+    const seriesSet=new Set([21,26,30,34,37]);
+    const filler=['Kompetensbristen som inte syns','Att förvalta ett förtroende','Innovation under press','Det långa perspektivet','En akademi i rörelse','Mellan ambition och förmåga','Vad krisen lärde oss','Investera i det dubbla','Efter stormen','Att hålla kursen','Beredskap är en vana','Den tysta omställningen','Europa vid ett vägskäl','Forskning som försvar','Att läsa sin samtid','Ord som förpliktar','Den nya kartan','Tre frågor till politiken','Mellan löfte och leverans','Det som inte mäts','En fråga om tempo','Att bygga i motvind','Kunskapens pris','Sverige i världen','Långsiktighet som strategi','Det tredje alternativet','När siffrorna talar','Mod att prioritera','Att tänka i decennier','Rörelse, inte rubriker'];
+    let fillerN=0;
+    const themesPool=['Kompetens','Säkerhet','Klimat','Europa','Innovation'];
+    const months=['jan','feb','mar','apr','maj','jun','jul','aug','sep','okt','nov','dec'];
+    const start=Date.UTC(2025,0,17);
+    const rnd=this.seeded(424242);
+    this._d=tone.map((t,i)=>{
+      const d=new Date(start + i*14*864e5);
+      const act=i<6?'I':(i<21?'II':'III');
+      const lix=Math.round(42 + (i/(N-1))*10 + (rnd()-0.5)*2.4);
+      const words=Math.round(360 + (i/(N-1))*620 + (rnd()-0.5)*120 + (act==='III'?110:0));
+      const avgSent=15 + (i/(N-1))*6;
+      const sentences=Math.max(8,Math.round(words/avgSent));
+      const questions=Math.max(0,Math.round((act==='I'?3:act==='II'?2:1)+(rnd()-0.5)*3));
+      const imperatives=Math.max(1,Math.round((act==='II'?6:act==='III'?5:2)+(rnd()-0.5)*3));
+      const viShare=Math.round(52 + (i/(N-1))*22 + (rnd()-0.5)*8);
+      const title=titlesNotable[i]||filler[(fillerN++)%filler.length];
+      const term=termMap[i]||'';
+      const series=seriesSet.has(i);
+      const theme=themeOf[i]||themesPool[Math.floor(rnd()*5)];
+      const sLen=Math.min(46,Math.max(12,sentences));
+      const sr=this.seeded(1000+i*97);
+      const peak=Math.floor(sLen*(0.28+sr()*0.42));
+      const sent=Array.from({length:sLen},(_,k)=>{
+        let base=t*0.55+(sr()-0.5)*Math.max(2,t*0.5);
+        if(i===8){ base=t*0.42+(sr()-0.5)*2.2; if(Math.abs(k-peak)<2) base=t*(0.92+sr()*0.28); }
+        else if(Math.abs(k-peak)<1) base=t*(0.82+sr()*0.28);
+        return base;
+      });
+      return {i,num:String(i+1).padStart(2,'0'),date:`${String(d.getUTCDate()).padStart(2,'0')} ${months[d.getUTCMonth()]} ${d.getUTCFullYear()}`,shortDate:`${String(d.getUTCDate()).padStart(2,'0')}/${String(d.getUTCMonth()+1).padStart(2,'0')}`,act,tone:t,lix,words,sentences,questions,imperatives,viShare,title,term,series,theme,sent,peak};
+    });
+    return this._d;
+  }
+
+  fmtTone(t){ return (t>=0?'+':'')+t.toFixed(1).replace('.',','); }
+
+  termsFor(o){
+    const pools={
+      Kompetens:['kompetens','utbildning','forskare','rekrytering','talang'],
+      Säkerhet:['beredskap','försvar','säkerhet','risk','hot'],
+      Klimat:['klimat','omställning','utsläpp','energi','hållbarhet'],
+      Europa:['Europa','union','samarbete','konkurrenskraft','gräns'],
+      Innovation:['innovation','teknik','investering','tillväxt','startup']
+    };
+    const sr=this.seeded(7000+o.i*131);
+    const base=pools[o.theme]||pools.Kompetens;
+    let list=base.map(term=>({term,count:Math.round(4+sr()*16),coined:false}));
+    if(o.term) list.unshift({term:o.term,count:Math.round(9+sr()*9),coined:true});
+    list.sort((a,b)=>b.count-a.count);
+    list=list.slice(0,6);
+    const max=Math.max(...list.map(x=>x.count));
+    return list.map(x=>({...x, w:Math.round((x.count/max)*100)+'%'}));
+  }
+
+  renderVals(){
+    const accent=this.props.accent ?? '#E0A23C';
+    const blue='#6FA8DC';
+    const D=this.data, N=D.length;
+    const sel=this.state.sel, cur=D[sel], prev=D[sel-1];
+
+    // ----- act filters -----
+    const counts={ALLA:N,I:D.filter(d=>d.act==='I').length,II:D.filter(d=>d.act==='II').length,III:D.filter(d=>d.act==='III').length};
+    const af=this.state.actFilter;
+    const actFilters=[['ALLA','ALLA AKTER'],['I','AKT I'],['II','AKT II'],['III','AKT III']].map(([k,label])=>({
+      label, count:counts[k], onClick:()=>this.setState({actFilter:k}),
+      color: af===k?'#EAF0F5':'#6E7B86', border: af===k?accent:'transparent', bg: af===k?'#10171F':'transparent'
+    }));
+
+    // ----- left rail -----
+    const tMax=14;
+    const railRows=D.map(o=>({
+      num:o.num, shortDate:o.shortDate, title:o.title,
+      toneStr:this.fmtTone(o.tone), toneW:Math.min(100,(o.tone/tMax)*100).toFixed(0)+'%',
+      toneColor:o.tone>=13?accent:(o.tone>=8?'#8FC0E6':blue),
+      titleColor:o.i===sel?'#EEF3F7':'#9FACB6',
+      bg:o.i===sel?'#121C26':'transparent',
+      accentBar:o.i===sel?accent:'transparent',
+      onClick:()=>this.setState({sel:o.i})
+    }));
+
+    // ----- detail header -----
+    const curV={
+      act:cur.act, num:cur.num, date:cur.date, title:cur.title,
+      isSpike:cur.tone>=13, hasTerm:!!cur.term, term:cur.term,
+      termKind:cur.series?'ESSÄSERIE':'MYNTAT BEGREPP',
+      termLabelColor:cur.series?blue:accent,
+      sentCount:cur.sent.length, peakIdx:cur.peak+1
+    };
+
+    // ----- KPI tiles -----
+    const delta=(c,p,digits)=>{ if(p===undefined) return {delta:'',deltaColor:'#5E6B76'}; const dv=c-p; const s=(dv>0?'▲ ':dv<0?'▼ ':'· ')+Math.abs(dv).toFixed(digits).replace('.',','); return {delta:s, deltaColor:dv>0?'#6BC08C':(dv<0?'#E08A6B':'#5E6B76')}; };
+    const kpis=[
+      {label:'TONINDEX', val:this.fmtTone(cur.tone), color:accent, ...delta(cur.tone,prev&&prev.tone,1)},
+      {label:'LIX', val:cur.lix, color:'#EAF0F5', ...delta(cur.lix,prev&&prev.lix,0)},
+      {label:'ANTAL ORD', val:cur.words, color:'#EAF0F5', ...delta(cur.words,prev&&prev.words,0)},
+      {label:'MENINGAR', val:cur.sentences, color:'#EAF0F5', ...delta(cur.sentences,prev&&prev.sentences,0)},
+      {label:'FRÅGOR', val:cur.questions, color:'#EAF0F5', ...delta(cur.questions,prev&&prev.questions,0)},
+      {label:'IMPERATIV', val:cur.imperatives, color:'#EAF0F5', ...delta(cur.imperatives,prev&&prev.imperatives,0)}
+    ];
+
+    // ----- sentence trace -----
+    const sv=cur.sent, W=980,H=150,pad=14;
+    const smin=Math.min(...sv),smax=Math.max(...sv),srng=(smax-smin)||1;
+    const sx=k=>pad+(k/(sv.length-1))*(W-2*pad);
+    const sy=v=>H-pad-((v-smin)/srng)*(H-2*pad);
+    const spts=sv.map((v,k)=>[sx(k),sy(v)]);
+    const spath=this.smooth(spts);
+    const sent={
+      path:spath, area:spath+` L ${sx(sv.length-1).toFixed(1)},${(H-pad).toFixed(1)} L ${pad},${(H-pad).toFixed(1)} Z`,
+      baseY:(H-pad).toFixed(1), midY:sy((smin+smax)/2).toFixed(1),
+      peakX:sx(cur.peak).toFixed(1), peakY:sy(sv[cur.peak]).toFixed(1)
+    };
+
+    // ----- small multiples -----
+    const mw=240,mh=56,mp=4;
+    const mkSmall=(key,label,color,fmt)=>{
+      const vals=D.map(o=>o[key]);
+      const mn=Math.min(...vals),mx=Math.max(...vals),rng=(mx-mn)||1;
+      const x=k=>mp+(k/(N-1))*(mw-2*mp);
+      const y=v=>mh-mp-((v-mn)/rng)*(mh-2*mp-4);
+      const pts=vals.map((v,k)=>[x(k),y(v)]);
+      return {label, color, lineColor:'#3A4A57', curVal:fmt?fmt(cur[key]):cur[key],
+        path:this.smooth(pts), dotX:x(sel).toFixed(1), dotY:y(cur[key]).toFixed(1)};
+    };
+    const smalls=[
+      mkSmall('tone','TONINDEX',accent,v=>this.fmtTone(v)),
+      mkSmall('lix','LIX',blue),
+      mkSmall('words','ANTAL ORD',blue),
+      mkSmall('sentences','MENINGAR',blue),
+      mkSmall('questions','FRÅGOR',blue),
+      mkSmall('viShare','”VI”-ANDEL %',blue)
+    ];
+
+    // ----- terms -----
+    const terms=this.termsFor(cur).map(t=>({...t, color:t.coined?'#EEF3F7':'#A6B2BC', bar:t.coined?accent:'#3A4A57'}));
+
+    // ----- grid -----
+    const cols=[
+      {key:'num',label:'№',align:'left'},{key:'date',label:'DATUM',align:'left'},{key:'title',label:'TITEL',align:'left'},
+      {key:'act',label:'AKT',align:'center'},{key:'tone',label:'TON',align:'right'},{key:'lix',label:'LIX',align:'right'},
+      {key:'words',label:'ORD',align:'right'},{key:'sentences',label:'MEN',align:'right'},{key:'questions',label:'FRÅG',align:'right'},
+      {key:'imperatives',label:'IMP',align:'right'},{key:'viShare',label:'VI%',align:'right'},{key:'term',label:'BEGREPP',align:'left'}
+    ];
+    const sk=this.state.sortKey, sd=this.state.sortDir;
+    const headers=cols.map(c=>({
+      label:c.label, align:c.align, color:sk===c.key?'#EAF0F5':'#5E6B76', bg:sk===c.key?'#13202B':'#10171F',
+      arrow: sk===c.key?(sd>0?' ↑':' ↓'):'',
+      onClick:()=>this.setState(s=>({sortKey:c.key, sortDir: s.sortKey===c.key? -s.sortDir : 1}))
+    }));
+    let rows=D.slice();
+    if(af!=='ALLA') rows=rows.filter(o=>o.act===af);
+    rows.sort((a,b)=>{ let va=a[sk],vb=b[sk]; if(typeof va==='string'){ return sd*va.localeCompare(vb,'sv'); } return sd*(va-vb); });
+    const gridRows=rows.map(o=>({
+      num:o.num, date:o.date, title:o.title, act:o.act, lix:o.lix, words:o.words, sentences:o.sentences, questions:o.questions, imperatives:o.imperatives, viShare:o.viShare+'%',
+      toneStr:this.fmtTone(o.tone), toneW:Math.min(100,(o.tone/tMax)*100).toFixed(0)+'%',
+      toneColor:o.tone>=13?accent:(o.tone>=8?'#8FC0E6':blue),
+      titleColor:o.i===sel?'#EEF3F7':'#C2CDD6',
+      termText:o.term||'—', termColor:o.term?(o.series?blue:accent):'#3C4751',
+      bg:o.i===sel?'#13202B':'transparent',
+      onClick:()=>this.setState({sel:o.i})
+    }));
+
+    const sortLabel=(cols.find(c=>c.key===sk)||{}).label+' '+(sd>0?'↑':'↓');
+
+    const legend=[
+      {k:'Tonindex', v:'hur agendasättande rösten är, relativt basläge 0. Spåras per brev och per mening.'},
+      {k:'LIX', v:'läsbarhet — högre = svårare. ≥ 50 motsvarar facktext.'},
+      {k:'Signaler', v:'sparklines visar varje mått över alla 38 brev; punkten är det valda brevet.'},
+      {k:'Navigera', v:'klicka ett brev i listan eller en rad i tabellen; klicka rubrik för att sortera.'}
+    ];
+
+    return {
+      accent, today:'2026-06-15',
+      actFilters, railRows, cur:curV, kpis, sent, smalls, terms, headers, gridRows,
+      sortLabel, visibleCount:rows.length,
+      legend, showHelp:this.state.showHelp, helpHidden:!this.state.showHelp,
+      toggleHelp:()=>this.setState(s=>({showHelp:!s.showHelp}))
+    };
+  }
+}
+</script>
+</body>
+</html>
