@@ -1,0 +1,34 @@
+{
+  "total": 33,
+  "by_act": {
+    "1": {
+      "count": 6,
+      "word_sum": 1939,
+      "tone_sum": 6.599999999999999,
+      "avg_words": 323.2,
+      "avg_tone": 1.1
+    },
+    "2": {
+      "count": 14,
+      "word_sum": 8697,
+      "tone_sum": 33.300000000000004,
+      "avg_words": 621.2,
+      "avg_tone": 2.4
+    },
+    "3": {
+      "count": 13,
+      "word_sum": 9532,
+      "tone_sum": 26.400000000000002,
+      "avg_words": 733.2,
+      "avg_tone": 2.0
+    }
+  },
+  "by_year": {
+    "2025": {
+      "count": 24
+    },
+    "2026": {
+      "count": 9
+    }
+  }
+}

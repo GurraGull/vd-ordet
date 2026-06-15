@@ -1,0 +1,1852 @@
+[
+  {
+    "date": "2025-01-14",
+    "nr": 1,
+    "title": "Inbjudningar till högaktuella evenemang och fler nyheter",
+    "series": false,
+    "act": 1,
+    "word_count": 355,
+    "avg_sentence_length": 15.4,
+    "lix": 41.9,
+    "loanword_rate": 0.0,
+    "tone_index": 5.6,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 3
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Donald Trump"
+      ],
+      "countries": [
+        "USA",
+        "Polen",
+        "Danmark"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "I ett nytt geopolitiskt läge måste Europa kombinera säkerhet med hållbarhet och konkurrenskraft — och IVA:s roll som brobyggare behövs mer än någonsin.",
+    "key_quote": {
+      "text": "Stora förändringar på det geopolitiska planet kommer att påverka oss och våra vägval framöver.",
+      "label": "Nytt geopolitiskt läge"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-01-14_Inbjudningar_till_hogaktuella_evenemang_och_fler_nyheter.txt"
+  },
+  {
+    "date": "2025-01-28",
+    "nr": 2,
+    "title": "EU:s konkurrenskraft, Chester Carlsons forskningspris, aktuella evenemang och fler nyheter",
+    "series": false,
+    "act": 1,
+    "word_count": 329,
+    "avg_sentence_length": 18.3,
+    "lix": 49.3,
+    "loanword_rate": 6.1,
+    "tone_index": 3.0,
+    "assertive_count": 1,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Ursula von der Leyen"
+      ],
+      "countries": [
+        "USA"
+      ],
+      "projects": [
+        "Competitiveness Compass"
+      ]
+    },
+    "signature_phrases": [
+      "speed is of the essence"
+    ],
+    "asks": [
+      "pensionspengar_hem",
+      "snabbare_beslutsfattande"
+    ],
+    "thesis": "EU:s Competitiveness Compass är rätt väg — men europeiskt pensionskapital bör investeras i europeiska bolag och takten måste vara hög.",
+    "key_quote": {
+      "text": "Speed is of the essence.",
+      "label": "Competitiveness Compass"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-01-28_EUs_konkurrenskraft_Chester_Carlsons_forskningspris_aktuella_evenemang_och_fler_.txt"
+  },
+  {
+    "date": "2025-02-11",
+    "nr": 3,
+    "title": "Kabelbrotten i Östersjön, ansvarsfull internationalisering, nyheter och evenemang",
+    "series": false,
+    "act": 1,
+    "word_count": 281,
+    "avg_sentence_length": 21.6,
+    "lix": 56.5,
+    "loanword_rate": 0.0,
+    "tone_index": 3.6,
+    "assertive_count": 2,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 3
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [],
+      "countries": [],
+      "projects": []
+    },
+    "signature_phrases": [
+      "ansvarsfull internationalisering"
+    ],
+    "asks": [],
+    "thesis": "Sverige måste skydda det skyddsvärda utan att låta komplexiteten förlama internationella forskningssamarbeten — ansvarsfull internationalisering är avgörande för konkurrenskraften.",
+    "key_quote": {
+      "text": "Vi måste skydda det som är skyddsvärt samtidigt som vi behöver vara strategiska och dra nytta av det som internationellt samarbete ger.",
+      "label": "Ansvarsfull internationalisering"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-02-11_Kabelbrotten_i_Ostersjon_ansvarsfull_internationalisering_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-02-25",
+    "nr": 4,
+    "title": "Seminarium om STEM-strategin, fler nyheter och evenemang",
+    "series": false,
+    "act": 1,
+    "word_count": 202,
+    "avg_sentence_length": 16.8,
+    "lix": 47.5,
+    "loanword_rate": 0.0,
+    "tone_index": -9.9,
+    "assertive_count": 0,
+    "hedge_count": 2,
+    "themes": [
+      {
+        "theme": "kompetens_utbildning",
+        "weight": 3
+      },
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      }
+    ],
+    "entities": {
+      "people": [
+        "Ursula von der Leyen"
+      ],
+      "countries": [
+        "Ukraina",
+        "Ryssland"
+      ],
+      "projects": [
+        "STEM-strategin"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "I en ny geopolitisk verklighet där storlek och styrka avgör måste EU säkra sin militära, ekonomiska och teknologiska styrka — och Sverige sin STEM-kompetens.",
+    "key_quote": {
+      "text": "Vi lever i en ny geopolitisk verklighet, där allt som betyder någonting verkar vara styrka och storlek.",
+      "label": "Styrka och storlek"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-02-25_Seminarium_om_STEM-strategin_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-03-11",
+    "nr": 5,
+    "title": "USA-resa med AI-fokus, nyheter och evenemang",
+    "series": false,
+    "act": 1,
+    "word_count": 467,
+    "avg_sentence_length": 14.2,
+    "lix": 42.0,
+    "loanword_rate": 0.0,
+    "tone_index": 4.3,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "ai_teknik",
+        "weight": 3
+      },
+      {
+        "theme": "usa_transatlantiskt",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Matt Garman",
+        "Satya Nadella",
+        "Carolina Dybeck Happe"
+      ],
+      "countries": [
+        "USA"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "Hastighet. Beräkningskraft. Finansiering."
+    ],
+    "asks": [
+      "pensionspengar_hem"
+    ],
+    "thesis": "USA-resan visar att hastighet, beräkningskraft och finansiering avgör AI-loppet — svenskt pensionskapital bör investeras i europeiska start-ups och Sverige bör snabbt tillämpa AI.",
+    "key_quote": {
+      "text": "Hastighet. Beräkningskraft. Finansiering.",
+      "label": "USA-resan"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-03-11_USA-resa_med_AI-fokus_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-03-25",
+    "nr": 6,
+    "title": "Europas konkurrenskraft, nyheter och evenemang",
+    "series": false,
+    "act": 1,
+    "word_count": 305,
+    "avg_sentence_length": 14.5,
+    "lix": 44.7,
+    "loanword_rate": 0.0,
+    "tone_index": 0.0,
+    "assertive_count": 0,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 3
+      },
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 2
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Ursula von der Leyen"
+      ],
+      "countries": [
+        "Tyskland",
+        "USA",
+        "Frankrike",
+        "Polen",
+        "Danmark"
+      ],
+      "projects": [
+        "Competitiveness Compass"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "Europa har en stark industri och bör känna framtidstro — med Competitiveness Compass, Clean Industrial Deal och försvarssatsningar stärker EU sin handlingsfrihet.",
+    "key_quote": {
+      "text": "Starka industrier är en förutsättning för ett oberoende Europa som har handlingsfrihet och kan stå på egna ben när det behövs.",
+      "label": "Europas oberoende"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-03-25_Europas_konkurrenskraft_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-04-08",
+    "nr": 7,
+    "title": "Stresstest för Europa, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 672,
+    "avg_sentence_length": 19.2,
+    "lix": 49.1,
+    "loanword_rate": 0.0,
+    "tone_index": 3.0,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "kompetens_utbildning",
+        "weight": 3
+      },
+      {
+        "theme": "usa_transatlantiskt",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      }
+    ],
+    "entities": {
+      "people": [
+        "Donald Trump",
+        "Mario Draghi"
+      ],
+      "countries": [
+        "USA",
+        "Frankrike",
+        "Belgien"
+      ],
+      "projects": [
+        "Draghirapporten"
+      ]
+    },
+    "signature_phrases": [
+      "stresstest för Europa"
+    ],
+    "asks": [
+      "behall_talangen",
+      "snabbare_beslutsfattande"
+    ],
+    "thesis": "Forskarflykten från USA är en historisk möjlighet — men Sverige måste inte bara attrahera talang utan ha kapacitet att ta emot och behålla den, inklusive att adressera bostäder, skola och tung kriminalitet.",
+    "key_quote": {
+      "text": "Att attrahera talang är en sak — men kapacitet att ta emot och behålla är något helt annat.",
+      "label": "Stresstest för Europa"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-04-08_Stresstest_for_Europa_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-04-22",
+    "nr": 8,
+    "title": "Matematiksatsning på landsbygd, upprustningen i Kina, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 571,
+    "avg_sentence_length": 21.1,
+    "lix": 48.6,
+    "loanword_rate": 0.0,
+    "tone_index": 1.8,
+    "assertive_count": 1,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "kina",
+        "weight": 3
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      }
+    ],
+    "entities": {
+      "people": [
+        "Xi Jinping"
+      ],
+      "countries": [
+        "Kina",
+        "USA"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "Medan Europa stirrar på Trump genomför Kina en medveten vetenskaplig och teknologisk upprustning för globalt ledarskap — Europa måste ha lika stort fokus på hur Kina agerar.",
+    "key_quote": {
+      "text": "Min slutsats är att det inte räcker att ha beredskap för hur USA agerar i detta nya läge.",
+      "label": "Upprustningen i Kina"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-04-22_Matematiksatsning_pa_landsbygd_upprustningen_i_Kina_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-05-06",
+    "nr": 9,
+    "title": "100 dagar med Trump, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 910,
+    "avg_sentence_length": 15.4,
+    "lix": 40.0,
+    "loanword_rate": 2.2,
+    "tone_index": 5.5,
+    "assertive_count": 7,
+    "hedge_count": 2,
+    "themes": [
+      {
+        "theme": "usa_transatlantiskt",
+        "weight": 3
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "klimat_energi",
+        "weight": 1
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Donald Trump"
+      ],
+      "countries": [
+        "USA"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "more of the same är inget alternativ",
+      "speed is of the essence"
+    ],
+    "asks": [
+      "snabbare_beslutsfattande"
+    ],
+    "thesis": "Trumps första 100 dagar visar att 'more of the same' inte är ett alternativ — näringsliv, akademi och politik måste bli snabbare, modigare och våga se bortom nästa mandatperiod.",
+    "key_quote": {
+      "text": "More of the same är inget alternativ.",
+      "label": "100 dagar med Trump"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-05-06_100_dagar_med_Trump_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-05-20",
+    "nr": 10,
+    "title": "Sverige i Global AI Index, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 738,
+    "avg_sentence_length": 14.8,
+    "lix": 42.5,
+    "loanword_rate": 0.0,
+    "tone_index": -1.4,
+    "assertive_count": 0,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "ai_teknik",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [],
+      "countries": [
+        "USA",
+        "Kina",
+        "Frankrike",
+        "Singapore",
+        "Sydkorea"
+      ],
+      "projects": [
+        "Global AI Index"
+      ]
+    },
+    "signature_phrases": [
+      "the deck is being reshuffled"
+    ],
+    "asks": [
+      "ai_reform"
+    ],
+    "thesis": "Sveriges plats 25 i Global AI Index är en väckarklocka — regeringen behöver en genomgripande AI-reform i Hem-PC:s och produktionslyftets klass.",
+    "key_quote": {
+      "text": "The deck is being reshuffled.",
+      "label": "Global AI Index"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-05-20_Sverige_i_Global_AI_Index.txt"
+  },
+  {
+    "date": "2025-06-03",
+    "nr": 11,
+    "title": "Läge för dual use, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 667,
+    "avg_sentence_length": 16.3,
+    "lix": 49.7,
+    "loanword_rate": 7.5,
+    "tone_index": 1.5,
+    "assertive_count": 2,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "dual_use_deeptech",
+        "weight": 3
+      },
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 3
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Keir Starmer"
+      ],
+      "countries": [
+        "Storbritannien",
+        "Tyskland",
+        "Sydkorea",
+        "Japan"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "dual use",
+      "strategisk nyckel"
+    ],
+    "asks": [
+      "dual_use_strategi"
+    ],
+    "thesis": "Dual use är inte längre en teknisk nisch utan en strategisk nyckel — Sverige och EU behöver en dual use-strategi som river murarna mellan civila och militära innovationssystem.",
+    "key_quote": {
+      "text": "Dual use är inte längre en teknisk nisch — det är en strategisk nyckel till Sveriges säkerhet, innovationsförmåga och konkurrenskraft.",
+      "label": "Läge för dual use"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-06-03_Lage_for_dual_use_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-06-17",
+    "nr": 12,
+    "title": "Premiär för Global Outlook: Asia, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 523,
+    "avg_sentence_length": 17.4,
+    "lix": 47.1,
+    "loanword_rate": 0.0,
+    "tone_index": 1.9,
+    "assertive_count": 1,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "ai_teknik",
+        "weight": 3
+      },
+      {
+        "theme": "kina",
+        "weight": 2
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Erik Brynjolfsson",
+        "Hyejin Kim",
+        "Erik Mobrand",
+        "Edy Velander"
+      ],
+      "countries": [
+        "Kina",
+        "USA"
+      ],
+      "projects": [
+        "Global Outlook"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "IVA återupplivar sin tradition av systematisk omvärldsbevakning med Global Outlook: Asia — i en tid då Kina snabbt knappar in på USA inom AI behöver Europa analysera, inte bara informeras.",
+    "key_quote": {
+      "text": "Information är en sak - att sätta informationen i ett sammanhang, analysera och värdera är något helt annat.",
+      "label": "Global Outlook: Asia"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-06-17_Premiar_for_Global_Outlook_Asia_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-07-01",
+    "nr": 13,
+    "title": "Europas säkerhet, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 721,
+    "avg_sentence_length": 17.6,
+    "lix": 46.9,
+    "loanword_rate": 1.4,
+    "tone_index": 8.3,
+    "assertive_count": 6,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 3
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "dual_use_deeptech",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mette Frederiksen",
+        "Donald Tusk",
+        "Volodymyr Zelenskyj"
+      ],
+      "countries": [
+        "Danmark",
+        "Polen",
+        "USA",
+        "Ukraina"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "försvarsinnovationsförmåga",
+      "Security, Europe!"
+    ],
+    "asks": [
+      "dual_use_strategi"
+    ],
+    "thesis": "Europa måste inte bara köpa försvarsförmåga utan bygga försvarsinnovationsförmåga — investera skyndsamt och rätt, och öppna forskningsfinansiering för dual use.",
+    "key_quote": {
+      "text": "Vi behöver hitta de nya modellerna för att inte bara bygga försvarsförmåga, utan försvarsinnovationsförmåga.",
+      "label": "Europas säkerhet"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-07-01_Europas_sakerhet_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-08-12",
+    "nr": 14,
+    "title": "EU:s långtidsbudget, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 667,
+    "avg_sentence_length": 20.8,
+    "lix": 52.9,
+    "loanword_rate": 0.0,
+    "tone_index": 3.0,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Ursula von der Leyen",
+        "Jeffrey Ding"
+      ],
+      "countries": [
+        "Tyskland",
+        "Nederländerna"
+      ],
+      "projects": [
+        "Horizon Europe"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "EU:s föreslagna långtidsbudget bör bedömas på hur pengarna investeras — konkurrenskraftsfonden och Horisont Europa är centrala, och Sveriges styrka ligger i snabb teknikspridning.",
+    "key_quote": {
+      "text": "En betydligt viktigare diskussion är hur pengarna ska investeras.",
+      "label": "EU:s långtidsbudget"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-08-12_EUs_langtidsbudget_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-08-26",
+    "nr": 15,
+    "title": "Greenhushing, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 688,
+    "avg_sentence_length": 16.0,
+    "lix": 43.3,
+    "loanword_rate": 5.8,
+    "tone_index": -1.5,
+    "assertive_count": 1,
+    "hedge_count": 2,
+    "themes": [
+      {
+        "theme": "klimat_energi",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "usa_transatlantiskt",
+        "weight": 1
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Donald Trump",
+        "Klaus Schwab"
+      ],
+      "countries": [
+        "USA",
+        "Ukraina",
+        "Ryssland"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "greenhushing",
+      "responsible capitalism"
+    ],
+    "asks": [],
+    "thesis": "Trots Trumps klimatförnekelse backar näringslivet inte på klimatarbetet — de 'greenhushar' globalt, men svenska företag bör fortsätta vara stolta över sitt klimatarbete.",
+    "key_quote": {
+      "text": "Greenhushing betyder ungefär att man visst jobbar med den gröna omställningen, men man pratar inte högt om det.",
+      "label": "Greenhushing"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-08-26_Greenhushing_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-09-09",
+    "nr": 16,
+    "title": "Nödvändiga infrastruktursatsningar, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 668,
+    "avg_sentence_length": 15.9,
+    "lix": 43.2,
+    "loanword_rate": 0.0,
+    "tone_index": 3.0,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "naringsliv_industri",
+        "weight": 3
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [],
+      "countries": [
+        "Danmark",
+        "Tyskland"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [],
+    "asks": [
+      "infrastrukturinvestering"
+    ],
+    "thesis": "Sverige behöver fatta modiga beslut om nästa stora infrastrukturinvestering nu — finansierad via lånemodeller som Öresundsbron och Fehmarnbelt — för kommande generationers välstånd.",
+    "key_quote": {
+      "text": "Nu är det läge för nästa stora infrastrukturinvestering.",
+      "label": "Nödvändiga infrastruktursatsningar"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-09-09_Nodvandiga_infrastruktursatsningar_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-09-16",
+    "nr": 17,
+    "title": "Svenska framtider: nytt visionsprojekt, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 444,
+    "avg_sentence_length": 17.1,
+    "lix": 49.7,
+    "loanword_rate": 0.0,
+    "tone_index": 0.0,
+    "assertive_count": 0,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 3
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mario Draghi"
+      ],
+      "countries": [
+        "Kina",
+        "Sydkorea",
+        "Japan",
+        "Taiwan"
+      ],
+      "projects": [
+        "Svenska framtider",
+        "Global Outlook"
+      ]
+    },
+    "signature_phrases": [
+      "Svenska framtider"
+    ],
+    "asks": [],
+    "thesis": "Sverige saknar en gemensam vision för framtiden — IVA lanserar 'Svenska framtider' för att staka ut Sverige som teknik- och innovationsland 2035, med start i en analys av landets position.",
+    "key_quote": {
+      "text": "Var är visionen för Sverige?",
+      "label": "Svenska framtider"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-09-16_Svenska_framtider_nytt_visionsprojekt_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-09-23",
+    "nr": 18,
+    "title": "Innovationslandet Sverige, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 530,
+    "avg_sentence_length": 16.1,
+    "lix": 44.9,
+    "loanword_rate": 0.0,
+    "tone_index": 3.8,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 3
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mario Draghi"
+      ],
+      "countries": [
+        "Schweiz"
+      ],
+      "projects": [
+        "Svenska framtider",
+        "Draghirapporten"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "Sveriges topplaceringar i innovationsrankningar speglar backspegeln — för att leda om tio år krävs att vi förstår var vi står idag, inte blir självbelåtna som Draghi varnar.",
+    "key_quote": {
+      "text": "Bägge undersökningar analyserar hur läget ser ut i backspegeln, inte i kristallkulan.",
+      "label": "Innovationslandet Sverige"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-09-23_Innovationslandet_Sverige_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-10-07",
+    "nr": 19,
+    "title": "Värdet av vetenskap, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 430,
+    "avg_sentence_length": 19.5,
+    "lix": 47.2,
+    "loanword_rate": 0.0,
+    "tone_index": 2.3,
+    "assertive_count": 2,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 3
+      },
+      {
+        "theme": "kompetens_utbildning",
+        "weight": 2
+      },
+      {
+        "theme": "usa_transatlantiskt",
+        "weight": 1
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [],
+      "countries": [
+        "USA"
+      ],
+      "projects": [
+        "Draghirapporten"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "När fakta och vetenskaplighet ifrågasätts från högsta ort är det viktigare än någonsin att hylla vetenskapen — allmänhetens förtroende för vetenskap är ett demokratiskt grundfundament.",
+    "key_quote": {
+      "text": "Allmänhetens förtroende för vetenskapen är ett grundfundament i en demokrati.",
+      "label": "Värdet av vetenskap"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-10-07_Vardet_av_vetenskap_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-10-21",
+    "nr": 20,
+    "title": "Guldmedaljörer, FoU-barometer, fler nyheter och evenemang",
+    "series": false,
+    "act": 2,
+    "word_count": 468,
+    "avg_sentence_length": 21.3,
+    "lix": 55.9,
+    "loanword_rate": 0.0,
+    "tone_index": 2.1,
+    "assertive_count": 2,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 1
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Joel Mokyr",
+        "Carl-Henric Svanberg",
+        "Mats Danielsson",
+        "Helena Hedblom",
+        "Daniel Stenberg"
+      ],
+      "countries": [],
+      "projects": [
+        "Svenska framtider"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [],
+    "thesis": "Nobelpriset till Mokyr bekräftar att tillväxt drivs av tolerans och fritt tänkande — Sverige måste förvalta sina styrkor och adressera svagheter inom strategiska tekniker som robotik och smarta elnät.",
+    "key_quote": {
+      "text": "Vi måste aktivt förvalta och bygga vidare på våra styrkor. Och kanske viktigare: vi måste känna till våra svagheter.",
+      "label": "Guldmedaljörer & FoU-barometer"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-10-21_Guldmedaljorer_FoU-barometer_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-11-04",
+    "nr": 21,
+    "title": "Axel Oxenstierna 2.0, fler nyheter och evenemang",
+    "series": false,
+    "act": 3,
+    "word_count": 707,
+    "avg_sentence_length": 16.4,
+    "lix": 46.9,
+    "loanword_rate": 0.0,
+    "tone_index": 2.8,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Kristina Alvendal"
+      ],
+      "countries": [
+        "USA",
+        "Kina",
+        "Ryssland"
+      ],
+      "projects": [
+        "FoU-barometer"
+      ]
+    },
+    "signature_phrases": [
+      "Axel Oxenstierna 2.0"
+    ],
+    "asks": [
+      "axel_oxenstierna"
+    ],
+    "thesis": "Sveriges effektiva myndigheter är en konkurrenskraftsfördel, men Axel Oxenstiernas förvaltningsmodell är inte längre anpassad till dagens snabba värld och EU — det är dags för en 'Axel Oxenstierna 2.0'.",
+    "key_quote": {
+      "text": "Nu tror jag det är dags för en Axel Oxenstierna 2.0.",
+      "label": "Axel Oxenstierna 2.0"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-11-04_Axel_Oxenstierna_20_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-11-18",
+    "nr": 22,
+    "title": "Rekordhögt världsindex för osäkerhet, fler nyheter och evenemang",
+    "series": false,
+    "act": 3,
+    "word_count": 584,
+    "avg_sentence_length": 18.2,
+    "lix": 47.0,
+    "loanword_rate": 0.0,
+    "tone_index": 1.7,
+    "assertive_count": 1,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 3
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [],
+      "countries": [
+        "USA",
+        "Kina",
+        "Ryssland"
+      ],
+      "projects": [
+        "Svenska framtider"
+      ]
+    },
+    "signature_phrases": [
+      "världsindex för osäkerhet",
+      "äga sin egen framtid"
+    ],
+    "asks": [],
+    "thesis": "World Uncertainty Index slår rekord på 122 000 — i en exceptionellt osäker tid har IVA ett särskilt ansvar att stå stadigt på vetenskaplig grund och hjälpa Sverige att äga sin egen framtid.",
+    "key_quote": {
+      "text": "Världen har nog sällan varit, eller känts, mer osäker än idag.",
+      "label": "Rekordhögt osäkerhetsindex"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-11-18_Rekordhogt_varldsindex_for_osakerhet_fler_nyheter_och_evenemang.txt"
+  },
+  {
+    "date": "2025-12-02",
+    "nr": 23,
+    "title": "om en svensk Teknikminister",
+    "series": true,
+    "act": 3,
+    "word_count": 735,
+    "avg_sentence_length": 17.1,
+    "lix": 45.3,
+    "loanword_rate": 0.0,
+    "tone_index": 0.0,
+    "assertive_count": 1,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      },
+      {
+        "theme": "kompetens_utbildning",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Joel Mokyr"
+      ],
+      "countries": [
+        "Tyskland",
+        "USA",
+        "Japan",
+        "Sydkorea",
+        "Finland"
+      ],
+      "projects": [
+        "Svenska framtider"
+      ]
+    },
+    "signature_phrases": [
+      "Teknikminister",
+      "Allas ansvar, ingens ansvar"
+    ],
+    "asks": [
+      "teknikminister"
+    ],
+    "thesis": "Inget av Riksdagens utskott och ingen minister har ett utpekat ansvar för teknikutveckling — Sverige bör överväga ett Teknikutskott eller en Teknikminister, annars blir det 'allas ansvar, ingens ansvar'.",
+    "key_quote": {
+      "text": "Allas ansvar, ingens ansvar.",
+      "label": "En svensk Teknikminister"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-12-02_IVAs_vd_--_om_en_svensk_Teknikminister.txt"
+  },
+  {
+    "date": "2025-12-16",
+    "nr": 24,
+    "title": "om behovet av livslångt lärande",
+    "series": true,
+    "act": 3,
+    "word_count": 781,
+    "avg_sentence_length": 17.4,
+    "lix": 45.1,
+    "loanword_rate": 0.0,
+    "tone_index": 1.3,
+    "assertive_count": 2,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "kompetens_utbildning",
+        "weight": 3
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Joel Mokyr",
+        "Erik Brynjolfsson",
+        "Gunnar Karlsson"
+      ],
+      "countries": [
+        "USA"
+      ],
+      "projects": [
+        "Svenska framtider"
+      ]
+    },
+    "signature_phrases": [
+      "AI-utsatta yrken"
+    ],
+    "asks": [],
+    "thesis": "Den ultrasnabba teknikutvecklingen gör livslångt lärande avgörande — men lärosätenas uppdrag och struktur är inte riggade för yrkesverksammas fortbildning, och det måste ändras.",
+    "key_quote": {
+      "text": "Throw out the box and encourage brain circulation!",
+      "label": "Behovet av livslångt lärande"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2025-12-16_IVAs_vd_--_om_behovet_av_livslangt_larande.txt"
+  },
+  {
+    "date": "2026-01-07",
+    "nr": 1,
+    "title": "om en ny era: Polycen",
+    "series": true,
+    "act": 3,
+    "word_count": 623,
+    "avg_sentence_length": 18.3,
+    "lix": 46.1,
+    "loanword_rate": 0.0,
+    "tone_index": 1.6,
+    "assertive_count": 2,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 3
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 1
+      },
+      {
+        "theme": "klimat_energi",
+        "weight": 1
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mette Frederiksen",
+        "Donald Tusk",
+        "Thomas L. Friedman"
+      ],
+      "countries": [
+        "Danmark",
+        "USA",
+        "Grönland",
+        "Ungern"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "Polycen",
+      "allt hänger ihop"
+    ],
+    "asks": [],
+    "thesis": "2026 inleds med dramatik — Thomas Friedmans begrepp 'Polycenen' fångar en epok där tätt sammanlänkade krafter rör sig snabbare än institutionerna hinner, och kräver att Europa tänker systemiskt och agerar effektivt.",
+    "key_quote": {
+      "text": "Polycenen — en epok där världen inte längre kan förstås genom tydliga motsatspar, utan formas av många tätt sammanlänkade krafter.",
+      "label": "En ny era: Polycen"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-01-07_IVAs_vd_--_om_en_ny_era_Polycen.txt"
+  },
+  {
+    "date": "2026-01-13",
+    "nr": 2,
+    "title": "om AI- och robotikboomen",
+    "series": true,
+    "act": 3,
+    "word_count": 557,
+    "avg_sentence_length": 18.6,
+    "lix": 47.5,
+    "loanword_rate": 0.0,
+    "tone_index": 3.6,
+    "assertive_count": 2,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "ai_teknik",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "kina",
+        "weight": 1
+      },
+      {
+        "theme": "kompetens_utbildning",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Hyejin Kim",
+        "Erik Mobrand"
+      ],
+      "countries": [
+        "Kina",
+        "Japan",
+        "Sydkorea"
+      ],
+      "projects": [
+        "Global Outlook",
+        "Svenska framtider"
+      ]
+    },
+    "signature_phrases": [],
+    "asks": [
+      "teknikminister"
+    ],
+    "thesis": "Sverige klättrar i AI-index men måste bli mer offensivt — Östasien leder robotikrevolutionen, och Sverige behöver handlingskraft och kanske en teknikminister för att inte hamna på efterkälken.",
+    "key_quote": {
+      "text": "Men det är inte den nya tekniken som är hotet -- det är hur samhället väljer att hantera den.",
+      "label": "AI- och robotikboomen"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-01-13_IVAs_vd_--_om_AI-_och_robotikboomen.txt"
+  },
+  {
+    "date": "2026-01-27",
+    "nr": 3,
+    "title": "om den mellanmänskliga transatlantiska länken",
+    "series": true,
+    "act": 3,
+    "word_count": 740,
+    "avg_sentence_length": 16.1,
+    "lix": 45.4,
+    "loanword_rate": 2.7,
+    "tone_index": 8.1,
+    "assertive_count": 7,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "usa_transatlantiskt",
+        "weight": 3
+      },
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 2
+      },
+      {
+        "theme": "dual_use_deeptech",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Viktor Orbán"
+      ],
+      "countries": [
+        "USA",
+        "Ukraina",
+        "Danmark",
+        "Tyskland"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "den mellanmänskliga transatlantiska länken"
+    ],
+    "asks": [
+      "dual_use_strategi"
+    ],
+    "thesis": "Den mellanmänskliga transatlantiska länken är djup och stark även när alliansen ifrågasätts — och Europa måste både påskynda försvarsforskningen nu och hålla fast vid det långsiktiga perspektivet.",
+    "key_quote": {
+      "text": "Vi måste arbeta med den värld vi lever i — utan att tappa sikte på den värld vi vill ha.",
+      "label": "Den transatlantiska länken"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-01-27_IVAs_vd_--_om_den_mellanmanskliga_transatlantiska_lanken.txt"
+  },
+  {
+    "date": "2026-02-10",
+    "nr": 4,
+    "title": "om avgörande teknologisk styrka",
+    "series": true,
+    "act": 3,
+    "word_count": 843,
+    "avg_sentence_length": 16.5,
+    "lix": 43.6,
+    "loanword_rate": 0.0,
+    "tone_index": 2.4,
+    "assertive_count": 3,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mario Draghi"
+      ],
+      "countries": [
+        "Kina",
+        "USA",
+        "Tyskland",
+        "Frankrike"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "pragmatisk federalism",
+      "speed boat",
+      "two-speed EU"
+    ],
+    "asks": [
+      "snabbare_beslutsfattande"
+    ],
+    "thesis": "Teknologisk styrka — hastighet, volym och genombrytning — avgör länders framgång; EU bör öka takten via pragmatisk federalism eller ett 'two-speed EU', och Sverige kan vara speedboat.",
+    "key_quote": {
+      "text": "Vad är värre än ett EU som går i olika takt? Jo, ett EU som låter takten sättas av den långsammaste.",
+      "label": "Avgörande teknologisk styrka"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-02-10_IVAs_vd_--_om_avgorande_teknologisk_styrka.txt"
+  },
+  {
+    "date": "2026-02-24",
+    "nr": 5,
+    "title": "om strategisk oumbärlighet",
+    "series": true,
+    "act": 3,
+    "word_count": 791,
+    "avg_sentence_length": 17.6,
+    "lix": 47.4,
+    "loanword_rate": 0.0,
+    "tone_index": 3.8,
+    "assertive_count": 3,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      },
+      {
+        "theme": "sakerhet_forsvar",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Stéphane Séjourné"
+      ],
+      "countries": [
+        "Kina",
+        "USA",
+        "Australien",
+        "Sydkorea",
+        "Indien"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "strategisk oumbärlighet",
+      "middle powers",
+      "Made in Europe"
+    ],
+    "asks": [
+      "strategisk_oumbarlighet"
+    ],
+    "thesis": "Klämt mellan Kina och USA bör Europa odla sin strategiska oumbärlighet — som 'middle powers' behöver man inte vara störst, det räcker att vara strategisk och smart, och aktivt använda sina styrkeområden.",
+    "key_quote": {
+      "text": "Man behöver inte vara störst och starkast i världen för att ha inflytande eller vara strategiskt relevant. Det räcker att vara strategisk och smart.",
+      "label": "Strategisk oumbärlighet"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-02-24_IVAs_vd_--_om_strategisk_oumbarlighet.txt"
+  },
+  {
+    "date": "2026-03-10",
+    "nr": 6,
+    "title": "om kapitalism, hållbarhet och demokrati",
+    "series": true,
+    "act": 3,
+    "word_count": 583,
+    "avg_sentence_length": 17.1,
+    "lix": 50.9,
+    "loanword_rate": 0.0,
+    "tone_index": 0.0,
+    "assertive_count": 3,
+    "hedge_count": 3,
+    "themes": [
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 3
+      },
+      {
+        "theme": "klimat_energi",
+        "weight": 2
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 1
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Jean Monnet"
+      ],
+      "countries": [
+        "USA",
+        "Israel",
+        "Iran",
+        "Kina"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "Capitalism, Sustainability and Democracy",
+      "kreativ förstörelse"
+    ],
+    "asks": [
+      "snabbare_beslutsfattande",
+      "dual_use_strategi"
+    ],
+    "thesis": "Europa är den enda regionen som kan förena kapitalism, hållbarhet och demokrati — men det kräver en systemförändring på djupet, inklusive en modernisering av Lissabonfördraget för snabbare beslutsfattande.",
+    "key_quote": {
+      "text": "Kanske är det så att krisinsikten har kommit tidigare till oss medborgare än till våra politiska ledare?",
+      "label": "Kapitalism, hållbarhet och demokrati"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-03-10_IVAs_vd_--_om_kapitalism_hallbarhet_och_demokrati.txt"
+  },
+  {
+    "date": "2026-03-24",
+    "nr": 7,
+    "title": "om hårdvara som strategisk oumbärlighet",
+    "series": true,
+    "act": 3,
+    "word_count": 803,
+    "avg_sentence_length": 16.7,
+    "lix": 47.9,
+    "loanword_rate": 3.7,
+    "tone_index": 0.0,
+    "assertive_count": 0,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "naringsliv_industri",
+        "weight": 3
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 2
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 1
+      },
+      {
+        "theme": "dual_use_deeptech",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Walter Russell Mead",
+        "Mario Draghi",
+        "Paul Achleitner",
+        "Gesine Weber"
+      ],
+      "countries": [
+        "USA",
+        "Kina"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "hårdvara som strategisk oumbärlighet",
+      "fysisk AI",
+      "niche superpower",
+      "förkrigstid"
+    ],
+    "asks": [
+      "strategisk_oumbarlighet"
+    ],
+    "thesis": "I en förkrigstid där absolut styrka eller strategisk oumbärlighet avgör blir hårdvara — infrastruktur, material, produktion, leveranskedjor — en strategisk resurs, och Sveriges hård- och mjukvarustyrka gör oss till en 'niche superpower'.",
+    "key_quote": {
+      "text": "Vi befinner oss i dag djupare i en förkrigstid än vad många tror.",
+      "label": "Hårdvara som strategisk oumbärlighet"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-03-24_IVAs_vd_--_om_hardvara_som_strategisk_oumbarlighet.txt"
+  },
+  {
+    "date": "2026-04-07",
+    "nr": 8,
+    "title": "hur läser EU Kina?",
+    "series": true,
+    "act": 3,
+    "word_count": 877,
+    "avg_sentence_length": 19.9,
+    "lix": 50.8,
+    "loanword_rate": 0.0,
+    "tone_index": 0.0,
+    "assertive_count": 1,
+    "hedge_count": 1,
+    "themes": [
+      {
+        "theme": "kina",
+        "weight": 3
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 1
+      },
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mikko Huotari",
+        "Tim Cook"
+      ],
+      "countries": [
+        "Kina",
+        "USA"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "indigenous innovation",
+      "Made in China"
+    ],
+    "asks": [],
+    "thesis": "Kina har satt den globala konkurrensen ur spel — europeiska företag tävlar mot hela kinesiska system — och Kina är den svenska och europeiska industrins ödesfråga som kräver ett gemensamt, långsiktigt och effektivt förhållningssätt.",
+    "key_quote": {
+      "text": "Det är Kina som är den svenska och europeiska industrins ödesfråga.",
+      "label": "Hur läser EU Kina?"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-04-07_IVAs_vd_--_hur_laser_EU_Kina.txt"
+  },
+  {
+    "date": "2026-04-21",
+    "nr": 9,
+    "title": "ambitiösa Sverige?",
+    "series": true,
+    "act": 3,
+    "word_count": 908,
+    "avg_sentence_length": 20.2,
+    "lix": 56.4,
+    "loanword_rate": 0.0,
+    "tone_index": 1.1,
+    "assertive_count": 1,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 3
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Robyn Denholm",
+        "Tim Ayres"
+      ],
+      "countries": [
+        "Australien",
+        "Kina",
+        "USA"
+      ],
+      "projects": [
+        "Ambitious Australia"
+      ]
+    },
+    "signature_phrases": [
+      "ambitiösa Sverige"
+    ],
+    "asks": [],
+    "thesis": "Australiens 'Ambitious Australia'-rapport visar att framtida konkurrenskraft inte avgörs av FoU-nivån utan av hur väl hela innovationssystemet fungerar — en läxa för ett Sverige som bör vara mer ambitiöst.",
+    "key_quote": {
+      "text": "Ett lands framtida konkurrenskraft avgörs inte av nivån på FoU-investeringar, utan av hur väl hela innovationssystemet fungerar, från kunskapsproduktion till kommersialisering och marknadspåverkan.",
+      "label": "Ambitiösa Sverige?"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-04-21_IVAs_vd_--_ambitiosa_Sverige.txt"
+  }
+]
