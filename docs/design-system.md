@@ -48,8 +48,15 @@ respect `prefers-reduced-motion`.
 The three-act tone arc as a **scroll-driven hero**: the curve draws in as you
 scroll; a fixed left **spine** tracks your position; narrative **beats** per
 letter surface its thesis, signaturcitat, and a "Myntat begrepp" chip (the
-coined phrase); act dividers; a count-up stat; the `+13,8` *Stresstest för
-Europa* callout.
+coined phrase); act dividers; a count-up stat; a peak callout.
+
+**Tone calibration decision (2026-06-15): reproducible is canonical.** The
+design's `+13,8 · Stresstest för Europa` callout was a placeholder. Our
+documented tone measure does not reproduce it (Stresstest computes to +3.0).
+The peak callout must be **data-driven** — bind it to the computed tone peak
+(currently *Europas säkerhet*, 2025-07-01, **+8.3**), never hardcoded.
+*Stresstest för Europa* remains the **narrative** Act 1→2 breakpoint, not the
+numeric tone peak.
 
 ### Explore view (`docs/design/Explore.dc.html`)
 An **annotated analytical essay** with margin annotations: tone-over-time, five
