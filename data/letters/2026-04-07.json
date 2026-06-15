@@ -3,7 +3,7 @@
   "nr": 8,
   "title": "hur läser EU Kina?",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 877,
   "avg_sentence_length": 19.9,
   "lix": 50.8,
@@ -11,18 +11,44 @@
   "tone_index": 0.0,
   "assertive_count": 1,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "kina",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Mikko Huotari",
+      "Tim Cook"
+    ],
+    "countries": [
+      "Kina",
+      "USA"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
+  "signature_phrases": [
+    "indigenous innovation",
+    "Made in China"
+  ],
   "asks": [],
-  "thesis": "",
+  "thesis": "Kina har satt den globala konkurrensen ur spel — europeiska företag tävlar mot hela kinesiska system — och Kina är den svenska och europeiska industrins ödesfråga som kräver ett gemensamt, långsiktigt och effektivt förhållningssätt.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Det är Kina som är den svenska och europeiska industrins ödesfråga.",
+    "label": "Hur läser EU Kina?"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-04-07_IVAs_vd_--_hur_laser_EU_Kina.txt"

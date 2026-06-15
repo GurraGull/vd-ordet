@@ -3,7 +3,7 @@
   "nr": 2,
   "title": "om AI- och robotikboomen",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 557,
   "avg_sentence_length": 18.6,
   "lix": 47.5,
@@ -11,18 +11,47 @@
   "tone_index": 3.6,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "ai_teknik",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "kina",
+      "weight": 1
+    },
+    {
+      "theme": "kompetens_utbildning",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Hyejin Kim",
+      "Erik Mobrand"
+    ],
+    "countries": [
+      "Kina",
+      "Japan",
+      "Sydkorea"
+    ],
+    "projects": [
+      "Global Outlook",
+      "Svenska framtider"
+    ]
   },
   "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "asks": [
+    "teknikminister"
+  ],
+  "thesis": "Sverige klättrar i AI-index men måste bli mer offensivt — Östasien leder robotikrevolutionen, och Sverige behöver handlingskraft och kanske en teknikminister för att inte hamna på efterkälken.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Men det är inte den nya tekniken som är hotet -- det är hur samhället väljer att hantera den.",
+    "label": "AI- och robotikboomen"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-01-13_IVAs_vd_--_om_AI-_och_robotikboomen.txt"

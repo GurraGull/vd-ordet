@@ -3,7 +3,7 @@
   "nr": 9,
   "title": "ambitiösa Sverige?",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 908,
   "avg_sentence_length": 20.2,
   "lix": 56.4,
@@ -11,18 +11,46 @@
   "tone_index": 1.1,
   "assertive_count": 1,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "forskning_innovation",
+      "weight": 3
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Robyn Denholm",
+      "Tim Ayres"
+    ],
+    "countries": [
+      "Australien",
+      "Kina",
+      "USA"
+    ],
+    "projects": [
+      "Ambitious Australia"
+    ]
   },
-  "signature_phrases": [],
+  "signature_phrases": [
+    "ambitiösa Sverige"
+  ],
   "asks": [],
-  "thesis": "",
+  "thesis": "Australiens 'Ambitious Australia'-rapport visar att framtida konkurrenskraft inte avgörs av FoU-nivån utan av hur väl hela innovationssystemet fungerar — en läxa för ett Sverige som bör vara mer ambitiöst.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Ett lands framtida konkurrenskraft avgörs inte av nivån på FoU-investeringar, utan av hur väl hela innovationssystemet fungerar, från kunskapsproduktion till kommersialisering och marknadspåverkan.",
+    "label": "Ambitiösa Sverige?"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-04-21_IVAs_vd_--_ambitiosa_Sverige.txt"

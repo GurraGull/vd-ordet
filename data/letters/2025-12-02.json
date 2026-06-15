@@ -3,7 +3,7 @@
   "nr": 23,
   "title": "om en svensk Teknikminister",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 735,
   "avg_sentence_length": 17.1,
   "lix": 45.3,
@@ -11,18 +11,50 @@
   "tone_index": 0.0,
   "assertive_count": 1,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    },
+    {
+      "theme": "kompetens_utbildning",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Joel Mokyr"
+    ],
+    "countries": [
+      "Tyskland",
+      "USA",
+      "Japan",
+      "Sydkorea",
+      "Finland"
+    ],
+    "projects": [
+      "Svenska framtider"
+    ]
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "Teknikminister",
+    "Allas ansvar, ingens ansvar"
+  ],
+  "asks": [
+    "teknikminister"
+  ],
+  "thesis": "Inget av Riksdagens utskott och ingen minister har ett utpekat ansvar för teknikutveckling — Sverige bör överväga ett Teknikutskott eller en Teknikminister, annars blir det 'allas ansvar, ingens ansvar'.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Allas ansvar, ingens ansvar.",
+    "label": "En svensk Teknikminister"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-12-02_IVAs_vd_--_om_en_svensk_Teknikminister.txt"

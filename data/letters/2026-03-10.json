@@ -3,7 +3,7 @@
   "nr": 6,
   "title": "om kapitalism, hållbarhet och demokrati",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 583,
   "avg_sentence_length": 17.1,
   "lix": 50.9,
@@ -11,18 +11,48 @@
   "tone_index": 0.0,
   "assertive_count": 3,
   "hedge_count": 3,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 3
+    },
+    {
+      "theme": "klimat_energi",
+      "weight": 2
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 1
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Jean Monnet"
+    ],
+    "countries": [
+      "USA",
+      "Israel",
+      "Iran",
+      "Kina"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "Capitalism, Sustainability and Democracy",
+    "kreativ förstörelse"
+  ],
+  "asks": [
+    "snabbare_beslutsfattande",
+    "dual_use_strategi"
+  ],
+  "thesis": "Europa är den enda regionen som kan förena kapitalism, hållbarhet och demokrati — men det kräver en systemförändring på djupet, inklusive en modernisering av Lissabonfördraget för snabbare beslutsfattande.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Kanske är det så att krisinsikten har kommit tidigare till oss medborgare än till våra politiska ledare?",
+    "label": "Kapitalism, hållbarhet och demokrati"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-03-10_IVAs_vd_--_om_kapitalism_hallbarhet_och_demokrati.txt"

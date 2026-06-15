@@ -3,7 +3,7 @@
   "nr": 7,
   "title": "om hårdvara som strategisk oumbärlighet",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 803,
   "avg_sentence_length": 16.7,
   "lix": 47.9,
@@ -11,18 +11,50 @@
   "tone_index": 0.0,
   "assertive_count": 0,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "naringsliv_industri",
+      "weight": 3
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 1
+    },
+    {
+      "theme": "dual_use_deeptech",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Walter Russell Mead",
+      "Mario Draghi",
+      "Paul Achleitner",
+      "Gesine Weber"
+    ],
+    "countries": [
+      "USA",
+      "Kina"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "hårdvara som strategisk oumbärlighet",
+    "fysisk AI",
+    "niche superpower",
+    "förkrigstid"
+  ],
+  "asks": [
+    "strategisk_oumbarlighet"
+  ],
+  "thesis": "I en förkrigstid där absolut styrka eller strategisk oumbärlighet avgör blir hårdvara — infrastruktur, material, produktion, leveranskedjor — en strategisk resurs, och Sveriges hård- och mjukvarustyrka gör oss till en 'niche superpower'.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vi befinner oss i dag djupare i en förkrigstid än vad många tror.",
+    "label": "Hårdvara som strategisk oumbärlighet"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-03-24_IVAs_vd_--_om_hardvara_som_strategisk_oumbarlighet.txt"

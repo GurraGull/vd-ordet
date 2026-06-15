@@ -3,7 +3,7 @@
   "nr": 21,
   "title": "Axel Oxenstierna 2.0, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 3,
   "word_count": 707,
   "avg_sentence_length": 16.4,
   "lix": 46.9,
@@ -11,18 +11,47 @@
   "tone_index": 2.8,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Kristina Alvendal"
+    ],
+    "countries": [
+      "USA",
+      "Kina",
+      "Ryssland"
+    ],
+    "projects": [
+      "FoU-barometer"
+    ]
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "Axel Oxenstierna 2.0"
+  ],
+  "asks": [
+    "axel_oxenstierna"
+  ],
+  "thesis": "Sveriges effektiva myndigheter är en konkurrenskraftsfördel, men Axel Oxenstiernas förvaltningsmodell är inte längre anpassad till dagens snabba värld och EU — det är dags för en 'Axel Oxenstierna 2.0'.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Nu tror jag det är dags för en Axel Oxenstierna 2.0.",
+    "label": "Axel Oxenstierna 2.0"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-11-04_Axel_Oxenstierna_20_fler_nyheter_och_evenemang.txt"

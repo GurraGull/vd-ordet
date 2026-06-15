@@ -3,7 +3,7 @@
   "nr": 4,
   "title": "om avgörande teknologisk styrka",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 843,
   "avg_sentence_length": 16.5,
   "lix": 43.6,
@@ -11,18 +11,48 @@
   "tone_index": 2.4,
   "assertive_count": 3,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 3
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Mario Draghi"
+    ],
+    "countries": [
+      "Kina",
+      "USA",
+      "Tyskland",
+      "Frankrike"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "pragmatisk federalism",
+    "speed boat",
+    "two-speed EU"
+  ],
+  "asks": [
+    "snabbare_beslutsfattande"
+  ],
+  "thesis": "Teknologisk styrka — hastighet, volym och genombrytning — avgör länders framgång; EU bör öka takten via pragmatisk federalism eller ett 'two-speed EU', och Sverige kan vara speedboat.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vad är värre än ett EU som går i olika takt? Jo, ett EU som låter takten sättas av den långsammaste.",
+    "label": "Avgörande teknologisk styrka"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-02-10_IVAs_vd_--_om_avgorande_teknologisk_styrka.txt"

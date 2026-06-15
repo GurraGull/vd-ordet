@@ -3,7 +3,7 @@
   "nr": 22,
   "title": "Rekordhögt världsindex för osäkerhet, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 3,
   "word_count": 584,
   "avg_sentence_length": 18.2,
   "lix": 47.0,
@@ -11,18 +11,44 @@
   "tone_index": 1.7,
   "assertive_count": 1,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 3
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 1
+    }
+  ],
   "entities": {
     "people": [],
-    "countries": [],
-    "projects": []
+    "countries": [
+      "USA",
+      "Kina",
+      "Ryssland"
+    ],
+    "projects": [
+      "Svenska framtider"
+    ]
   },
-  "signature_phrases": [],
+  "signature_phrases": [
+    "världsindex för osäkerhet",
+    "äga sin egen framtid"
+  ],
   "asks": [],
-  "thesis": "",
+  "thesis": "World Uncertainty Index slår rekord på 122 000 — i en exceptionellt osäker tid har IVA ett särskilt ansvar att stå stadigt på vetenskaplig grund och hjälpa Sverige att äga sin egen framtid.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Världen har nog sällan varit, eller känts, mer osäker än idag.",
+    "label": "Rekordhögt osäkerhetsindex"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-11-18_Rekordhogt_varldsindex_for_osakerhet_fler_nyheter_och_evenemang.txt"

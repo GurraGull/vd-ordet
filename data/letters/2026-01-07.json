@@ -3,7 +3,7 @@
   "nr": 1,
   "title": "om en ny era: Polycen",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 623,
   "avg_sentence_length": 18.3,
   "lix": 46.1,
@@ -11,18 +11,47 @@
   "tone_index": 1.6,
   "assertive_count": 2,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 3
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 1
+    },
+    {
+      "theme": "klimat_energi",
+      "weight": 1
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Mette Frederiksen",
+      "Donald Tusk",
+      "Thomas L. Friedman"
+    ],
+    "countries": [
+      "Danmark",
+      "USA",
+      "Grönland",
+      "Ungern"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
+  "signature_phrases": [
+    "Polycen",
+    "allt hänger ihop"
+  ],
   "asks": [],
-  "thesis": "",
+  "thesis": "2026 inleds med dramatik — Thomas Friedmans begrepp 'Polycenen' fångar en epok där tätt sammanlänkade krafter rör sig snabbare än institutionerna hinner, och kräver att Europa tänker systemiskt och agerar effektivt.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Polycenen — en epok där världen inte längre kan förstås genom tydliga motsatspar, utan formas av många tätt sammanlänkade krafter.",
+    "label": "En ny era: Polycen"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-01-07_IVAs_vd_--_om_en_ny_era_Polycen.txt"

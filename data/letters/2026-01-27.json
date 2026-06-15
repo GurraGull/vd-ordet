@@ -3,7 +3,7 @@
   "nr": 3,
   "title": "om den mellanmänskliga transatlantiska länken",
   "series": true,
-  "act": 0,
+  "act": 3,
   "word_count": 740,
   "avg_sentence_length": 16.1,
   "lix": 45.4,
@@ -11,18 +11,46 @@
   "tone_index": 8.1,
   "assertive_count": 7,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "usa_transatlantiskt",
+      "weight": 3
+    },
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 2
+    },
+    {
+      "theme": "dual_use_deeptech",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Viktor Orbán"
+    ],
+    "countries": [
+      "USA",
+      "Ukraina",
+      "Danmark",
+      "Tyskland"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "den mellanmänskliga transatlantiska länken"
+  ],
+  "asks": [
+    "dual_use_strategi"
+  ],
+  "thesis": "Den mellanmänskliga transatlantiska länken är djup och stark även när alliansen ifrågasätts — och Europa måste både påskynda försvarsforskningen nu och hålla fast vid det långsiktiga perspektivet.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vi måste arbeta med den värld vi lever i — utan att tappa sikte på den värld vi vill ha.",
+    "label": "Den transatlantiska länken"
   },
   "source_url": "",
   "raw_text": "data/raw/2026-01-27_IVAs_vd_--_om_den_mellanmanskliga_transatlantiska_lanken.txt"
