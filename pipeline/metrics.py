@@ -27,3 +27,25 @@ def lix(text):
         return 0.0
     long_words = sum(1 for x in w if len(x) > 6)
     return round(len(w) / len(s) + long_words * 100 / len(w), 1)
+
+
+def count_markers(text, markers):
+    low = text.lower()
+    total = 0
+    for m in markers:
+        total += len(re.findall(r"\b" + re.escape(m.lower()) + r"\b", low))
+    return total
+
+
+def tone_index(text, assertive, hedge):
+    w = word_count(text)
+    if not w:
+        return 0.0
+    return round((count_markers(text, assertive) - count_markers(text, hedge)) * 1000 / w, 1)
+
+
+def loanword_rate(text, loanwords):
+    w = word_count(text)
+    if not w:
+        return 0.0
+    return round(count_markers(text, loanwords) * 1000 / w, 1)
