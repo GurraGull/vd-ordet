@@ -1,0 +1,29 @@
+{
+  "date": "2025-02-11",
+  "nr": 3,
+  "title": "Kabelbrotten i Östersjön, ansvarsfull internationalisering, nyheter och evenemang",
+  "series": false,
+  "act": 0,
+  "word_count": 281,
+  "avg_sentence_length": 21.6,
+  "lix": 56.5,
+  "loanword_rate": 0.0,
+  "tone_index": 3.6,
+  "assertive_count": 2,
+  "hedge_count": 1,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-02-11_Kabelbrotten_i_Ostersjon_ansvarsfull_internationalisering_nyheter_och_evenemang.txt"
+}

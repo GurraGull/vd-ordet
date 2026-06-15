@@ -1,0 +1,29 @@
+{
+  "date": "2025-01-14",
+  "nr": 1,
+  "title": "Inbjudningar till högaktuella evenemang och fler nyheter",
+  "series": false,
+  "act": 0,
+  "word_count": 355,
+  "avg_sentence_length": 15.4,
+  "lix": 41.9,
+  "loanword_rate": 0.0,
+  "tone_index": 5.6,
+  "assertive_count": 2,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-01-14_Inbjudningar_till_hogaktuella_evenemang_och_fler_nyheter.txt"
+}

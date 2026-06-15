@@ -1,0 +1,29 @@
+{
+  "date": "2025-12-02",
+  "nr": 23,
+  "title": "om en svensk Teknikminister",
+  "series": true,
+  "act": 0,
+  "word_count": 735,
+  "avg_sentence_length": 17.1,
+  "lix": 45.3,
+  "loanword_rate": 0.0,
+  "tone_index": 0.0,
+  "assertive_count": 1,
+  "hedge_count": 1,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-12-02_IVAs_vd_--_om_en_svensk_Teknikminister.txt"
+}

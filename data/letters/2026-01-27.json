@@ -1,0 +1,29 @@
+{
+  "date": "2026-01-27",
+  "nr": 3,
+  "title": "om den mellanmänskliga transatlantiska länken",
+  "series": true,
+  "act": 0,
+  "word_count": 740,
+  "avg_sentence_length": 16.1,
+  "lix": 45.4,
+  "loanword_rate": 2.7,
+  "tone_index": 8.1,
+  "assertive_count": 7,
+  "hedge_count": 1,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-01-27_IVAs_vd_--_om_den_mellanmanskliga_transatlantiska_lanken.txt"
+}

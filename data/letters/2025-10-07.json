@@ -1,0 +1,29 @@
+{
+  "date": "2025-10-07",
+  "nr": 19,
+  "title": "Värdet av vetenskap, fler nyheter och evenemang",
+  "series": false,
+  "act": 0,
+  "word_count": 430,
+  "avg_sentence_length": 19.5,
+  "lix": 47.2,
+  "loanword_rate": 0.0,
+  "tone_index": 2.3,
+  "assertive_count": 2,
+  "hedge_count": 1,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-10-07_Vardet_av_vetenskap_fler_nyheter_och_evenemang.txt"
+}

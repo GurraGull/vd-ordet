@@ -1,0 +1,29 @@
+{
+  "date": "2025-07-01",
+  "nr": 13,
+  "title": "Europas säkerhet, fler nyheter och evenemang",
+  "series": false,
+  "act": 0,
+  "word_count": 721,
+  "avg_sentence_length": 17.6,
+  "lix": 46.9,
+  "loanword_rate": 1.4,
+  "tone_index": 8.3,
+  "assertive_count": 6,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-07-01_Europas_sakerhet_fler_nyheter_och_evenemang.txt"
+}

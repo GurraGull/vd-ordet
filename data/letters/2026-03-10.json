@@ -1,0 +1,29 @@
+{
+  "date": "2026-03-10",
+  "nr": 6,
+  "title": "om kapitalism, hållbarhet och demokrati",
+  "series": true,
+  "act": 0,
+  "word_count": 583,
+  "avg_sentence_length": 17.1,
+  "lix": 50.9,
+  "loanword_rate": 0.0,
+  "tone_index": 0.0,
+  "assertive_count": 3,
+  "hedge_count": 3,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-03-10_IVAs_vd_--_om_kapitalism_hallbarhet_och_demokrati.txt"
+}

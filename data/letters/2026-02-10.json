@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-10",
+  "nr": 4,
+  "title": "om avgörande teknologisk styrka",
+  "series": true,
+  "act": 0,
+  "word_count": 843,
+  "avg_sentence_length": 16.5,
+  "lix": 43.6,
+  "loanword_rate": 0.0,
+  "tone_index": 2.4,
+  "assertive_count": 3,
+  "hedge_count": 1,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-02-10_IVAs_vd_--_om_avgorande_teknologisk_styrka.txt"
+}

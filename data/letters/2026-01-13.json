@@ -1,0 +1,29 @@
+{
+  "date": "2026-01-13",
+  "nr": 2,
+  "title": "om AI- och robotikboomen",
+  "series": true,
+  "act": 0,
+  "word_count": 557,
+  "avg_sentence_length": 18.6,
+  "lix": 47.5,
+  "loanword_rate": 0.0,
+  "tone_index": 3.6,
+  "assertive_count": 2,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-01-13_IVAs_vd_--_om_AI-_och_robotikboomen.txt"
+}

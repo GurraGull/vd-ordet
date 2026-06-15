@@ -1,0 +1,29 @@
+{
+  "date": "2025-04-22",
+  "nr": 8,
+  "title": "Matematiksatsning på landsbygd, upprustningen i Kina, fler nyheter och evenemang",
+  "series": false,
+  "act": 0,
+  "word_count": 571,
+  "avg_sentence_length": 21.1,
+  "lix": 48.6,
+  "loanword_rate": 0.0,
+  "tone_index": 1.8,
+  "assertive_count": 1,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-04-22_Matematiksatsning_pa_landsbygd_upprustningen_i_Kina_fler_nyheter_och_evenemang.txt"
+}

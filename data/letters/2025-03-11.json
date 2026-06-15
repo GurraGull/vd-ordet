@@ -1,0 +1,29 @@
+{
+  "date": "2025-03-11",
+  "nr": 5,
+  "title": "USA-resa med AI-fokus, nyheter och evenemang",
+  "series": false,
+  "act": 0,
+  "word_count": 467,
+  "avg_sentence_length": 14.2,
+  "lix": 42.0,
+  "loanword_rate": 0.0,
+  "tone_index": 4.3,
+  "assertive_count": 2,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-03-11_USA-resa_med_AI-fokus_nyheter_och_evenemang.txt"
+}

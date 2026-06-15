@@ -1,0 +1,29 @@
+{
+  "date": "2026-04-21",
+  "nr": 9,
+  "title": "ambitiösa Sverige?",
+  "series": true,
+  "act": 0,
+  "word_count": 908,
+  "avg_sentence_length": 20.2,
+  "lix": 56.4,
+  "loanword_rate": 0.0,
+  "tone_index": 1.1,
+  "assertive_count": 1,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-04-21_IVAs_vd_--_ambitiosa_Sverige.txt"
+}

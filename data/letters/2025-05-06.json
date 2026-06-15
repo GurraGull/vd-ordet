@@ -1,0 +1,29 @@
+{
+  "date": "2025-05-06",
+  "nr": 9,
+  "title": "100 dagar med Trump, fler nyheter och evenemang",
+  "series": false,
+  "act": 0,
+  "word_count": 910,
+  "avg_sentence_length": 15.4,
+  "lix": 40.0,
+  "loanword_rate": 2.2,
+  "tone_index": 5.5,
+  "assertive_count": 7,
+  "hedge_count": 2,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2025-05-06_100_dagar_med_Trump_fler_nyheter_och_evenemang.txt"
+}

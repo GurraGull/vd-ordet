@@ -1,0 +1,29 @@
+{
+  "date": "2026-02-24",
+  "nr": 5,
+  "title": "om strategisk oumbärlighet",
+  "series": true,
+  "act": 0,
+  "word_count": 791,
+  "avg_sentence_length": 17.6,
+  "lix": 47.4,
+  "loanword_rate": 0.0,
+  "tone_index": 3.8,
+  "assertive_count": 3,
+  "hedge_count": 0,
+  "themes": [],
+  "entities": {
+    "people": [],
+    "countries": [],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [],
+  "thesis": "",
+  "key_quote": {
+    "text": "",
+    "label": ""
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-02-24_IVAs_vd_--_om_strategisk_oumbarlighet.txt"
+}
