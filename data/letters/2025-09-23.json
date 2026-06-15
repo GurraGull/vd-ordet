@@ -3,7 +3,7 @@
   "nr": 18,
   "title": "Innovationslandet Sverige, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 530,
   "avg_sentence_length": 16.1,
   "lix": 44.9,
@@ -11,18 +11,42 @@
   "tone_index": 3.8,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "forskning_innovation",
+      "weight": 3
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 1
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Mario Draghi"
+    ],
+    "countries": [
+      "Schweiz"
+    ],
+    "projects": [
+      "Svenska framtider",
+      "Draghirapporten"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "Sveriges topplaceringar i innovationsrankningar speglar backspegeln — för att leda om tio år krävs att vi förstår var vi står idag, inte blir självbelåtna som Draghi varnar.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Bägge undersökningar analyserar hur läget ser ut i backspegeln, inte i kristallkulan.",
+    "label": "Innovationslandet Sverige"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-09-23_Innovationslandet_Sverige_fler_nyheter_och_evenemang.txt"

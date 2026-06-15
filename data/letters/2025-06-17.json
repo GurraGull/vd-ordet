@@ -3,7 +3,7 @@
   "nr": 12,
   "title": "Premiär för Global Outlook: Asia, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 523,
   "avg_sentence_length": 17.4,
   "lix": 47.1,
@@ -11,18 +11,45 @@
   "tone_index": 1.9,
   "assertive_count": 1,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "ai_teknik",
+      "weight": 3
+    },
+    {
+      "theme": "kina",
+      "weight": 2
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Erik Brynjolfsson",
+      "Hyejin Kim",
+      "Erik Mobrand",
+      "Edy Velander"
+    ],
+    "countries": [
+      "Kina",
+      "USA"
+    ],
+    "projects": [
+      "Global Outlook"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "IVA återupplivar sin tradition av systematisk omvärldsbevakning med Global Outlook: Asia — i en tid då Kina snabbt knappar in på USA inom AI behöver Europa analysera, inte bara informeras.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Information är en sak - att sätta informationen i ett sammanhang, analysera och värdera är något helt annat.",
+    "label": "Global Outlook: Asia"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-06-17_Premiar_for_Global_Outlook_Asia_fler_nyheter_och_evenemang.txt"

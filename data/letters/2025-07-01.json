@@ -3,7 +3,7 @@
   "nr": 13,
   "title": "Europas säkerhet, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 721,
   "avg_sentence_length": 17.6,
   "lix": 46.9,
@@ -11,18 +11,49 @@
   "tone_index": 8.3,
   "assertive_count": 6,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 3
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    },
+    {
+      "theme": "dual_use_deeptech",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Mette Frederiksen",
+      "Donald Tusk",
+      "Volodymyr Zelenskyj"
+    ],
+    "countries": [
+      "Danmark",
+      "Polen",
+      "USA",
+      "Ukraina"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "försvarsinnovationsförmåga",
+    "Security, Europe!"
+  ],
+  "asks": [
+    "dual_use_strategi"
+  ],
+  "thesis": "Europa måste inte bara köpa försvarsförmåga utan bygga försvarsinnovationsförmåga — investera skyndsamt och rätt, och öppna forskningsfinansiering för dual use.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vi behöver hitta de nya modellerna för att inte bara bygga försvarsförmåga, utan försvarsinnovationsförmåga.",
+    "label": "Europas säkerhet"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-07-01_Europas_sakerhet_fler_nyheter_och_evenemang.txt"

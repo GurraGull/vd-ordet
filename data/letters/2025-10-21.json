@@ -3,7 +3,7 @@
   "nr": 20,
   "title": "Guldmedaljörer, FoU-barometer, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 468,
   "avg_sentence_length": 21.3,
   "lix": 55.9,
@@ -11,18 +11,43 @@
   "tone_index": 2.1,
   "assertive_count": 2,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "forskning_innovation",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 1
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
+    "people": [
+      "Joel Mokyr",
+      "Carl-Henric Svanberg",
+      "Mats Danielsson",
+      "Helena Hedblom",
+      "Daniel Stenberg"
+    ],
     "countries": [],
-    "projects": []
+    "projects": [
+      "Svenska framtider"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "Nobelpriset till Mokyr bekräftar att tillväxt drivs av tolerans och fritt tänkande — Sverige måste förvalta sina styrkor och adressera svagheter inom strategiska tekniker som robotik och smarta elnät.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vi måste aktivt förvalta och bygga vidare på våra styrkor. Och kanske viktigare: vi måste känna till våra svagheter.",
+    "label": "Guldmedaljörer & FoU-barometer"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-10-21_Guldmedaljorer_FoU-barometer_fler_nyheter_och_evenemang.txt"

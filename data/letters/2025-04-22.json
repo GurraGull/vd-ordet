@@ -3,7 +3,7 @@
   "nr": 8,
   "title": "Matematiksatsning på landsbygd, upprustningen i Kina, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 571,
   "avg_sentence_length": 21.1,
   "lix": 48.6,
@@ -11,18 +11,40 @@
   "tone_index": 1.8,
   "assertive_count": 1,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "kina",
+      "weight": 3
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Xi Jinping"
+    ],
+    "countries": [
+      "Kina",
+      "USA"
+    ],
     "projects": []
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "Medan Europa stirrar på Trump genomför Kina en medveten vetenskaplig och teknologisk upprustning för globalt ledarskap — Europa måste ha lika stort fokus på hur Kina agerar.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Min slutsats är att det inte räcker att ha beredskap för hur USA agerar i detta nya läge.",
+    "label": "Upprustningen i Kina"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-04-22_Matematiksatsning_pa_landsbygd_upprustningen_i_Kina_fler_nyheter_och_evenemang.txt"

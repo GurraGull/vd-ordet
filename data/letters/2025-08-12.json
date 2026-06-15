@@ -3,7 +3,7 @@
   "nr": 14,
   "title": "EU:s långtidsbudget, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 667,
   "avg_sentence_length": 20.8,
   "lix": 52.9,
@@ -11,18 +11,43 @@
   "tone_index": 3.0,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 3
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Ursula von der Leyen",
+      "Jeffrey Ding"
+    ],
+    "countries": [
+      "Tyskland",
+      "Nederländerna"
+    ],
+    "projects": [
+      "Horizon Europe"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "EU:s föreslagna långtidsbudget bör bedömas på hur pengarna investeras — konkurrenskraftsfonden och Horisont Europa är centrala, och Sveriges styrka ligger i snabb teknikspridning.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "En betydligt viktigare diskussion är hur pengarna ska investeras.",
+    "label": "EU:s långtidsbudget"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-08-12_EUs_langtidsbudget_fler_nyheter_och_evenemang.txt"

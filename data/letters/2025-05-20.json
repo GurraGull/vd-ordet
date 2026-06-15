@@ -3,7 +3,7 @@
   "nr": 10,
   "title": "Sverige i Global AI Index, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 738,
   "avg_sentence_length": 14.8,
   "lix": 42.5,
@@ -11,18 +11,47 @@
   "tone_index": -1.4,
   "assertive_count": 0,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "ai_teknik",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    }
+  ],
   "entities": {
     "people": [],
-    "countries": [],
-    "projects": []
+    "countries": [
+      "USA",
+      "Kina",
+      "Frankrike",
+      "Singapore",
+      "Sydkorea"
+    ],
+    "projects": [
+      "Global AI Index"
+    ]
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "the deck is being reshuffled"
+  ],
+  "asks": [
+    "ai_reform"
+  ],
+  "thesis": "Sveriges plats 25 i Global AI Index är en väckarklocka — regeringen behöver en genomgripande AI-reform i Hem-PC:s och produktionslyftets klass.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "The deck is being reshuffled.",
+    "label": "Global AI Index"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-05-20_Sverige_i_Global_AI_Index.txt"

@@ -3,7 +3,7 @@
   "nr": 7,
   "title": "Stresstest för Europa, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 672,
   "avg_sentence_length": 19.2,
   "lix": 49.1,
@@ -11,18 +11,49 @@
   "tone_index": 3.0,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "kompetens_utbildning",
+      "weight": 3
+    },
+    {
+      "theme": "usa_transatlantiskt",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Donald Trump",
+      "Mario Draghi"
+    ],
+    "countries": [
+      "USA",
+      "Frankrike",
+      "Belgien"
+    ],
+    "projects": [
+      "Draghirapporten"
+    ]
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "stresstest för Europa"
+  ],
+  "asks": [
+    "behall_talangen",
+    "snabbare_beslutsfattande"
+  ],
+  "thesis": "Forskarflykten från USA är en historisk möjlighet — men Sverige måste inte bara attrahera talang utan ha kapacitet att ta emot och behålla den, inklusive att adressera bostäder, skola och tung kriminalitet.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Att attrahera talang är en sak — men kapacitet att ta emot och behålla är något helt annat.",
+    "label": "Stresstest för Europa"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-04-08_Stresstest_for_Europa_fler_nyheter_och_evenemang.txt"

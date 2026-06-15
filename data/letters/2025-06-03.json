@@ -3,7 +3,7 @@
   "nr": 11,
   "title": "Läge för dual use, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 667,
   "avg_sentence_length": 16.3,
   "lix": 49.7,
@@ -11,18 +11,47 @@
   "tone_index": 1.5,
   "assertive_count": 2,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "dual_use_deeptech",
+      "weight": 3
+    },
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 3
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Keir Starmer"
+    ],
+    "countries": [
+      "Storbritannien",
+      "Tyskland",
+      "Sydkorea",
+      "Japan"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "dual use",
+    "strategisk nyckel"
+  ],
+  "asks": [
+    "dual_use_strategi"
+  ],
+  "thesis": "Dual use är inte längre en teknisk nisch utan en strategisk nyckel — Sverige och EU behöver en dual use-strategi som river murarna mellan civila och militära innovationssystem.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Dual use är inte längre en teknisk nisch — det är en strategisk nyckel till Sveriges säkerhet, innovationsförmåga och konkurrenskraft.",
+    "label": "Läge för dual use"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-06-03_Lage_for_dual_use_fler_nyheter_och_evenemang.txt"

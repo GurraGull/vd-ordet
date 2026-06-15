@@ -3,7 +3,7 @@
   "nr": 19,
   "title": "Värdet av vetenskap, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 430,
   "avg_sentence_length": 19.5,
   "lix": 47.2,
@@ -11,18 +11,39 @@
   "tone_index": 2.3,
   "assertive_count": 2,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "forskning_innovation",
+      "weight": 3
+    },
+    {
+      "theme": "kompetens_utbildning",
+      "weight": 2
+    },
+    {
+      "theme": "usa_transatlantiskt",
+      "weight": 1
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    }
+  ],
   "entities": {
     "people": [],
-    "countries": [],
-    "projects": []
+    "countries": [
+      "USA"
+    ],
+    "projects": [
+      "Draghirapporten"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "När fakta och vetenskaplighet ifrågasätts från högsta ort är det viktigare än någonsin att hylla vetenskapen — allmänhetens förtroende för vetenskap är ett demokratiskt grundfundament.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Allmänhetens förtroende för vetenskapen är ett grundfundament i en demokrati.",
+    "label": "Värdet av vetenskap"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-10-07_Vardet_av_vetenskap_fler_nyheter_och_evenemang.txt"

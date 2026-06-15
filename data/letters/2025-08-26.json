@@ -3,7 +3,7 @@
   "nr": 15,
   "title": "Greenhushing, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 688,
   "avg_sentence_length": 16.0,
   "lix": 43.3,
@@ -11,18 +11,45 @@
   "tone_index": -1.5,
   "assertive_count": 1,
   "hedge_count": 2,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "klimat_energi",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "usa_transatlantiskt",
+      "weight": 1
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Donald Trump",
+      "Klaus Schwab"
+    ],
+    "countries": [
+      "USA",
+      "Ukraina",
+      "Ryssland"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
+  "signature_phrases": [
+    "greenhushing",
+    "responsible capitalism"
+  ],
   "asks": [],
-  "thesis": "",
+  "thesis": "Trots Trumps klimatförnekelse backar näringslivet inte på klimatarbetet — de 'greenhushar' globalt, men svenska företag bör fortsätta vara stolta över sitt klimatarbete.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Greenhushing betyder ungefär att man visst jobbar med den gröna omställningen, men man pratar inte högt om det.",
+    "label": "Greenhushing"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-08-26_Greenhushing_fler_nyheter_och_evenemang.txt"

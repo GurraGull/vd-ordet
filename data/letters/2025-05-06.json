@@ -3,7 +3,7 @@
   "nr": 9,
   "title": "100 dagar med Trump, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 2,
   "word_count": 910,
   "avg_sentence_length": 15.4,
   "lix": 40.0,
@@ -11,18 +11,44 @@
   "tone_index": 5.5,
   "assertive_count": 7,
   "hedge_count": 2,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "usa_transatlantiskt",
+      "weight": 3
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    },
+    {
+      "theme": "klimat_energi",
+      "weight": 1
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Donald Trump"
+    ],
+    "countries": [
+      "USA"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "more of the same är inget alternativ",
+    "speed is of the essence"
+  ],
+  "asks": [
+    "snabbare_beslutsfattande"
+  ],
+  "thesis": "Trumps första 100 dagar visar att 'more of the same' inte är ett alternativ — näringsliv, akademi och politik måste bli snabbare, modigare och våga se bortom nästa mandatperiod.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "More of the same är inget alternativ.",
+    "label": "100 dagar med Trump"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-05-06_100_dagar_med_Trump_fler_nyheter_och_evenemang.txt"
