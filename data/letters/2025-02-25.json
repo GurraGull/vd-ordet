@@ -3,7 +3,7 @@
   "nr": 4,
   "title": "Seminarium om STEM-strategin, fler nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 1,
   "word_count": 202,
   "avg_sentence_length": 16.8,
   "lix": 47.5,
@@ -11,18 +11,42 @@
   "tone_index": -9.9,
   "assertive_count": 0,
   "hedge_count": 2,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "kompetens_utbildning",
+      "weight": 3
+    },
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Ursula von der Leyen"
+    ],
+    "countries": [
+      "Ukraina",
+      "Ryssland"
+    ],
+    "projects": [
+      "STEM-strategin"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "I en ny geopolitisk verklighet där storlek och styrka avgör måste EU säkra sin militära, ekonomiska och teknologiska styrka — och Sverige sin STEM-kompetens.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vi lever i en ny geopolitisk verklighet, där allt som betyder någonting verkar vara styrka och storlek.",
+    "label": "Styrka och storlek"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-02-25_Seminarium_om_STEM-strategin_fler_nyheter_och_evenemang.txt"

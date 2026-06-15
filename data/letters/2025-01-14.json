@@ -3,7 +3,7 @@
   "nr": 1,
   "title": "Inbjudningar till högaktuella evenemang och fler nyheter",
   "series": false,
-  "act": 0,
+  "act": 1,
   "word_count": 355,
   "avg_sentence_length": 15.4,
   "lix": 41.9,
@@ -11,18 +11,41 @@
   "tone_index": 5.6,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 3
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Donald Trump"
+    ],
+    "countries": [
+      "USA",
+      "Polen",
+      "Danmark"
+    ],
     "projects": []
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "I ett nytt geopolitiskt läge måste Europa kombinera säkerhet med hållbarhet och konkurrenskraft — och IVA:s roll som brobyggare behövs mer än någonsin.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Stora förändringar på det geopolitiska planet kommer att påverka oss och våra vägval framöver.",
+    "label": "Nytt geopolitiskt läge"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-01-14_Inbjudningar_till_hogaktuella_evenemang_och_fler_nyheter.txt"

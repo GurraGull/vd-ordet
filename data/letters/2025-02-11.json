@@ -3,7 +3,7 @@
   "nr": 3,
   "title": "Kabelbrotten i Östersjön, ansvarsfull internationalisering, nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 1,
   "word_count": 281,
   "avg_sentence_length": 21.6,
   "lix": 56.5,
@@ -11,18 +11,37 @@
   "tone_index": 3.6,
   "assertive_count": 2,
   "hedge_count": 1,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 3
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    }
+  ],
   "entities": {
     "people": [],
     "countries": [],
     "projects": []
   },
-  "signature_phrases": [],
+  "signature_phrases": [
+    "ansvarsfull internationalisering"
+  ],
   "asks": [],
-  "thesis": "",
+  "thesis": "Sverige måste skydda det skyddsvärda utan att låta komplexiteten förlama internationella forskningssamarbeten — ansvarsfull internationalisering är avgörande för konkurrenskraften.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Vi måste skydda det som är skyddsvärt samtidigt som vi behöver vara strategiska och dra nytta av det som internationellt samarbete ger.",
+    "label": "Ansvarsfull internationalisering"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-02-11_Kabelbrotten_i_Ostersjon_ansvarsfull_internationalisering_nyheter_och_evenemang.txt"

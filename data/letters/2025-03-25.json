@@ -3,7 +3,7 @@
   "nr": 6,
   "title": "Europas konkurrenskraft, nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 1,
   "word_count": 305,
   "avg_sentence_length": 14.5,
   "lix": 44.7,
@@ -11,18 +11,45 @@
   "tone_index": 0.0,
   "assertive_count": 0,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 3
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 3
+    },
+    {
+      "theme": "sakerhet_forsvar",
+      "weight": 2
+    },
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
-    "projects": []
+    "people": [
+      "Ursula von der Leyen"
+    ],
+    "countries": [
+      "Tyskland",
+      "USA",
+      "Frankrike",
+      "Polen",
+      "Danmark"
+    ],
+    "projects": [
+      "Competitiveness Compass"
+    ]
   },
   "signature_phrases": [],
   "asks": [],
-  "thesis": "",
+  "thesis": "Europa har en stark industri och bör känna framtidstro — med Competitiveness Compass, Clean Industrial Deal och försvarssatsningar stärker EU sin handlingsfrihet.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Starka industrier är en förutsättning för ett oberoende Europa som har handlingsfrihet och kan stå på egna ben när det behövs.",
+    "label": "Europas oberoende"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-03-25_Europas_konkurrenskraft_nyheter_och_evenemang.txt"

@@ -3,7 +3,7 @@
   "nr": 5,
   "title": "USA-resa med AI-fokus, nyheter och evenemang",
   "series": false,
-  "act": 0,
+  "act": 1,
   "word_count": 467,
   "avg_sentence_length": 14.2,
   "lix": 42.0,
@@ -11,18 +11,45 @@
   "tone_index": 4.3,
   "assertive_count": 2,
   "hedge_count": 0,
-  "themes": [],
+  "themes": [
+    {
+      "theme": "ai_teknik",
+      "weight": 3
+    },
+    {
+      "theme": "usa_transatlantiskt",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 1
+    }
+  ],
   "entities": {
-    "people": [],
-    "countries": [],
+    "people": [
+      "Matt Garman",
+      "Satya Nadella",
+      "Carolina Dybeck Happe"
+    ],
+    "countries": [
+      "USA"
+    ],
     "projects": []
   },
-  "signature_phrases": [],
-  "asks": [],
-  "thesis": "",
+  "signature_phrases": [
+    "Hastighet. Beräkningskraft. Finansiering."
+  ],
+  "asks": [
+    "pensionspengar_hem"
+  ],
+  "thesis": "USA-resan visar att hastighet, beräkningskraft och finansiering avgör AI-loppet — svenskt pensionskapital bör investeras i europeiska start-ups och Sverige bör snabbt tillämpa AI.",
   "key_quote": {
-    "text": "",
-    "label": ""
+    "text": "Hastighet. Beräkningskraft. Finansiering.",
+    "label": "USA-resan"
   },
   "source_url": "",
   "raw_text": "data/raw/2025-03-11_USA-resa_med_AI-fokus_nyheter_och_evenemang.txt"
