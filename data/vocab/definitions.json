@@ -1,0 +1,13 @@
+{
+  "tonindex": "Tonindex — ett mått på hur drivande språket är. Vi räknar kraftord som signalerar att VD driver en linje (måste, kräver, avgörande, brådskande) minus gardingsord som signalerar öppen reservation (kanske, möjligen, tycks), per 1 000 ord. Högt positivt värde = texten driver tydligt en linje; nära noll eller negativt = ett mer öppet resonemang. En indikator på tonläge — inte en bedömning av innehållets kvalitet eller av personen.",
+  "lix": "LIX-läsbarhet — ett svenskt standardmått på hur svår en text är att läsa, beräknat som meningarnas medellängd plus andelen långa ord (över sex tecken). Riktvärden: 40–49 = svår (facktext, längre debattartikel), 50–59 = mycket svår. Måttet säger något om språkets komplexitet, inte om innehållets värde.",
+  "assertiva_hedgande_markorer": "Assertiva och hedgande markörer — de två ordlistor som tonindex bygger på. Assertiva markörer är kraftord som driver en linje (måste, kräver, avgörande). Hedgande markörer uttrycker reservation eller öppenhet (kanske, tycks, i viss mån). Listorna är fasta och granskningsbara.",
+  "engelska_laneord": "Engelska låneord — antalet engelska fackuttryck per 1 000 ord (t.ex. dual use, deep tech, niche superpower). Inte ett mått på otydlighet utan på signalspråk: varje uttryck kan kopplas till en specifik internationell debatt.",
+  "meningslangd": "Meningslängd — genomsnittligt antal ord per mening. Kortare meningar gör en text mer journalistisk i strukturen även när innehållet är komplext.",
+  "langd": "Längd — antal ord i brevet. VD-orden har vuxit från korta avrapporteringar (cirka 145 ord 2024) till essäer (cirka 730 ord 2026).",
+  "akt": "Akt — en av tre faser som analysen delar in korpusen i, utifrån hur rösten utvecklas: Akt 1 (att hitta rösten), Akt 2 (att sätta agendan) och Akt 3 (doktrinen). Indelningen är en tolkning som kan justeras när fler brev tillkommer.",
+  "tema": "Tema — ett av tolv ämnesområden (t.ex. EU & konkurrenskraft, säkerhet & försvar, Kina) som varje brev klassificeras mot. Ett brev kan bära flera teman med olika tyngd.",
+  "ask": "Ask (återkommande uppmaning) — en konkret handlingsuppmaning som VD återkommer till i flera brev (t.ex. snabbare beslutsfattande, dual use-strategi). Vi spårar hur ofta varje ask återkommer.",
+  "signaturfras": "Signaturfras — ett eget, ofta nyskapat uttryck som bär VD:ns budskap (t.ex. strategisk oumbärlighet, Axel Oxenstierna 2.0). VD:ns retoriska fingeravtryck.",
+  "signaturcitat": "Signaturcitat — den mest utmärkande meningen i ett brev, vald för att fånga dess kärna."
+}

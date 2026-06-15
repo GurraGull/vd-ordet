@@ -1,0 +1,14 @@
+[
+  {"id": "eu_konkurrenskraft", "label": "EU & konkurrenskraft"},
+  {"id": "forskning_innovation", "label": "Forskning & innovation"},
+  {"id": "naringsliv_industri", "label": "Näringsliv & industri"},
+  {"id": "sakerhet_forsvar", "label": "Säkerhet & försvar"},
+  {"id": "ai_teknik", "label": "AI & teknik"},
+  {"id": "klimat_energi", "label": "Klimat & energi"},
+  {"id": "kina", "label": "Kina"},
+  {"id": "usa_transatlantiskt", "label": "USA & transatlantiskt"},
+  {"id": "kompetens_utbildning", "label": "Kompetens & utbildning"},
+  {"id": "ekonomi_finans", "label": "Ekonomi & finans"},
+  {"id": "geopolitik_omvarld", "label": "Geopolitik & omvärld"},
+  {"id": "dual_use_deeptech", "label": "Dual use & deep tech"}
+]

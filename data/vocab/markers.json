@@ -1,0 +1,4 @@
+{
+  "assertive": ["måste", "kräver", "avgörande", "brådskande", "akut", "tvingas", "omedelbart", "snarast", "tiden är knapp"],
+  "hedge": ["kanske", "möjligen", "troligtvis", "tycks", "verkar", "i viss mån", "eventuellt"]
+}
