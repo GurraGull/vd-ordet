@@ -9,6 +9,10 @@ dist/
 *.log
 .env*
 .vercel
+next-env.d.ts
+
+# Claude Code local settings
+.claude/settings.local.json
 
 # Python (pipeline/)
 __pycache__/
