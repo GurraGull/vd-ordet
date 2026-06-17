@@ -3,6 +3,7 @@ import { groupByAct, arcGeometry, actStats } from '@/lib/derive';
 import ToneArc from '@/components/ToneArc';
 import ActStart from '@/components/ActStart';
 import LetterBeat from '@/components/LetterBeat';
+import ScrollSpine from '@/components/ScrollSpine';
 
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
 function monthYear(iso: string): string {
@@ -30,6 +31,7 @@ export default function StoryPage() {
 
   return (
     <main className="bg-paper min-h-screen">
+      <ScrollSpine acts={acts} />
       {/* Masthead */}
       <div className="border-b border-[#e3dac4]">
         <div className="max-w-[1120px] mx-auto px-10 py-3 flex items-center justify-between">
@@ -72,7 +74,7 @@ export default function StoryPage() {
       {/* Narrative beats by act */}
       <section className="max-w-[1120px] mx-auto px-10 pb-24">
         {groups.map((g) => (
-          <div key={g.act.id}>
+          <div key={g.act.id} id={`act-${g.act.id}`}>
             <ActStart act={g.act} stats={actStats(g.letters)} />
             {g.letters.map((l) => (
               <LetterBeat key={l.date} letter={l} themeLabels={themeLabels} />
