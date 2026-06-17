@@ -9,6 +9,11 @@ const config: Config = {
         ink: '#0E3A5E',
         gold: '#C8A24A',
         muted: '#5E6B76',
+        night: '#0B0F14',
+        panel: '#0E141B',
+        line: '#1E2730',
+        amber: '#E0A23C',
+        steel: '#9FACB6',
       },
       fontFamily: {
         serif: ['var(--font-newsreader)', 'Georgia', 'serif'],

@@ -14,3 +14,4 @@ export function loadThemeLabels(): Record<string, string> {
   const themes = readJson<{ id: string; label: string }[]>('vocab/themes.json');
   return Object.fromEntries(themes.map((t) => [t.id, t.label]));
 }
+export function loadAsks(): { id: string; label: string }[] { return readJson<{ id: string; label: string }[]>('vocab/asks.json'); }
