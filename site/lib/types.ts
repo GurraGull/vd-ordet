@@ -29,4 +29,4 @@ export interface ActDef { id: number; name: string; period: string; start: strin
 export interface ActStats { count: number; avgWords: number; avgTone: number; avgLix: number }
 export interface CoinedTerm { term: string; firstDate: string; count: number }
 export interface ArcPoint { date: string; tone: number; x: number; y: number; isPeak: boolean }
-export interface ArcGeometry { points: ArcPoint[]; path: string; area: string; baseY: number; dividers: number[]; peak: ArcPoint | null }
+export interface ArcGeometry { points: ArcPoint[]; path: string; area: string; baseY: number; dividers: number[]; peak: Letter | null }
