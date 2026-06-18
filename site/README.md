@@ -31,7 +31,14 @@ The "live" guarantees are covered by tests in `lib/__tests__/derive.test.ts`
 
 - `app/page.tsx` — loads data, derives, renders the Story.
 - `lib/data.ts` — reads the dataset at build time. `lib/derive.ts` — pure logic.
-- `components/` — `ToneArc` (arc hero), `LetterBeat`, `ActStart`, `ScrollSpine`.
-- Design tokens in `tailwind.config.ts` ("The Annual Essay"; see `../docs/design-system.md`).
+- `app/konsol/page.tsx` — the dark **data console** ("look inside"): theme
+  momentum, USA↔Kina axis, open-asks tracker, white spaces, an emerging-signals
+  watch list, and a sortable letter explorer. Analytics in `lib/analytics.ts`
+  (tested), all derived from the same dataset.
+- `components/` — `ToneArc`, `LetterBeat`, `ActStart`, `ScrollSpine`,
+  `console/LetterExplorer`.
+- Design tokens in `tailwind.config.ts` (warm "The Annual Essay" + the dark
+  console palette; see `../docs/design-system.md`).
 
-The dark "look inside" **console** is a later phase (Plan 3), on this same data.
+Two views, one dataset: **`/`** tells the story, **`/konsol`** lets you look
+inside the data. Both stay live the same way (add a letter → rebuild).

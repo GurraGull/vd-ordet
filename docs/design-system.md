@@ -85,8 +85,10 @@ data we already have — **no dataset extension**:
 - **Editorial "Annual Essay"** (warm, light) — `Story.dc.html`, `Explore.dc.html`,
   `Art Direction.dc.html`. The narrative front. → **Plan 2** builds the Story.
 - **Dark "Signal Console"** (analytical) — `Overview.dc.html`,
-  `Signal Console.dc.html`. The "look inside the data" tool. → **Plan 3** (later),
-  on existing data; the console tiles that needed deeper measures
+  `Signal Console.dc.html`. The "look inside the data" tool. → **Plan 3 — built**
+  at `/konsol`, on existing data, with a forward-looking layer (theme momentum,
+  USA↔Kina axis, open asks, white spaces, emerging-signals watch list) + a
+  sortable letter explorer. The tiles that needed deeper measures
   (sentence-by-sentence tone, questions, imperatives, vi/jag) are **dropped**.
 
 Alternates on file but **not chosen**: `Style Variants.dc.html` (Riso Broadside,
