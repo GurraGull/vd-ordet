@@ -15,3 +15,4 @@ export function loadThemeLabels(): Record<string, string> {
   return Object.fromEntries(themes.map((t) => [t.id, t.label]));
 }
 export function loadAsks(): { id: string; label: string }[] { return readJson<{ id: string; label: string }[]>('vocab/asks.json'); }
+export function loadDefinitions(): Record<string, string> { return readJson<Record<string, string>>('vocab/definitions.json'); }

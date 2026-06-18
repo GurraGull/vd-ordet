@@ -28,11 +28,15 @@ export function themeMomentum(letters: Letter[], acts: ActDef[], themeLabels: Re
   for (const [theme, rec] of themeActWeight) {
     const actShares = ids.map((id) => (actTotal[id] ? +(rec[id] / actTotal[id]).toFixed(3) : 0));
     const total = ids.reduce((s, id) => s + rec[id], 0);
-    const diff = actShares[actShares.length - 1] - actShares[0];
+    // recent direction: the two most recent acts ("where it's heading"), so a
+    // theme that peaked then faded reads as down, not up.
+    const n = actShares.length;
+    const diff = n >= 2 ? actShares[n - 1] - actShares[n - 2] : 0;
     const trend: 'up' | 'down' | 'flat' = diff > 0.02 ? 'up' : diff < -0.02 ? 'down' : 'flat';
     out.push({ theme, label: themeLabels[theme] ?? theme, actShares, total, trend });
   }
-  out.sort((a, b) => Math.abs(b.actShares[b.actShares.length - 1] - b.actShares[0]) - Math.abs(a.actShares[a.actShares.length - 1] - a.actShares[0]));
+  const recentDelta = (s: number[]) => Math.abs(s[s.length - 1] - (s[s.length - 2] ?? 0));
+  out.sort((a, b) => recentDelta(b.actShares) - recentDelta(a.actShares));
   return out;
 }
 

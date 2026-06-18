@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { loadLetters, loadActs, loadThemeLabels } from '@/lib/data';
 import { groupByAct, arcGeometry, actStats } from '@/lib/derive';
 import ToneArc from '@/components/ToneArc';
@@ -36,7 +37,10 @@ export default function StoryPage() {
       <div className="border-b border-[#e3dac4]">
         <div className="max-w-[1120px] mx-auto px-10 py-3 flex items-center justify-between">
           <span className="font-mono text-xs tracking-[0.16em] text-ink">IVA · VD-ORD</span>
-          <span className="font-mono text-[10px] tracking-[0.2em] text-muted">{letters.length} BREV · BERÄTTELSE</span>
+          <span className="flex items-center gap-5">
+            <span className="font-mono text-[10px] tracking-[0.2em] text-muted">{letters.length} BREV · BERÄTTELSE</span>
+            <Link href="/konsol" className="font-mono text-[10px] tracking-[0.16em] text-ink hover:text-gold no-underline">KONSOL →</Link>
+          </span>
         </div>
       </div>
 
