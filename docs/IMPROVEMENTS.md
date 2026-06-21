@@ -9,3 +9,9 @@ or revert; publishing the live site stays manual (`site/deploy.sh`).
 `/konsol/`), public repo, twice-daily improver scheduled. Next: check the
 console's responsive layout on a narrow viewport, or add a subtle "uppdaterad
 <datum>" stamp to the masthead.
+
+2026-06-21 — Added an executive summary to the top of the Story: a synthesis
+lead + one analytical card per act (text in `data/vocab/acts.json` summaries +
+`data/vocab/overview.json`, live per-act stats). Next: trim the now-slightly-
+redundant per-act `note` in the section dividers, or make the synthesis partly
+data-driven from the analytics layer.

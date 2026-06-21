@@ -1,10 +1,11 @@
 import Link from 'next/link';
-import { loadLetters, loadActs, loadThemeLabels } from '@/lib/data';
+import { loadLetters, loadActs, loadThemeLabels, loadOverview } from '@/lib/data';
 import { groupByAct, arcGeometry, actStats } from '@/lib/derive';
 import ToneArc from '@/components/ToneArc';
 import ActStart from '@/components/ActStart';
 import LetterBeat from '@/components/LetterBeat';
 import ScrollSpine from '@/components/ScrollSpine';
+import ExecutiveSummary from '@/components/ExecutiveSummary';
 
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
 function monthYear(iso: string): string {
@@ -16,6 +17,7 @@ export default function StoryPage() {
   const letters = loadLetters();
   const acts = loadActs();
   const themeLabels = loadThemeLabels();
+  const overview = loadOverview();
   const geo = arcGeometry(letters, acts);
   const groups = groupByAct(letters, acts);
 
@@ -74,6 +76,9 @@ export default function StoryPage() {
           markerar det mest agendasättande brevet i serien — beräknat ur datan, inte förvalt.
         </p>
       </section>
+
+      {/* Executive summary — the analysis in 3–4 chunks, one per arc */}
+      <ExecutiveSummary lead={overview.lead} acts={groups.map((g) => ({ act: g.act, stats: actStats(g.letters) }))} />
 
       {/* Narrative beats by act */}
       <section className="max-w-[1120px] mx-auto px-10 pb-24">
