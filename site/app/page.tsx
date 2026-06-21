@@ -31,6 +31,7 @@ export default function StoryPage() {
 
   const sorted = [...letters].sort((a, b) => a.date.localeCompare(b.date));
   const range = `${monthYear(sorted[0].date)} – ${monthYear(sorted[sorted.length - 1].date)}`;
+  const aktWord = ['', 'en', 'två', 'tre', 'fyra', 'fem', 'sex', 'sju'][groups.length] ?? String(groups.length);
 
   return (
     <main className="bg-paper min-h-screen">
@@ -55,8 +56,9 @@ export default function StoryPage() {
           Rösten som <span className="text-gold">växte fram</span>
         </h1>
         <p className="font-serif text-xl md:text-2xl leading-relaxed text-[#46535d] max-w-[56ch] mt-6">
-          {letters.length} VD-ord, lästa som en enda berättelse i tre akter. Vi mätte tonen, språket och de begrepp hon
-          myntade — och lät datan visa hur en röst hittar, sätter och till sist kodifierar sin agenda.
+          {letters.length} VD-ord, lästa som en enda berättelse i {aktWord} akter. Vi mätte tonen, språket och de begrepp
+          hon myntade — och lät datan visa hur en röst hittar, sätter och kodifierar sin agenda, och till sist vänder
+          den mot handling.
         </p>
       </section>
 

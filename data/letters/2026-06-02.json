@@ -1,0 +1,63 @@
+{
+  "date": "2026-06-02",
+  "nr": 12,
+  "title": "Att överleva kaos",
+  "series": true,
+  "act": 4,
+  "themes": [
+    {
+      "theme": "geopolitik_omvarld",
+      "weight": 3
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 1
+    },
+    {
+      "theme": "kina",
+      "weight": 1
+    }
+  ],
+  "entities": {
+    "people": [
+      "Mark Leonard",
+      "Walter Russell Mead",
+      "Antonio Gramsci",
+      "Robert Schuman"
+    ],
+    "countries": [
+      "Kina",
+      "USA",
+      "Storbritannien",
+      "Ryssland"
+    ],
+    "projects": []
+  },
+  "signature_phrases": [
+    "un-order",
+    "polykris",
+    "pragmatisk handlingsfrihet"
+  ],
+  "asks": [
+    "snabbare_beslutsfattande",
+    "strategisk_industripolitik"
+  ],
+  "thesis": "Den gamla världsordningen är inte i 'oordning' utan upplöst ('un-order'); Europa vinner inget på att försöka återställa den utan måste utveckla en egen pragmatisk handlingsfrihet — agil, experimentell och långsiktigt strategisk — utan att kompromissa med sina värderingar.",
+  "key_quote": {
+    "text": "Om den gamla ordningen inte finns längre har Europa väldigt lite att vinna på att stå bredvid spelbordet och argumentera för dess återupprättande.",
+    "label": "Att överleva kaos"
+  },
+  "word_count": 901,
+  "avg_sentence_length": 17.7,
+  "lix": 45.2,
+  "loanword_rate": 0.0,
+  "tone_index": -1.1,
+  "assertive_count": 1,
+  "hedge_count": 2,
+  "source_url": "",
+  "raw_text": "data/raw/2026-06-02_IVAs_vd_--_att_overleva_kaos.txt"
+}

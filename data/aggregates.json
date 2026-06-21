@@ -1,5 +1,5 @@
 {
-  "total": 33,
+  "total": 37,
   "by_act": {
     "1": {
       "count": 6,
@@ -21,6 +21,13 @@
       "tone_sum": 26.400000000000002,
       "avg_words": 733.2,
       "avg_tone": 2.0
+    },
+    "4": {
+      "count": 4,
+      "word_sum": 3296,
+      "tone_sum": -1.7000000000000002,
+      "avg_words": 824.0,
+      "avg_tone": -0.4
     }
   },
   "by_year": {
@@ -28,7 +35,7 @@
       "count": 24
     },
     "2026": {
-      "count": 9
+      "count": 13
     }
   }
 }

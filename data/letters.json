@@ -1848,5 +1848,237 @@
     },
     "source_url": "",
     "raw_text": "data/raw/2026-04-21_IVAs_vd_--_ambitiosa_Sverige.txt"
+  },
+  {
+    "date": "2026-05-05",
+    "nr": 10,
+    "title": "Kina på nära håll",
+    "series": true,
+    "act": 4,
+    "word_count": 969,
+    "avg_sentence_length": 17.0,
+    "lix": 46.3,
+    "loanword_rate": 0.0,
+    "tone_index": 0.0,
+    "assertive_count": 2,
+    "hedge_count": 2,
+    "themes": [
+      {
+        "theme": "kina",
+        "weight": 3
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 2
+      },
+      {
+        "theme": "forskning_innovation",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Marcus Aurelius",
+        "Deng Xiaoping",
+        "Xi Jinping"
+      ],
+      "countries": [
+        "Kina",
+        "USA"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [],
+    "asks": [
+      "snabbare_beslutsfattande"
+    ],
+    "thesis": "Efter en vecka i Kina: Kina kontrollerar sitt tempo och ser tekniken som en maktfaktor, medan Europa är starkt men måste agera snabbare och mer strategiskt — och fokusera på det vi faktiskt kan kontrollera.",
+    "key_quote": {
+      "text": "Sverige och Europa kan i allra högsta grad kontrollera sitt eget öde.",
+      "label": "Kontrollera sitt eget öde"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-05-05_IVAs_vd_--_Kina_pa_nara_hall.txt"
+  },
+  {
+    "date": "2026-05-19",
+    "nr": 11,
+    "title": "Sydkoreas modell",
+    "series": true,
+    "act": 4,
+    "word_count": 856,
+    "avg_sentence_length": 19.9,
+    "lix": 50.7,
+    "loanword_rate": 0.0,
+    "tone_index": 1.2,
+    "assertive_count": 1,
+    "hedge_count": 0,
+    "themes": [
+      {
+        "theme": "naringsliv_industri",
+        "weight": 3
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Lee Jae-myung",
+        "Pierre Wunsch"
+      ],
+      "countries": [
+        "Sydkorea",
+        "USA",
+        "Kina",
+        "Saudiarabien"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "teknologisk suveränitet",
+      "picking winners"
+    ],
+    "asks": [
+      "strategisk_industripolitik"
+    ],
+    "thesis": "Sydkoreas statligt drivna satsning på en egen AI- och halvledarstack — strategisk prioritering, inte att rädda nedgångsindustrier — utmanar Europas frihandelsdogm; Sverige och EU behöver ompröva statens roll i strategisk teknikutveckling.",
+    "key_quote": {
+      "text": "Varför ska vi hålla fast vid ”level playing field” när ingen annan gör det?",
+      "label": "Statens roll"
+    },
+    "source_url": "",
+    "raw_text": "data/raw/2026-05-19_IVAs_vd_--_Sydkoreas_modell.txt"
+  },
+  {
+    "date": "2026-06-02",
+    "nr": 12,
+    "title": "Att överleva kaos",
+    "series": true,
+    "act": 4,
+    "themes": [
+      {
+        "theme": "geopolitik_omvarld",
+        "weight": 3
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 2
+      },
+      {
+        "theme": "ai_teknik",
+        "weight": 1
+      },
+      {
+        "theme": "kina",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [
+        "Mark Leonard",
+        "Walter Russell Mead",
+        "Antonio Gramsci",
+        "Robert Schuman"
+      ],
+      "countries": [
+        "Kina",
+        "USA",
+        "Storbritannien",
+        "Ryssland"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "un-order",
+      "polykris",
+      "pragmatisk handlingsfrihet"
+    ],
+    "asks": [
+      "snabbare_beslutsfattande",
+      "strategisk_industripolitik"
+    ],
+    "thesis": "Den gamla världsordningen är inte i 'oordning' utan upplöst ('un-order'); Europa vinner inget på att försöka återställa den utan måste utveckla en egen pragmatisk handlingsfrihet — agil, experimentell och långsiktigt strategisk — utan att kompromissa med sina värderingar.",
+    "key_quote": {
+      "text": "Om den gamla ordningen inte finns längre har Europa väldigt lite att vinna på att stå bredvid spelbordet och argumentera för dess återupprättande.",
+      "label": "Att överleva kaos"
+    },
+    "word_count": 901,
+    "avg_sentence_length": 17.7,
+    "lix": 45.2,
+    "loanword_rate": 0.0,
+    "tone_index": -1.1,
+    "assertive_count": 1,
+    "hedge_count": 2,
+    "source_url": "",
+    "raw_text": "data/raw/2026-06-02_IVAs_vd_--_att_overleva_kaos.txt"
+  },
+  {
+    "date": "2026-06-16",
+    "nr": 13,
+    "title": "Staten som första kund",
+    "series": true,
+    "act": 4,
+    "themes": [
+      {
+        "theme": "forskning_innovation",
+        "weight": 3
+      },
+      {
+        "theme": "ekonomi_finans",
+        "weight": 2
+      },
+      {
+        "theme": "naringsliv_industri",
+        "weight": 2
+      },
+      {
+        "theme": "eu_konkurrenskraft",
+        "weight": 1
+      }
+    ],
+    "entities": {
+      "people": [],
+      "countries": [
+        "Finland"
+      ],
+      "projects": []
+    },
+    "signature_phrases": [
+      "staten som första kund",
+      "ankarkund",
+      "Axel Oxenstierna 2.0"
+    ],
+    "asks": [
+      "strategisk_industripolitik",
+      "axel_oxenstierna"
+    ],
+    "thesis": "Offentlig upphandling — nästan en femtedel av Sveriges ekonomi — är en outnyttjad motor för innovation; Sverige är en god forskningsfinansiär men en dålig första kund och behöver prioritera och systematisera statens roll som ankarkund, vilket kräver en politisk signal.",
+    "key_quote": {
+      "text": "Är Sverige en god forskningsfinansiär, men dålig kund?",
+      "label": "Staten som första kund"
+    },
+    "word_count": 570,
+    "avg_sentence_length": 15.0,
+    "lix": 45.9,
+    "loanword_rate": 0.0,
+    "tone_index": -1.8,
+    "assertive_count": 0,
+    "hedge_count": 1,
+    "source_url": "",
+    "raw_text": "data/raw/2026-06-16_IVAs_vd_--_staten_som_forsta_kund.txt"
   }
 ]

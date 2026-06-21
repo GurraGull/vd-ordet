@@ -1,0 +1,55 @@
+{
+  "date": "2026-05-05",
+  "nr": 10,
+  "title": "Kina på nära håll",
+  "series": true,
+  "act": 4,
+  "word_count": 969,
+  "avg_sentence_length": 17.0,
+  "lix": 46.3,
+  "loanword_rate": 0.0,
+  "tone_index": 0.0,
+  "assertive_count": 2,
+  "hedge_count": 2,
+  "themes": [
+    {
+      "theme": "kina",
+      "weight": 3
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 2
+    },
+    {
+      "theme": "forskning_innovation",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 1
+    }
+  ],
+  "entities": {
+    "people": [
+      "Marcus Aurelius",
+      "Deng Xiaoping",
+      "Xi Jinping"
+    ],
+    "countries": [
+      "Kina",
+      "USA"
+    ],
+    "projects": []
+  },
+  "signature_phrases": [],
+  "asks": [
+    "snabbare_beslutsfattande"
+  ],
+  "thesis": "Efter en vecka i Kina: Kina kontrollerar sitt tempo och ser tekniken som en maktfaktor, medan Europa är starkt men måste agera snabbare och mer strategiskt — och fokusera på det vi faktiskt kan kontrollera.",
+  "key_quote": {
+    "text": "Sverige och Europa kan i allra högsta grad kontrollera sitt eget öde.",
+    "label": "Kontrollera sitt eget öde"
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-05-05_IVAs_vd_--_Kina_pa_nara_hall.txt"
+}

@@ -1,0 +1,55 @@
+{
+  "date": "2026-06-16",
+  "nr": 13,
+  "title": "Staten som första kund",
+  "series": true,
+  "act": 4,
+  "themes": [
+    {
+      "theme": "forskning_innovation",
+      "weight": 3
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 2
+    },
+    {
+      "theme": "naringsliv_industri",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 1
+    }
+  ],
+  "entities": {
+    "people": [],
+    "countries": [
+      "Finland"
+    ],
+    "projects": []
+  },
+  "signature_phrases": [
+    "staten som första kund",
+    "ankarkund",
+    "Axel Oxenstierna 2.0"
+  ],
+  "asks": [
+    "strategisk_industripolitik",
+    "axel_oxenstierna"
+  ],
+  "thesis": "Offentlig upphandling — nästan en femtedel av Sveriges ekonomi — är en outnyttjad motor för innovation; Sverige är en god forskningsfinansiär men en dålig första kund och behöver prioritera och systematisera statens roll som ankarkund, vilket kräver en politisk signal.",
+  "key_quote": {
+    "text": "Är Sverige en god forskningsfinansiär, men dålig kund?",
+    "label": "Staten som första kund"
+  },
+  "word_count": 570,
+  "avg_sentence_length": 15.0,
+  "lix": 45.9,
+  "loanword_rate": 0.0,
+  "tone_index": -1.8,
+  "assertive_count": 0,
+  "hedge_count": 1,
+  "source_url": "",
+  "raw_text": "data/raw/2026-06-16_IVAs_vd_--_staten_som_forsta_kund.txt"
+}

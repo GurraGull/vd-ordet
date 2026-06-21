@@ -1,0 +1,59 @@
+{
+  "date": "2026-05-19",
+  "nr": 11,
+  "title": "Sydkoreas modell",
+  "series": true,
+  "act": 4,
+  "word_count": 856,
+  "avg_sentence_length": 19.9,
+  "lix": 50.7,
+  "loanword_rate": 0.0,
+  "tone_index": 1.2,
+  "assertive_count": 1,
+  "hedge_count": 0,
+  "themes": [
+    {
+      "theme": "naringsliv_industri",
+      "weight": 3
+    },
+    {
+      "theme": "ai_teknik",
+      "weight": 2
+    },
+    {
+      "theme": "eu_konkurrenskraft",
+      "weight": 2
+    },
+    {
+      "theme": "ekonomi_finans",
+      "weight": 1
+    }
+  ],
+  "entities": {
+    "people": [
+      "Lee Jae-myung",
+      "Pierre Wunsch"
+    ],
+    "countries": [
+      "Sydkorea",
+      "USA",
+      "Kina",
+      "Saudiarabien"
+    ],
+    "projects": []
+  },
+  "signature_phrases": [
+    "teknologisk suveränitet",
+    "picking winners"
+  ],
+  "asks": [
+    "strategisk_industripolitik"
+  ],
+  "thesis": "Sydkoreas statligt drivna satsning på en egen AI- och halvledarstack — strategisk prioritering, inte att rädda nedgångsindustrier — utmanar Europas frihandelsdogm; Sverige och EU behöver ompröva statens roll i strategisk teknikutveckling.",
+  "key_quote": {
+    "text": "Varför ska vi hålla fast vid ”level playing field” när ingen annan gör det?",
+    "label": "Statens roll"
+  },
+  "source_url": "",
+  "raw_text": "data/raw/2026-05-19_IVAs_vd_--_Sydkoreas_modell.txt"
+}
