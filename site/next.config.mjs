@@ -1,3 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = { output: 'export', images: { unoptimized: true } };
+const basePath = process.env.BASE_PATH || '';
+const nextConfig = {
+  output: 'export',
+  images: { unoptimized: true },
+  basePath,
+  assetPrefix: basePath || undefined,
+};
 export default nextConfig;
