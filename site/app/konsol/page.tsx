@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { loadLetters, loadActs, loadThemeLabels, loadAsks, loadDefinitions } from '@/lib/data';
-import { themeMomentum, asksTracker, axisShift, topThinkers, themeCoverage, emergingSignals } from '@/lib/analytics';
+import { themeMomentum, asksTracker, axisShift, topThinkers, themeCoverage, emergingSignals, conceptLifecycle, decisionPrompts } from '@/lib/analytics';
+import type { DecisionPrompt } from '@/lib/analytics';
 import LetterExplorer from '@/components/console/LetterExplorer';
 
 const MONTHS = ['jan', 'feb', 'mar', 'apr', 'maj', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
@@ -11,6 +12,24 @@ const TREND: Record<string, { mark: string; word: string; cls: string }> = {
   down: { mark: '▼', word: 'avtar', cls: 'text-steel/60' },
   flat: { mark: '—', word: 'stabil', cls: 'text-steel/40' },
 };
+
+function promptText(p: DecisionPrompt): string {
+  switch (p.kind) {
+    case 'escalate':
+      return `Du har drivit "${p.label}" i ${p.count} brev, senast ${monthYear(p.lastDate)} — utan synligt svar. Dags att eskalera?`;
+    case 'revive':
+      return `"${p.term}" myntades ${monthYear(p.firstDate)} och har inte återkommit — bygg vidare på det?`;
+    case 'whitespace':
+      return `"${p.label}" är minst belyst i serien (vikt ${p.total}) — medvetet val, eller en lucka inför årsrapporten?`;
+    case 'momentum':
+      return p.direction === 'up'
+        ? `"${p.label}" stiger snabbast i de senaste breven — dubbla ner?`
+        : `"${p.label}" avtar i de senaste breven — avsiktligt?`;
+  }
+}
+function promptBasis(p: DecisionPrompt): string {
+  return { escalate: `öppna asks · ×${(p as any).count}`, revive: 'vilande begrepp', whitespace: 'vita fläckar', momentum: 'temamomentum' }[p.kind];
+}
 
 function SectionLabel({ children, hint }: { children: React.ReactNode; hint?: string }) {
   return (
@@ -36,6 +55,11 @@ export default function KonsolPage() {
   // white spaces = genuinely under-covered themes, excluding ones that are rising
   const whiteSpaces = themeCoverage(letters, themeLabels).filter((w) => !rising.has(w.theme)).slice(0, 4);
   const emerging = emergingSignals(letters, acts).slice(0, 8);
+  const lifecycle = conceptLifecycle(letters, acts);
+  const prompts = decisionPrompts(askStats, whiteSpaces, lifecycle, momentumFull);
+  const etablerade = lifecycle.filter((c) => c.status === 'etablerad');
+  const vilande = lifecycle.filter((c) => c.status === 'vilande' && c.count === 1).slice(0, 6);
+  const oneOffs = lifecycle.filter((c) => c.count === 1).length;
   const axisMax = Math.max(1, ...axis.flatMap((a) => [a.usa, a.kina]));
   const defStrip = ['tonindex', 'lix', 'tema', 'ask'].map((k) => ({ k, text: firstSentence(defs[k] ?? '') }));
 
@@ -70,6 +94,24 @@ export default function KonsolPage() {
             </div>
           ))}
         </div>
+
+        {/* decision prompts — att överväga */}
+        {prompts.length > 0 && (
+          <section className="mt-12 border rounded p-6" style={{ borderColor: '#3a3320', background: 'linear-gradient(135deg,#14110a,#0C1117)' }}>
+            <SectionLabel hint="datadrivna frågor till dig som vd">Att överväga</SectionLabel>
+            <div className="grid md:grid-cols-2 gap-x-10 gap-y-4">
+              {prompts.map((p, i) => (
+                <div key={i} className="flex gap-3 items-start border-t border-line/60 pt-3">
+                  <span className="text-amber leading-7">→</span>
+                  <div>
+                    <p className="text-[15.5px] leading-relaxed text-[#EAF0F5]" style={{ fontFamily: 'var(--font-newsreader)' }}>{promptText(p)}</p>
+                    <div className="font-mono text-[10px] tracking-wide text-steel/50 mt-1 uppercase">{promptBasis(p)}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* forward-looking grid */}
         <div className="grid lg:grid-cols-2 gap-5 mt-14">
@@ -168,6 +210,29 @@ export default function KonsolPage() {
               )}
             </section>
           </div>
+
+          {/* concept lifecycle */}
+          <section className="border border-line rounded bg-panel p-6">
+            <SectionLabel hint="myntade begrepp — vad stannade, vad somnade">Begreppens livscykel</SectionLabel>
+            <p className="text-[14px] leading-relaxed text-steel mb-5" style={{ fontFamily: 'var(--font-franklin)' }}>
+              <span className="text-[#EAF0F5]">{oneOffs} av {lifecycle.length}</span> myntade begrepp användes bara en gång — en generativ röst som sällan upprepar sig själv.
+            </p>
+            <div className="font-mono text-[10px] tracking-[0.12em] text-steel/60 uppercase mb-2">Återkommande &amp; vid liv</div>
+            <div className="flex flex-wrap gap-2 mb-5">
+              {etablerade.length ? etablerade.map((c) => (
+                <span key={c.term} className="text-[13px] italic text-[#F2F6FA] border border-amber/40 rounded px-2.5 py-1" style={{ fontFamily: 'var(--font-newsreader)' }}>{c.term} <span className="font-mono text-[10px] not-italic text-amber">×{c.count}</span></span>
+              )) : <span className="text-[12px] text-steel/50">—</span>}
+            </div>
+            <div className="font-mono text-[10px] tracking-[0.12em] text-steel/60 uppercase mb-2">Myntade en gång — att återanvända?</div>
+            <div className="flex flex-col gap-1.5">
+              {vilande.map((c) => (
+                <div key={c.term} className="grid grid-cols-[1fr_auto] items-baseline gap-3">
+                  <span className="text-[13px] italic text-[#cdd6dd]" style={{ fontFamily: 'var(--font-newsreader)' }}>{c.term}</span>
+                  <span className="font-mono text-[10px] text-steel/50">myntat {monthYear(c.firstDate)}</span>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
 
         {/* explorer */}

@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { themeMomentum, asksTracker, axisShift, topThinkers, themeCoverage, emergingSignals } from '../analytics';
+import { themeMomentum, asksTracker, axisShift, topThinkers, themeCoverage, emergingSignals, conceptLifecycle, decisionPrompts } from '../analytics';
 import type { Letter, ActDef } from '../types';
 
 const acts: ActDef[] = [
@@ -63,6 +63,43 @@ describe('themeCoverage', () => {
     const c = themeCoverage(data, themeLabels);
     expect(c[0].theme).toBe('klimat_energi');
     expect(c[0].total).toBe(0);
+  });
+});
+
+const acts4 = [
+  ...acts,
+  { id: 4, name: 'Akt 4', period: '', start: '2026-05-01', end: '2026-12-31', note: '' },
+];
+
+describe('conceptLifecycle', () => {
+  const data4: Letter[] = [
+    L('2025-06-01', 2, { signature_phrases: ['alpha'] }),
+    L('2026-02-01', 3, { signature_phrases: ['beta'] }),
+    L('2026-06-01', 4, { signature_phrases: ['beta'] }),
+    L('2026-05-10', 4, { signature_phrases: ['gamma'] }),
+    L('2026-01-01', 3, { signature_phrases: ['delta'] }),
+    L('2026-03-01', 3, { signature_phrases: ['delta'] }),
+  ];
+  it('classifies established / dormant / new concepts', () => {
+    const lc = conceptLifecycle(data4, acts4);
+    const by = Object.fromEntries(lc.map((c) => [c.term, c.status]));
+    expect(by).toEqual({ beta: 'etablerad', delta: 'vilande', alpha: 'vilande', gamma: 'ny' });
+    expect(lc.find((c) => c.term === 'beta')!.count).toBe(2);
+  });
+});
+
+describe('decisionPrompts', () => {
+  it('builds escalate / revive / whitespace / momentum prompts from the analytics', () => {
+    const askStats = asksTracker(data, asks);
+    const lc = conceptLifecycle([L('2025-06-01', 2, { signature_phrases: ['gammalt'] })], acts4);
+    const cov = themeCoverage(data, themeLabels);
+    const mom = themeMomentum(data, acts, themeLabels);
+    const prompts = decisionPrompts(askStats, cov, lc, mom);
+    const kinds = prompts.map((p) => p.kind);
+    expect(kinds).toContain('revive');
+    expect(kinds).toContain('whitespace');
+    const revive = prompts.find((p) => p.kind === 'revive');
+    expect(revive && 'term' in revive && revive.term).toBe('gammalt');
   });
 });
 

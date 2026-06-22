@@ -83,6 +83,50 @@ export function themeCoverage(letters: Letter[], themeLabels: Record<string, str
     .sort((a, b) => a.total - b.total || a.letters - b.letters);
 }
 
+export interface ConceptStatus { term: string; firstDate: string; lastDate: string; count: number; status: 'etablerad' | 'vilande' | 'ny' }
+
+export function conceptLifecycle(letters: Letter[], acts: ActDef[]): ConceptStatus[] {
+  const ids = actIds(acts);
+  const lastActStart = acts.find((a) => a.id === ids[ids.length - 1])?.start ?? '9999';
+  const map = new Map<string, { firstDate: string; lastDate: string; count: number }>();
+  for (const l of [...letters].sort((a, b) => a.date.localeCompare(b.date))) {
+    for (const term of l.signature_phrases) {
+      const e = map.get(term);
+      if (e) { e.count += 1; e.lastDate = l.date; }
+      else map.set(term, { firstDate: l.date, lastDate: l.date, count: 1 });
+    }
+  }
+  const out: ConceptStatus[] = [];
+  for (const [term, v] of map) {
+    let status: 'etablerad' | 'vilande' | 'ny';
+    if (v.firstDate >= lastActStart) status = 'ny';
+    else if (v.count >= 2 && v.lastDate >= lastActStart) status = 'etablerad';
+    else status = 'vilande';
+    out.push({ term, firstDate: v.firstDate, lastDate: v.lastDate, count: v.count, status });
+  }
+  const order: Record<string, number> = { etablerad: 0, vilande: 1, ny: 2 };
+  out.sort((a, b) => order[a.status] - order[b.status] || b.count - a.count || b.lastDate.localeCompare(a.lastDate));
+  return out;
+}
+
+export type DecisionPrompt =
+  | { kind: 'escalate'; label: string; count: number; lastDate: string }
+  | { kind: 'revive'; term: string; firstDate: string }
+  | { kind: 'whitespace'; label: string; total: number }
+  | { kind: 'momentum'; label: string; direction: 'up' | 'down' };
+
+export function decisionPrompts(askStats: AskStat[], whiteSpaces: ThemeCoverage[], lifecycle: ConceptStatus[], momentum: ThemeMomentum[]): DecisionPrompt[] {
+  const out: DecisionPrompt[] = [];
+  const topAsk = askStats[0];
+  if (topAsk && topAsk.count >= 3) out.push({ kind: 'escalate', label: topAsk.label, count: topAsk.count, lastDate: topAsk.lastDate });
+  const revive = lifecycle.find((c) => c.status === 'vilande' && c.count === 1);
+  if (revive) out.push({ kind: 'revive', term: revive.term, firstDate: revive.firstDate });
+  if (whiteSpaces[0]) out.push({ kind: 'whitespace', label: whiteSpaces[0].label, total: whiteSpaces[0].total });
+  const mover = momentum.find((m) => m.trend === 'up') ?? momentum.find((m) => m.trend === 'down');
+  if (mover && mover.trend !== 'flat') out.push({ kind: 'momentum', label: mover.label, direction: mover.trend as 'up' | 'down' });
+  return out;
+}
+
 export function emergingSignals(letters: Letter[], acts: ActDef[]): EmergingTerm[] {
   const ids = actIds(acts);
   const lastAct = ids[ids.length - 1];

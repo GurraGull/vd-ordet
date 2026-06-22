@@ -23,3 +23,11 @@ tone −0,4). Added a new recurring ask `strategisk_industripolitik`; the arc,
 4-card summary, scroll-spine and console all extended automatically. Next:
 backfill `source_url`s for the new letters; consider a per-act tone-band on the
 arc.
+
+2026-06-22 — Console: added an **"Att överväga"** lead band (4 data-grounded
+decision prompts: escalate top open ask, revive a dormant coinage, address a
+white space, double down on a rising theme) and a **"Begreppens livscykel"**
+panel (which coinages recurred vs went one-off; surfaces the "42 of 44 used
+once" insight). New tested analytics `conceptLifecycle` + `decisionPrompts`.
+Next: a notability signal so "revive" surfaces striking dormant concepts
+(Polycen) over recent one-offs; reconcile signature-phrase vs ask recurrence.
