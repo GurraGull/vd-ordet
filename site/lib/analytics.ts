@@ -83,17 +83,28 @@ export function themeCoverage(letters: Letter[], themeLabels: Record<string, str
     .sort((a, b) => a.total - b.total || a.letters - b.letters);
 }
 
-export interface ConceptStatus { term: string; firstDate: string; lastDate: string; count: number; status: 'etablerad' | 'vilande' | 'ny' }
+export interface ConceptStatus { term: string; firstDate: string; lastDate: string; count: number; status: 'etablerad' | 'vilande' | 'ny'; notability: number }
+
+// How central a coined phrase is: appearing in a letter's title (+2), its key
+// quote (+1) or thesis (+1) marks a defining concept rather than a passing mention.
+function conceptScore(term: string, l: Letter): number {
+  const t = term.toLowerCase();
+  const inTitle = l.title.toLowerCase().includes(t) ? 2 : 0;
+  const inQuote = `${l.key_quote.label} ${l.key_quote.text}`.toLowerCase().includes(t) ? 1 : 0;
+  const inThesis = l.thesis.toLowerCase().includes(t) ? 1 : 0;
+  return inTitle + inQuote + inThesis;
+}
 
 export function conceptLifecycle(letters: Letter[], acts: ActDef[]): ConceptStatus[] {
   const ids = actIds(acts);
   const lastActStart = acts.find((a) => a.id === ids[ids.length - 1])?.start ?? '9999';
-  const map = new Map<string, { firstDate: string; lastDate: string; count: number }>();
+  const map = new Map<string, { firstDate: string; lastDate: string; count: number; notability: number }>();
   for (const l of [...letters].sort((a, b) => a.date.localeCompare(b.date))) {
     for (const term of l.signature_phrases) {
+      const score = conceptScore(term, l);
       const e = map.get(term);
-      if (e) { e.count += 1; e.lastDate = l.date; }
-      else map.set(term, { firstDate: l.date, lastDate: l.date, count: 1 });
+      if (e) { e.count += 1; e.lastDate = l.date; e.notability = Math.max(e.notability, score); }
+      else map.set(term, { firstDate: l.date, lastDate: l.date, count: 1, notability: score });
     }
   }
   const out: ConceptStatus[] = [];
@@ -102,10 +113,10 @@ export function conceptLifecycle(letters: Letter[], acts: ActDef[]): ConceptStat
     if (v.firstDate >= lastActStart) status = 'ny';
     else if (v.count >= 2 && v.lastDate >= lastActStart) status = 'etablerad';
     else status = 'vilande';
-    out.push({ term, firstDate: v.firstDate, lastDate: v.lastDate, count: v.count, status });
+    out.push({ term, firstDate: v.firstDate, lastDate: v.lastDate, count: v.count, status, notability: v.notability });
   }
   const order: Record<string, number> = { etablerad: 0, vilande: 1, ny: 2 };
-  out.sort((a, b) => order[a.status] - order[b.status] || b.count - a.count || b.lastDate.localeCompare(a.lastDate));
+  out.sort((a, b) => order[a.status] - order[b.status] || b.notability - a.notability || b.count - a.count || b.lastDate.localeCompare(a.lastDate));
   return out;
 }
 

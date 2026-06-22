@@ -31,3 +31,10 @@ panel (which coinages recurred vs went one-off; surfaces the "42 of 44 used
 once" insight). New tested analytics `conceptLifecycle` + `decisionPrompts`.
 Next: a notability signal so "revive" surfaces striking dormant concepts
 (Polycen) over recent one-offs; reconcile signature-phrase vs ask recurrence.
+
+2026-06-22 — (1) Per-act **commentary**: each act card in the executive summary
+now carries an analytical "kommentar" (italic, gold rule) beside the descriptive
+summary; cards moved to a roomier 2×2. (2) **Notability** for coined concepts
+(`conceptScore`: title +2 / key-quote +1 / thesis +1) now ranks the lifecycle —
+"att återanvända" and the revive prompt surface defining dormant concepts
+(Polycen, Teknikminister, Svenska framtider) over passing mentions. 16 tests.

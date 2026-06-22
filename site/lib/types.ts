@@ -25,7 +25,7 @@ export interface Letter {
   raw_text: string;
 }
 
-export interface ActDef { id: number; name: string; period: string; start: string; end: string; note: string; summary?: string }
+export interface ActDef { id: number; name: string; period: string; start: string; end: string; note: string; summary?: string; commentary?: string }
 export interface ActStats { count: number; avgWords: number; avgTone: number; avgLix: number }
 export interface CoinedTerm { term: string; firstDate: string; count: number }
 export interface ArcPoint { date: string; tone: number; x: number; y: number; isPeak: boolean }

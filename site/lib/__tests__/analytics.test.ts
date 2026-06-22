@@ -86,6 +86,15 @@ describe('conceptLifecycle', () => {
     expect(by).toEqual({ beta: 'etablerad', delta: 'vilande', alpha: 'vilande', gamma: 'ny' });
     expect(lc.find((c) => c.term === 'beta')!.count).toBe(2);
   });
+  it('scores notability higher for a title-defining concept than a passing mention', () => {
+    const ls: Letter[] = [
+      L('2026-01-07', 3, { signature_phrases: ['polycen'], title: 'om en ny era: polycen' }),
+      L('2026-04-07', 3, { signature_phrases: ['made in china'], title: 'hur läser EU Kina' }),
+    ];
+    const lc = conceptLifecycle(ls, acts4);
+    expect(lc.find((c) => c.term === 'polycen')!.notability).toBeGreaterThan(lc.find((c) => c.term === 'made in china')!.notability);
+    expect(lc[0].term).toBe('polycen');
+  });
 });
 
 describe('decisionPrompts', () => {
